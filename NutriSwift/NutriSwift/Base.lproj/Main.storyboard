@@ -54,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="BGW-ix-hZP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="Kmq-8s-65A"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="Webp.net-resizeimage (2)" selectedImage="Webp.net-resizeimage (2)" id="Kmq-8s-65A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOU-0V-bfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Omb-JF-nUW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nutrition" id="isI-z5-nG0"/>
+                    <tabBarItem key="tabBarItem" title="Nutrition" image="Webp.net-resizeimage (3)" selectedImage="Webp.net-resizeimage (3)" id="isI-z5-nG0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7X-vr-3So" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +104,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bPb-cX-ihW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Diary" id="eHV-o3-olm"/>
+                    <tabBarItem key="tabBarItem" title="Diary" image="Webp.net-resizeimage (4)" selectedImage="Webp.net-resizeimage (4)" id="eHV-o3-olm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4i-iD-xYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,4 +157,9 @@
             <point key="canvasLocation" x="-1418" y="683"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Webp.net-resizeimage (2)" width="35" height="35"/>
+        <image name="Webp.net-resizeimage (3)" width="35" height="35"/>
+        <image name="Webp.net-resizeimage (4)" width="33" height="33"/>
+    </resources>
 </document>
