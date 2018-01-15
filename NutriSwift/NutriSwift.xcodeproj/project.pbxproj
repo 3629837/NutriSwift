@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF802C92200C72470085976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C91200C72470085976F /* AppDelegate.swift */; };
+		AF802C94200C72470085976F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C93200C72470085976F /* ViewController.swift */; };
+		AF802C97200C72470085976F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF802C95200C72470085976F /* Main.storyboard */; };
+		AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */; };
+		AF802C9C200C72470085976F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9B200C72470085976F /* Assets.xcassets */; };
+		AF802C9F200C72470085976F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9D200C72470085976F /* LaunchScreen.storyboard */; };
+		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
+		AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF802CA6200C72470085976F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF802C86200C72470085976F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF802C8D200C72470085976F;
+			remoteInfo = NutriSwift;
+		};
+		AF802CB1200C72470085976F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF802C86200C72470085976F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF802C8D200C72470085976F;
+			remoteInfo = NutriSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF802C8E200C72470085976F /* NutriSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF802C91200C72470085976F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF802C93200C72470085976F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF802C96200C72470085976F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF802C99200C72470085976F /* NutriSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NutriSwift.xcdatamodel; sourceTree = "<group>"; };
+		AF802C9B200C72470085976F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF802C9E200C72470085976F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF802CA0200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF802CA5200C72470085976F /* NutriSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF802CA9200C72470085976F /* NutriSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftTests.swift; sourceTree = "<group>"; };
+		AF802CAB200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF802CB4200C72470085976F /* NutriSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftUITests.swift; sourceTree = "<group>"; };
+		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF802C8B200C72470085976F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF802CA2200C72470085976F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF802CAD200C72470085976F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF802C85200C72470085976F = {
+			isa = PBXGroup;
+			children = (
+				AF802C90200C72470085976F /* NutriSwift */,
+				AF802CA8200C72470085976F /* NutriSwiftTests */,
+				AF802CB3200C72470085976F /* NutriSwiftUITests */,
+				AF802C8F200C72470085976F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF802C8F200C72470085976F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF802C8E200C72470085976F /* NutriSwift.app */,
+				AF802CA5200C72470085976F /* NutriSwiftTests.xctest */,
+				AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF802C90200C72470085976F /* NutriSwift */ = {
+			isa = PBXGroup;
+			children = (
+				AF802C91200C72470085976F /* AppDelegate.swift */,
+				AF802C93200C72470085976F /* ViewController.swift */,
+				AF802C95200C72470085976F /* Main.storyboard */,
+				AF802C9B200C72470085976F /* Assets.xcassets */,
+				AF802C9D200C72470085976F /* LaunchScreen.storyboard */,
+				AF802CA0200C72470085976F /* Info.plist */,
+				AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */,
+			);
+			path = NutriSwift;
+			sourceTree = "<group>";
+		};
+		AF802CA8200C72470085976F /* NutriSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF802CA9200C72470085976F /* NutriSwiftTests.swift */,
+				AF802CAB200C72470085976F /* Info.plist */,
+			);
+			path = NutriSwiftTests;
+			sourceTree = "<group>";
+		};
+		AF802CB3200C72470085976F /* NutriSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF802CB4200C72470085976F /* NutriSwiftUITests.swift */,
+				AF802CB6200C72470085976F /* Info.plist */,
+			);
+			path = NutriSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF802C8D200C72470085976F /* NutriSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF802CB9200C72470085976F /* Build configuration list for PBXNativeTarget "NutriSwift" */;
+			buildPhases = (
+				AF802C8A200C72470085976F /* Sources */,
+				AF802C8B200C72470085976F /* Frameworks */,
+				AF802C8C200C72470085976F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NutriSwift;
+			productName = NutriSwift;
+			productReference = AF802C8E200C72470085976F /* NutriSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF802CA4200C72470085976F /* NutriSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF802CBC200C72470085976F /* Build configuration list for PBXNativeTarget "NutriSwiftTests" */;
+			buildPhases = (
+				AF802CA1200C72470085976F /* Sources */,
+				AF802CA2200C72470085976F /* Frameworks */,
+				AF802CA3200C72470085976F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF802CA7200C72470085976F /* PBXTargetDependency */,
+			);
+			name = NutriSwiftTests;
+			productName = NutriSwiftTests;
+			productReference = AF802CA5200C72470085976F /* NutriSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF802CAF200C72470085976F /* NutriSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF802CBF200C72470085976F /* Build configuration list for PBXNativeTarget "NutriSwiftUITests" */;
+			buildPhases = (
+				AF802CAC200C72470085976F /* Sources */,
+				AF802CAD200C72470085976F /* Frameworks */,
+				AF802CAE200C72470085976F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF802CB2200C72470085976F /* PBXTargetDependency */,
+			);
+			name = NutriSwiftUITests;
+			productName = NutriSwiftUITests;
+			productReference = AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF802C86200C72470085976F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Hayden Farrier";
+				TargetAttributes = {
+					AF802C8D200C72470085976F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AF802CA4200C72470085976F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF802C8D200C72470085976F;
+					};
+					AF802CAF200C72470085976F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF802C8D200C72470085976F;
+					};
+				};
+			};
+			buildConfigurationList = AF802C89200C72470085976F /* Build configuration list for PBXProject "NutriSwift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF802C85200C72470085976F;
+			productRefGroup = AF802C8F200C72470085976F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF802C8D200C72470085976F /* NutriSwift */,
+				AF802CA4200C72470085976F /* NutriSwiftTests */,
+				AF802CAF200C72470085976F /* NutriSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF802C8C200C72470085976F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF802C9F200C72470085976F /* LaunchScreen.storyboard in Resources */,
+				AF802C9C200C72470085976F /* Assets.xcassets in Resources */,
+				AF802C97200C72470085976F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF802CA3200C72470085976F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF802CAE200C72470085976F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF802C8A200C72470085976F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */,
+				AF802C94200C72470085976F /* ViewController.swift in Sources */,
+				AF802C92200C72470085976F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF802CA1200C72470085976F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF802CAC200C72470085976F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF802CA7200C72470085976F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF802C8D200C72470085976F /* NutriSwift */;
+			targetProxy = AF802CA6200C72470085976F /* PBXContainerItemProxy */;
+		};
+		AF802CB2200C72470085976F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF802C8D200C72470085976F /* NutriSwift */;
+			targetProxy = AF802CB1200C72470085976F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF802C95200C72470085976F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF802C96200C72470085976F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF802C9D200C72470085976F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF802C9E200C72470085976F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF802CB7200C72470085976F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF802CB8200C72470085976F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF802CBA200C72470085976F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HaydenInc.NutriSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF802CBB200C72470085976F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HaydenInc.NutriSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF802CBD200C72470085976F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HaydenInc.NutriSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriSwift.app/NutriSwift";
+			};
+			name = Debug;
+		};
+		AF802CBE200C72470085976F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HaydenInc.NutriSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriSwift.app/NutriSwift";
+			};
+			name = Release;
+		};
+		AF802CC0200C72470085976F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HaydenInc.NutriSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NutriSwift;
+			};
+			name = Debug;
+		};
+		AF802CC1200C72470085976F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HaydenInc.NutriSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NutriSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF802C89200C72470085976F /* Build configuration list for PBXProject "NutriSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF802CB7200C72470085976F /* Debug */,
+				AF802CB8200C72470085976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF802CB9200C72470085976F /* Build configuration list for PBXNativeTarget "NutriSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF802CBA200C72470085976F /* Debug */,
+				AF802CBB200C72470085976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF802CBC200C72470085976F /* Build configuration list for PBXNativeTarget "NutriSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF802CBD200C72470085976F /* Debug */,
+				AF802CBE200C72470085976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF802CBF200C72470085976F /* Build configuration list for PBXNativeTarget "NutriSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF802CC0200C72470085976F /* Debug */,
+				AF802CC1200C72470085976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF802C99200C72470085976F /* NutriSwift.xcdatamodel */,
+			);
+			currentVersion = AF802C99200C72470085976F /* NutriSwift.xcdatamodel */;
+			path = NutriSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AF802C86200C72470085976F /* Project object */;
+}
