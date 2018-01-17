@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0711F672200F233A00232159 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711F66F200F233900232159 /* DataViewController.swift */; };
+		0711F673200F233A00232159 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711F670200F233A00232159 /* RootViewController.swift */; };
+		0711F674200F233A00232159 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711F671200F233A00232159 /* ModelController.swift */; };
+		0711F677200F27B000232159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F675200F27B000232159 /* Main.storyboard */; };
+		0711F678200F27B000232159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F676200F27B000232159 /* LaunchScreen.storyboard */; };
 		AF802C92200C72470085976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C91200C72470085976F /* AppDelegate.swift */; };
 		AF802C94200C72470085976F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C93200C72470085976F /* ViewController.swift */; };
-		AF802C97200C72470085976F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF802C95200C72470085976F /* Main.storyboard */; };
 		AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */; };
 		AF802C9C200C72470085976F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9B200C72470085976F /* Assets.xcassets */; };
-		AF802C9F200C72470085976F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9D200C72470085976F /* LaunchScreen.storyboard */; };
 		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
 		AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftUITests.swift */; };
 /* End PBXBuildFile section */
@@ -35,13 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0711F66F200F233900232159 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		0711F670200F233A00232159 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		0711F671200F233A00232159 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		0711F675200F27B000232159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0711F676200F27B000232159 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF802C8E200C72470085976F /* NutriSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF802C91200C72470085976F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF802C93200C72470085976F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF802C96200C72470085976F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF802C99200C72470085976F /* NutriSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NutriSwift.xcdatamodel; sourceTree = "<group>"; };
 		AF802C9B200C72470085976F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF802C9E200C72470085976F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF802CA0200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF802CA5200C72470085976F /* NutriSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF802CA9200C72470085976F /* NutriSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftTests.swift; sourceTree = "<group>"; };
@@ -99,11 +105,14 @@
 		AF802C90200C72470085976F /* NutriSwift */ = {
 			isa = PBXGroup;
 			children = (
+				0711F676200F27B000232159 /* LaunchScreen.storyboard */,
+				0711F675200F27B000232159 /* Main.storyboard */,
+				0711F66F200F233900232159 /* DataViewController.swift */,
+				0711F671200F233A00232159 /* ModelController.swift */,
+				0711F670200F233A00232159 /* RootViewController.swift */,
 				AF802C91200C72470085976F /* AppDelegate.swift */,
 				AF802C93200C72470085976F /* ViewController.swift */,
-				AF802C95200C72470085976F /* Main.storyboard */,
 				AF802C9B200C72470085976F /* Assets.xcassets */,
-				AF802C9D200C72470085976F /* LaunchScreen.storyboard */,
 				AF802CA0200C72470085976F /* Info.plist */,
 				AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */,
 			);
@@ -235,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF802C9F200C72470085976F /* LaunchScreen.storyboard in Resources */,
+				0711F678200F27B000232159 /* LaunchScreen.storyboard in Resources */,
 				AF802C9C200C72470085976F /* Assets.xcassets in Resources */,
-				AF802C97200C72470085976F /* Main.storyboard in Resources */,
+				0711F677200F27B000232159 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0711F673200F233A00232159 /* RootViewController.swift in Sources */,
+				0711F672200F233A00232159 /* DataViewController.swift in Sources */,
 				AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */,
+				0711F674200F233A00232159 /* ModelController.swift in Sources */,
 				AF802C94200C72470085976F /* ViewController.swift in Sources */,
 				AF802C92200C72470085976F /* AppDelegate.swift in Sources */,
 			);
@@ -298,25 +310,6 @@
 			targetProxy = AF802CB1200C72470085976F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AF802C95200C72470085976F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF802C96200C72470085976F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AF802C9D200C72470085976F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF802C9E200C72470085976F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AF802CB7200C72470085976F /* Debug */ = {
