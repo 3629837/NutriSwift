@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-2318" y="681"/>
         </scene>
-        <!--Item-->
+        <!--Diary-->
         <scene sceneID="78c-xr-Qur">
             <objects>
-                <tableViewController id="aSN-0J-MNX" sceneMemberID="viewController">
+                <tableViewController id="aSN-0J-MNX" userLabel="Diary" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Ir-X9-8cm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,32 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W22-4j-hqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4455" y="699"/>
-        </scene>
-        <!--Diary-->
-        <scene sceneID="XLr-Mu-v0a">
-            <objects>
-                <viewController id="NXh-Fm-eFg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tQc-Zc-Vdh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-fF-O9A">
-                                <rect key="frame" x="163" y="243" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="bPb-cX-ihW"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Diary" image="Webp.net-resizeimage (4)" selectedImage="Webp.net-resizeimage (4)" id="eHV-o3-olm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e4i-iD-xYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3122" y="681"/>
+            <point key="canvasLocation" x="-3298" y="682"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="64c-7C-kx0">
@@ -161,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="-1454" y="-152"/>
         </scene>
-        <!--hello-->
+        <!--AddFood-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="hello" customClass="ViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="AddFood" customClass="ViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
