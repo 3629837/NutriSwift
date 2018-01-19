@@ -108,7 +108,7 @@
                             <outlet property="delegate" destination="aSN-0J-MNX" id="yZ9-D0-vhs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="SSN-Nq-zfW"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="Webp.net-resizeimage (4)" id="SSN-Nq-zfW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W22-4j-hqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
