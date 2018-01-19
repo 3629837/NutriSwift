@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="-3367.1999999999998" y="-457.42128935532236"/>
         </scene>
-        <!--Item-->
+        <!--Diary-->
         <scene sceneID="78c-xr-Qur">
             <objects>
                 <tableViewController id="aSN-0J-MNX" userLabel="Diary" sceneMemberID="viewController">
@@ -268,8 +268,11 @@
     </scenes>
     <resources>
         <image name="185bd1d6eedc806ed74bac16d19bf744" width="282" height="423"/>
-        <image name="Webp.net-resizeimage (4)" width="33" height="33"/>
-        <image name="addicon" width="33" height="33"/>
+        <image name="TabBarAddFood" width="33" height="33"/>
+        <image name="TabBarDiary" width="33" height="33"/>
+        <image name="TabBarExplore" width="33" height="33"/>
+        <image name="TabBarNutrition" width="33" height="33"/>
+        <image name="TabBarSettings" width="33" height="33"/>
         <image name="breakfasticon" width="45" height="45"/>
         <image name="snacksicon" width="45" height="45"/>
     </resources>
