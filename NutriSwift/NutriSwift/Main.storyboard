@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="t7x-GH-KUN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settingsicon" selectedImage="settingsicon" id="4gy-lr-XaE"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="TabBarSettings" id="4gy-lr-XaE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzj-Fg-qZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="BGW-ix-hZP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="exploreglobe" selectedImage="exploreglobe" id="Kmq-8s-65A"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="TabBarExplore" id="Kmq-8s-65A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOU-0V-bfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Omb-JF-nUW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nutrition" image="nutritionicon" selectedImage="nutritionicon" id="isI-z5-nG0"/>
+                    <tabBarItem key="tabBarItem" title="Nutrition" image="TabBarNutrition" id="isI-z5-nG0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7X-vr-3So" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +108,7 @@
                             <outlet property="delegate" destination="aSN-0J-MNX" id="yZ9-D0-vhs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="Webp.net-resizeimage (4)" id="SSN-Nq-zfW"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="TabBarDiary" id="SSN-Nq-zfW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W22-4j-hqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,7 +186,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add food" image="addicon" selectedImage="addicon" id="mh7-BM-xMr"/>
+                    <tabBarItem key="tabBarItem" title="Add food" image="TabBarAddFood" id="mh7-BM-xMr"/>
                     <toolbarItems>
                         <barButtonItem title="Itemgfl" image="breakfasticon" width="12" id="hs7-GP-Vop">
                             <inset key="imageInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -202,12 +202,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Webp.net-resizeimage (4)" width="33" height="33"/>
-        <image name="addicon" width="33" height="33"/>
+        <image name="TabBarAddFood" width="33" height="33"/>
+        <image name="TabBarDiary" width="33" height="33"/>
+        <image name="TabBarExplore" width="33" height="33"/>
+        <image name="TabBarNutrition" width="33" height="33"/>
+        <image name="TabBarSettings" width="33" height="33"/>
         <image name="breakfasticon" width="45" height="45"/>
-        <image name="exploreglobe" width="33" height="33"/>
-        <image name="nutritionicon" width="33" height="33"/>
-        <image name="settingsicon" width="33" height="33"/>
         <image name="snacksicon" width="45" height="45"/>
     </resources>
 </document>
