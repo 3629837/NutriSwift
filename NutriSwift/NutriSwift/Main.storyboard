@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQE-1K-IK0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Q7-GS-sCZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -84,6 +84,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7X-vr-3So" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2318" y="681"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rTb-W5-aGo">
+            <objects>
+                <viewController id="dkB-q8-gwr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ud0-mI-Hfe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome to NutriSwift" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="itE-Tv-fF1">
+                                <rect key="frame" x="69" y="601" width="236" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.35498715753424659" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-j5-MAw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Yhu-56-QPa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFK-cl-Ps2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4242.3999999999996" y="-457.42128935532236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="06h-cs-hTp">
+            <objects>
+                <viewController id="4Q7-GS-sCZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aan-qj-Js2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="185bd1d6eedc806ed74bac16d19bf744" translatesAutoresizingMaskIntoConstraints="NO" id="3i8-R3-XA8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Track your nutrition intake with ease" borderStyle="roundedRect" textAlignment="center" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="zfO-kJ-FwG">
+                                <rect key="frame" x="0.0" y="601" width="375" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="0.35498715749999998" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cVO-Cc-HCI" firstAttribute="trailing" secondItem="zfO-kJ-FwG" secondAttribute="trailing" id="08P-Se-IBB"/>
+                            <constraint firstItem="cVO-Cc-HCI" firstAttribute="top" secondItem="3i8-R3-XA8" secondAttribute="top" constant="20" id="MHc-Z8-Ypd"/>
+                            <constraint firstItem="cVO-Cc-HCI" firstAttribute="trailing" secondItem="3i8-R3-XA8" secondAttribute="trailing" id="WFh-bM-zDq"/>
+                            <constraint firstItem="3i8-R3-XA8" firstAttribute="leading" secondItem="cVO-Cc-HCI" secondAttribute="leading" id="Yi4-AQ-Gv5"/>
+                            <constraint firstItem="zfO-kJ-FwG" firstAttribute="leading" secondItem="cVO-Cc-HCI" secondAttribute="leading" id="hyS-ek-bwF"/>
+                            <constraint firstItem="cVO-Cc-HCI" firstAttribute="bottom" secondItem="zfO-kJ-FwG" secondAttribute="bottom" constant="34" id="oYu-7Z-CCP"/>
+                            <constraint firstItem="cVO-Cc-HCI" firstAttribute="bottom" secondItem="3i8-R3-XA8" secondAttribute="bottom" id="vp7-HR-Vre"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cVO-Cc-HCI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSE-xd-Kcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3367.1999999999998" y="-457.42128935532236"/>
         </scene>
         <!--Diary-->
         <scene sceneID="78c-xr-Qur">
@@ -202,6 +267,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="185bd1d6eedc806ed74bac16d19bf744" width="282" height="423"/>
         <image name="TabBarAddFood" width="33" height="33"/>
         <image name="TabBarDiary" width="33" height="33"/>
         <image name="TabBarExplore" width="33" height="33"/>
