@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="t7x-GH-KUN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settingsicon" selectedImage="settingsicon" id="4gy-lr-XaE"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="TabBarSettings" id="4gy-lr-XaE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzj-Fg-qZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="BGW-ix-hZP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="exploreglobe" selectedImage="exploreglobe" id="Kmq-8s-65A"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="TabBarExplore" id="Kmq-8s-65A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOU-0V-bfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Omb-JF-nUW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nutrition" image="nutritionicon" selectedImage="nutritionicon" id="isI-z5-nG0"/>
+                    <tabBarItem key="tabBarItem" title="Nutrition" image="TabBarNutrition" id="isI-z5-nG0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7X-vr-3So" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +153,7 @@
         <!--Item-->
         <scene sceneID="78c-xr-Qur">
             <objects>
-                <tableViewController id="aSN-0J-MNX" sceneMemberID="viewController">
+                <tableViewController id="aSN-0J-MNX" userLabel="Diary" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Ir-X9-8cm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,37 +173,12 @@
                             <outlet property="delegate" destination="aSN-0J-MNX" id="yZ9-D0-vhs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="SSN-Nq-zfW"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="TabBarDiary" id="SSN-Nq-zfW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W22-4j-hqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4455" y="699"/>
-        </scene>
-        <!--Diary-->
-        <scene sceneID="XLr-Mu-v0a">
-            <objects>
-                <viewController id="NXh-Fm-eFg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tQc-Zc-Vdh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-fF-O9A">
-                                <rect key="frame" x="163" y="243" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="bPb-cX-ihW"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Diary" image="Webp.net-resizeimage (4)" selectedImage="Webp.net-resizeimage (4)" id="eHV-o3-olm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e4i-iD-xYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3122" y="681"/>
+            <point key="canvasLocation" x="-3298" y="682"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="64c-7C-kx0">
@@ -226,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="-1454" y="-152"/>
         </scene>
-        <!--hello-->
+        <!--AddFood-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="hello" customClass="ViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="AddFood" customClass="ViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +251,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add food" image="addicon" selectedImage="addicon" id="mh7-BM-xMr"/>
+                    <tabBarItem key="tabBarItem" title="Add food" image="TabBarAddFood" id="mh7-BM-xMr"/>
                     <toolbarItems>
                         <barButtonItem title="Itemgfl" image="breakfasticon" width="12" id="hs7-GP-Vop">
                             <inset key="imageInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -296,9 +271,6 @@
         <image name="Webp.net-resizeimage (4)" width="33" height="33"/>
         <image name="addicon" width="33" height="33"/>
         <image name="breakfasticon" width="45" height="45"/>
-        <image name="exploreglobe" width="33" height="33"/>
-        <image name="nutritionicon" width="33" height="33"/>
-        <image name="settingsicon" width="33" height="33"/>
         <image name="snacksicon" width="45" height="45"/>
     </resources>
 </document>
