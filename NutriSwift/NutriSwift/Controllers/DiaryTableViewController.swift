@@ -28,6 +28,10 @@ class DiaryTableViewController: UITableViewController {
         return "Section Name Placeholder"
     }
     
+    @IBAction func AddMeal(_ sender: UIButton) {
+        
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

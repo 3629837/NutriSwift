@@ -162,6 +162,9 @@
                             <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="AddMeal"/>
+                            <connections>
+                                <action selector="AddMeal:" destination="aSN-0J-MNX" eventType="touchUpInside" id="7NK-jz-lFQ"/>
+                            </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="1jU-c2-o57">
@@ -196,6 +199,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Diary" image="TabBarDiary" id="SSN-Nq-zfW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="AddMeal" destination="RE0-eb-HJU" id="fYd-pE-NYi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W22-4j-hqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
