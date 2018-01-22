@@ -17,6 +17,7 @@
 		AF802C9C200C72470085976F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9B200C72470085976F /* Assets.xcassets */; };
 		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
 		AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftUITests.swift */; };
+		AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF802CB4200C72470085976F /* NutriSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftUITests.swift; sourceTree = "<group>"; };
 		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		AF802C90200C72470085976F /* NutriSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AF8CAC842015B61500B5C9B7 /* Model */,
 				AF663F412011CEEB00F47B13 /* Controllers */,
 				0711F676200F27B000232159 /* LaunchScreen.storyboard */,
 				0711F675200F27B000232159 /* Main.storyboard */,
@@ -141,6 +144,14 @@
 				AF802CB6200C72470085976F /* Info.plist */,
 			);
 			path = NutriSwiftUITests;
+			sourceTree = "<group>";
+		};
+		AF8CAC842015B61500B5C9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				AF802C94200C72470085976F /* ViewController.swift in Sources */,
 				AF802C92200C72470085976F /* AppDelegate.swift in Sources */,
 				19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */,
+				AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
