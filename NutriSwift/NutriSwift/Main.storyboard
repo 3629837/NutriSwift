@@ -85,20 +85,61 @@
             </objects>
             <point key="canvasLocation" x="-2318" y="681"/>
         </scene>
-        <!--View Controller-->
+        <!--FoodEntry-->
         <scene sceneID="Uda-DG-9we">
             <objects>
-                <viewController id="Tqp-DL-4GL" sceneMemberID="viewController">
+                <viewController title="FoodEntry" id="Tqp-DL-4GL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Rf-En-luU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PkK-Fj-de5">
+                                <rect key="frame" x="211" y="109" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huc-WP-pJs">
+                                <rect key="frame" x="67" y="62" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj9-IO-aiv">
+                                <rect key="frame" x="67" y="118" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V38-4Z-n8X">
+                                <rect key="frame" x="211" y="53" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="WEb-8W-sdf"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="YKc-dS-8ck" id="IbU-vV-ATi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojz-qi-kXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="YKc-dS-8ck">
+                    <connections>
+                        <outlet property="delegate" destination="Tqp-DL-4GL" id="6Ab-sj-qOS"/>
+                        <outlet property="searchContentsController" destination="Tqp-DL-4GL" id="Qgt-Nm-CpF"/>
+                        <outlet property="searchResultsDataSource" destination="Tqp-DL-4GL" id="P2r-Ce-oJf"/>
+                        <outlet property="searchResultsDelegate" destination="Tqp-DL-4GL" id="EXG-Oq-4S0"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-3298" y="1386"/>
+            <point key="canvasLocation" x="-3298.5" y="1469.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rTb-W5-aGo">
@@ -164,8 +205,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="185bd1d6eedc806ed74bac16d19bf744" translatesAutoresizingMaskIntoConstraints="NO" id="3i8-R3-XA8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Track your nutrition with ease" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-UJ-PAG">
-                                <rect key="frame" x="38" y="588" width="298" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your nutrition with ease" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-UJ-PAG">
+                                <rect key="frame" x="53" y="596" width="268" height="27.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
@@ -415,6 +456,7 @@
                             <state key="normal" title="AddMeal"/>
                             <connections>
                                 <action selector="AddMeal:" destination="aSN-0J-MNX" eventType="touchUpInside" id="7NK-jz-lFQ"/>
+                                <segue destination="Tqp-DL-4GL" kind="show" id="Xis-Cz-h97"/>
                             </connections>
                         </button>
                         <prototypes>
