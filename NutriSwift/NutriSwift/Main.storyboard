@@ -124,25 +124,6 @@
                                     <action selector="foodEntered:" destination="VmO-91-N4Y" eventType="editingDidEnd" id="QZw-KB-pcj"/>
                                 </connections>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzr-4r-pq4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Add Food" id="Iq2-fL-OOR">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="OzX-kw-ubc">
-                                            <connections>
-                                                <segue destination="aSN-0J-MNX" kind="show" id="y6M-fn-rO7"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Add" id="UHx-cE-GNo">
-                                            <connections>
-                                                <action selector="foodAdd:" destination="VmO-91-N4Y" id="PFg-F2-nvl"/>
-                                                <segue destination="nxY-EY-7AS" kind="show" id="jet-pl-Dqw"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="WEb-8W-sdf"/>
@@ -163,51 +144,6 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-3300" y="1469.4152923538231"/>
-        </scene>
-        <!--Food Info-->
-        <scene sceneID="MQg-YL-3Kh">
-            <objects>
-                <viewController storyboardIdentifier="FoodInfoController" title="Food Info" id="nxY-EY-7AS" customClass="FoodInfoController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pku-Sb-xg3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tgo-I8-vZ5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Add Food" id="kKG-us-xzU">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="diS-SP-87b">
-                                            <connections>
-                                                <segue destination="Tqp-DL-4GL" kind="show" id="QT6-SA-0NC"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="lFy-qa-DMN">
-                                            <connections>
-                                                <segue destination="aSN-0J-MNX" kind="show" id="w1A-df-I1A"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-Im-Til">
-                                <rect key="frame" x="124" y="63" width="127" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5v0-gN-dac"/>
-                    </view>
-                    <connections>
-                        <outlet property="foodLabel" destination="4FY-Im-Til" id="EAp-Sc-P5v"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OgI-eo-YLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2450.4000000000001" y="1468.5157421289357"/>
         </scene>
         <!--Intro Page 1-->
         <scene sceneID="rTb-W5-aGo">
@@ -661,8 +597,4 @@
         <image name="opaque" width="816" height="1222"/>
         <image name="snacksicon" width="45" height="45"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="w1A-df-I1A"/>
-        <segue reference="QT6-SA-0NC"/>
-    </inferredMetricsTieBreakers>
 </document>

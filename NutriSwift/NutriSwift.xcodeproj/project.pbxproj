@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0711F677200F27B000232159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F675200F27B000232159 /* Main.storyboard */; };
 		0711F678200F27B000232159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F676200F27B000232159 /* LaunchScreen.storyboard */; };
-		19DDB8BF2016C083007848BD /* FoodEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDB8BE2016C083007848BD /* FoodEntryController.swift */; };
-		19DDB8C12016C1FD007848BD /* FoodInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDB8C02016C1FD007848BD /* FoodInfoController.swift */; };
 		19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39E912015A13200A3A55E /* ProfilePageController.swift */; };
 		AF663F432011D00400F47B13 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663F422011D00400F47B13 /* DiaryTableViewController.swift */; };
 		AF802C92200C72470085976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C91200C72470085976F /* AppDelegate.swift */; };
@@ -42,8 +40,6 @@
 /* Begin PBXFileReference section */
 		0711F675200F27B000232159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0711F676200F27B000232159 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		19DDB8BE2016C083007848BD /* FoodEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntryController.swift; sourceTree = "<group>"; };
-		19DDB8C02016C1FD007848BD /* FoodInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInfoController.swift; sourceTree = "<group>"; };
 		19E39E912015A13200A3A55E /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
 		AF663F422011D00400F47B13 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryTableViewController.swift; path = NutriSwift/Controllers/DiaryTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		AF802C8E200C72470085976F /* NutriSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,8 +88,6 @@
 				AF802C93200C72470085976F /* ViewController.swift */,
 				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				19E39E912015A13200A3A55E /* ProfilePageController.swift */,
-				19DDB8BE2016C083007848BD /* FoodEntryController.swift */,
-				19DDB8C02016C1FD007848BD /* FoodInfoController.swift */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -297,8 +291,6 @@
 				AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */,
 				AF663F432011D00400F47B13 /* DiaryTableViewController.swift in Sources */,
 				AF802C94200C72470085976F /* ViewController.swift in Sources */,
-				19DDB8C12016C1FD007848BD /* FoodInfoController.swift in Sources */,
-				19DDB8BF2016C083007848BD /* FoodEntryController.swift in Sources */,
 				AF802C92200C72470085976F /* AppDelegate.swift in Sources */,
 				19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */,
 				AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */,
