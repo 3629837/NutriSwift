@@ -54,5 +54,7 @@ class NutritionModel {
             ["Zinc", "14mg", "40mg"],
     ]
     
+//    let apple = foodNutritionModel(foodName: "Apple", vitaminA: 0.000002, thiamin: 0.019*10^-3, riboflavin: 0.028*10-3, niacin: 0.091*10-3, vitaminB6: 0.037*10-3, vitaminB12: 0, folate: 0, pantothenicAcid: 0, biotin: Float, vitaminC : Float, vitaminD: Float, vitaminE: Float, vitaminK: Float, choline: Float, calcium: Float, chromium: Float, copper: Float, fluoride: Float, iodine: Float, iron: Float, magnesium: Float, manganese: Float, molybdenum: Float, phosphorus: Float, potassium: Float, selenium: Float, sodium: Float, zinc: Float)
+    
 }
 

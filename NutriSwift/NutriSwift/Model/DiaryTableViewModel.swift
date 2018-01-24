@@ -20,7 +20,7 @@ class DiaryModel {
     var foodEntry =
     [
         [
-            ["Apple", "50"],
+            ["Apple", 50],
             ["Oats", "100"]
         ],
         [

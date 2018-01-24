@@ -43,9 +43,9 @@ class DiaryTableViewController: UITableViewController {
 
         //labels access the foodEntry array to get the foodName: weight(g) dict entries for each section/row
         let foodName = cell.viewWithTag(1) as! UILabel
-        foodName.text = DiaryModel.get.foodEntry[section][row][0]
+        foodName.text = String(describing: DiaryModel.get.foodEntry[section][row][0])
         let foodWeight = cell.viewWithTag(2) as! UILabel
-        foodWeight.text = DiaryModel.get.foodEntry[section][row][1] + "g"
+        foodWeight.text = String(describing: DiaryModel.get.foodEntry[section][row][1]) + "g"
         return cell
     }
 }
