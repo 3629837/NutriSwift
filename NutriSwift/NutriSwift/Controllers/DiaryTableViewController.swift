@@ -33,19 +33,19 @@ class DiaryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-        return DiaryModel.get.foodEntry[sectionIndex].count
+        return DiaryModel.get.meals[sectionIndex].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "diaryRow", for: indexPath)
         let row = indexPath.row
-        let section = indexPath.section
+        let sectionIndex = indexPath.section
 
         //labels access the foodEntry array to get the foodName: weight(g) dict entries for each section/row
-        let foodName = cell.viewWithTag(1) as! UILabel
-        foodName.text = String(describing: DiaryModel.get.foodEntry[section][row][0])
-        let foodWeight = cell.viewWithTag(2) as! UILabel
-        foodWeight.text = String(describing: DiaryModel.get.foodEntry[section][row][1]) + "g"
+        let foodName = cell.viewWithTag(101) as! UILabel
+        foodName.text = DiaryModel.get.meals[sectionIndex][row].foodName
+        let foodWeight = cell.viewWithTag(102) as! UILabel
+        foodWeight.text = String(describing: DiaryModel.get.meals[sectionIndex][row].foodWeight) + "g"
         return cell
     }
 }

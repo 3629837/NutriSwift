@@ -21,31 +21,36 @@ class NutritionViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return DiaryModel.get.sectionNames.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
-        return DiaryModel.get.sectionNames[sectionIndex]
+        return "Nutrition Breakdown"
     }
     
-    @IBAction func AddMeal(_ sender: UIButton) {
-        print("Going to FoodEntry")
-    }
+//    @IBAction func AddMeal(_ sender: UIButton) {
+//        print("Going to FoodEntry")
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-        return DiaryModel.get.foodEntry[sectionIndex].count
+        return NutritionModel.get.nutritionRDI.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "nutritionRow", for: indexPath)
         let row = indexPath.row
         let section = indexPath.section
+        let intake = NutritionModel.get.nutritionRDI[row].current
+        let rdi = NutritionModel.get.nutritionRDI[row].RDI
+        let intakePercentage = intake / rdi
         
-        //labels access the foodEntry array to get the foodName: weight(g) dict entries for each section/row
-        let foodName = cell.viewWithTag(1) as! UILabel
-        foodName.text = String(describing: DiaryModel.get.foodEntry[section][row][0])
-        let foodWeight = cell.viewWithTag(2) as! UILabel
-        foodWeight.text = String(describing: DiaryModel.get.foodEntry[section][row][1]) + "g"
+        //[nutrientName, RDI/AI(recommendedIntake), UL(upper level/limit), currentIntake]
+        
+        let nutrientName = cell.viewWithTag(201) as! UILabel
+        nutrientName.text = NutritionModel.get.nutritionRDI[row].nutrientName
+        let nutrientPercentage = cell.viewWithTag(202) as! UILabel
+        nutrientPercentage.text = String(describing: intakePercentage) + "%"
+
         return cell
     }
 }

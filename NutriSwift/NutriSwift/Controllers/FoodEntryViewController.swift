@@ -8,17 +8,21 @@
 
 import UIKit
 
-class FoodEntryViewController: UIViewController {
+class FoodEntryViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-
-    
-    @IBOutlet var entryMeal: UITextField!
     @IBOutlet var entryName: UITextField!
     @IBOutlet var entryWeight: UITextField!
 
     
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    var meal = ""
     
     override func viewDidLoad() {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerView.selectRow(0, inComponent: 0, animated: true)
+        meal = "Breakfast"
         super.viewDidLoad()
     }
     
@@ -26,35 +30,49 @@ class FoodEntryViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func printEntry(_ sender: Any) {
-        let meal = entryMeal.text!
-        let name = entryName.text!
-        let weight = entryWeight.text!
-//        if let weight = Int(weight) {
-//            var rawData = (meal, name, weight)
-//            DiaryModel.get.rawEntry.append(rawData)
-//            DiaryModel.get.readRawData(rawData: DiaryModel.get.rawEntry)
-//        }
-        var rawData = (meal, name, weight)
-        DiaryModel.get.rawEntry.append(rawData)
-        DiaryModel.get.readRawData(rawData: DiaryModel.get.rawEntry)
-        DiaryModel.get.rawEntry = []
-//        else {
-//            print("not working")
-//        }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return DiaryModel.get.sectionNames.count
+    }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return DiaryModel.get.sectionNames[row]
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        meal = DiaryModel.get.sectionNames[row]
+    }
     
+    @IBAction func printEntry(_ sender: Any) {
+        let name = entryName.text!
+        let weight = Double(entryWeight.text!)
+        var inputtedFood = DiaryModel.get.isValidFood(foods: DiaryModel.get.foods, input: name)
+        if inputtedFood.foodName != "False" {
+            print("Valid Entry")
+            switch meal {
+                case "Breakfast":
+                    inputtedFood.mealType = "Breakfast"
+                    inputtedFood.foodWeight = weight!
+                    DiaryModel.get.meals[0].append(inputtedFood)
+                case "Lunch":
+                    inputtedFood.mealType = "Lunch"
+                    inputtedFood.foodWeight = weight!
+                    DiaryModel.get.meals[1].append(inputtedFood)
+                case "Dinner":
+                    inputtedFood.mealType = "Dinner"
+                    inputtedFood.foodWeight = weight!
+                    DiaryModel.get.meals[2].append(inputtedFood)
+                case "Snacks":
+                    inputtedFood.mealType = "Snacks"
+                    inputtedFood.foodWeight = weight!
+                    DiaryModel.get.meals[3].append(inputtedFood)
+                default:
+                    print("failed")
+            }
+        }
+    }
 }
 
