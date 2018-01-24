@@ -31,12 +31,17 @@ class NutritionModel {
     
     var nutritionRDI: [Nutrient] = [Nutrient]()
     
-    func updateNutrition(meals: [[Food]], nutritionRDI: [Nutrient]) -> [Nutrient] {
+    func updateNutrition(meals: [[Food]], nutritionRDI: [Nutrient]) -> Int {
 //        var vitaminA = nutritionRDI[0].current
 //        var thiamin = nutritionRDI[1].current
 //        var riboflavin = nutritionRDI[2].current
 //        var niacin = nutritionRDI[3].current
 //        var vitaminB6 = nutritionRDI[4].current
+        nutritionRDI[0].current = 0.0
+        nutritionRDI[1].current = 0.0
+        nutritionRDI[2].current = 0.0
+        nutritionRDI[3].current = 0.0
+        nutritionRDI[4].current = 0.0
         
         for mealType in meals {
             for food in mealType {
@@ -48,9 +53,7 @@ class NutritionModel {
             }
         }
         
-        var newNutritionRDI = [vitaminA]
-        
-        return nutritionRDI
+        return 1
     }
     
 //    var nutritionRDI =

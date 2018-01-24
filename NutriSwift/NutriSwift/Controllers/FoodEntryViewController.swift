@@ -73,6 +73,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDataSource, UIPicke
                     print("failed")
             }
         }
+        NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
     }
 }
 
