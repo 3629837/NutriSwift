@@ -25,6 +25,17 @@ class DiaryModel {
         ],
         [
             ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
+            ["Chicken Breast", "150"],
             ["Spinach", "25"]
         ],
         [
