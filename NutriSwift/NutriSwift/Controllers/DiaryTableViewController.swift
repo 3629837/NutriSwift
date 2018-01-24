@@ -10,6 +10,10 @@ import UIKit
 
 class DiaryTableViewController: UITableViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

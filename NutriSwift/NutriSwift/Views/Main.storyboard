@@ -138,7 +138,6 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="printEntry:" destination="Tqp-DL-4GL" eventType="touchUpInside" id="ttm-Ns-g7K"/>
-                                    <segue destination="aSN-0J-MNX" kind="show" id="1ym-Wc-PQn"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-UO-31y">
@@ -1148,7 +1147,4 @@
         <image name="introPic4" width="700" height="1050"/>
         <image name="snacksicon" width="45" height="45"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1ym-Wc-PQn"/>
-    </inferredMetricsTieBreakers>
 </document>

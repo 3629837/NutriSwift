@@ -10,6 +10,11 @@ import UIKit
 
 class NutritionViewController: UITableViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -42,7 +47,8 @@ class NutritionViewController: UITableViewController {
         let section = indexPath.section
         let intake = NutritionModel.get.nutritionRDI[row].current
         let rdi = NutritionModel.get.nutritionRDI[row].RDI
-        let intakePercentage = intake / rdi
+        let intakePercentage = round(100*(intake/rdi))
+
         
         //[nutrientName, RDI/AI(recommendedIntake), UL(upper level/limit), currentIntake]
         
