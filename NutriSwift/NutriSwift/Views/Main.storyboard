@@ -1047,7 +1047,6 @@
                     <connections>
                         <segue destination="k82-84-mrY" kind="relationship" relationship="viewControllers" id="JbT-Ii-8Lh"/>
                         <segue destination="472-Hb-hig" kind="relationship" relationship="viewControllers" id="5aQ-jA-v2s"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZBy-my-LiW"/>
                         <segue destination="h3r-WD-3Rr" kind="relationship" relationship="viewControllers" id="fxt-Io-loC"/>
                         <segue destination="ft8-cT-QbT" kind="relationship" relationship="viewControllers" id="1MJ-E6-glC"/>
                     </connections>
@@ -1055,70 +1054,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S56-9S-Adw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1454" y="-152"/>
-        </scene>
-        <!--AddFood-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" userLabel="AddFood" customClass="ViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTL-ab-97l">
-                                <rect key="frame" x="69" y="467" width="54" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88235294117647056" green="0.96862745098039216" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="breakfasticon"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNl-KB-0l7">
-                                <rect key="frame" x="69" y="515" width="87" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snacks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMn-8Z-m25">
-                                <rect key="frame" x="154" y="519" width="67" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVU-UI-crI">
-                                <rect key="frame" x="154" y="467" width="56" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="snacksicon"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Add food" image="TabBarAddFood" id="mh7-BM-xMr"/>
-                    <toolbarItems>
-                        <barButtonItem title="Itemgfl" image="breakfasticon" width="12" id="hs7-GP-Vop">
-                            <inset key="imageInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <inset key="landscapeImageInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1079.2" y="682.3088455772114"/>
         </scene>
         <!--Diary-->
         <scene sceneID="9PV-fB-zV4">
@@ -1141,17 +1076,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TabBarAddFood" width="33" height="33"/>
         <image name="TabBarDiary" width="33" height="33"/>
         <image name="TabBarExplore" width="33" height="33"/>
         <image name="TabBarNutrition" width="33" height="33"/>
         <image name="TabBarSettings" width="33" height="33"/>
         <image name="blankProfilePic" width="300" height="300"/>
-        <image name="breakfasticon" width="45" height="45"/>
         <image name="introPic1" width="282" height="421"/>
         <image name="introPic2" width="282" height="423"/>
         <image name="introPic3" width="650" height="867"/>
         <image name="introPic4" width="700" height="1050"/>
-        <image name="snacksicon" width="45" height="45"/>
     </resources>
 </document>
