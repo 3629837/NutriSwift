@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0711F677200F27B000232159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F675200F27B000232159 /* Main.storyboard */; };
 		0711F678200F27B000232159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F676200F27B000232159 /* LaunchScreen.storyboard */; };
+		074F8E232018AE27007044E0 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074F8E222018AE27007044E0 /* ExploreTableViewController.swift */; };
 		19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39E912015A13200A3A55E /* ProfilePageController.swift */; };
 		AF44ED2C2018195F00F66927 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44ED2B2018195F00F66927 /* Food.swift */; };
 		AF663F432011D00400F47B13 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663F422011D00400F47B13 /* DiaryTableViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0711F675200F27B000232159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0711F676200F27B000232159 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		074F8E222018AE27007044E0 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		19E39E912015A13200A3A55E /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
 		AF44ED2B2018195F00F66927 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		AF663F422011D00400F47B13 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryTableViewController.swift; path = NutriSwift/Controllers/DiaryTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -106,6 +108,7 @@
 				AFF4EFE320184F0B0062411E /* NutritionViewController.swift */,
 				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				19E39E912015A13200A3A55E /* ProfilePageController.swift */,
+				074F8E222018AE27007044E0 /* ExploreTableViewController.swift */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -312,6 +315,7 @@
 				AFF4EFE420184F0B0062411E /* NutritionViewController.swift in Sources */,
 				AF7504D42016DC0C002D38C7 /* FoodEntryViewController.swift in Sources */,
 				AF44ED2C2018195F00F66927 /* Food.swift in Sources */,
+				074F8E232018AE27007044E0 /* ExploreTableViewController.swift in Sources */,
 				AF663F432011D00400F47B13 /* DiaryTableViewController.swift in Sources */,
 				AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */,
 				AFF4EFE8201897D10062411E /* Nutrient.swift in Sources */,
