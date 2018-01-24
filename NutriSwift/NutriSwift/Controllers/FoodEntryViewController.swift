@@ -38,6 +38,7 @@ class FoodEntryViewController: UIViewController {
         var rawData = (meal, name, weight)
         DiaryModel.get.rawEntry.append(rawData)
         DiaryModel.get.readRawData(rawData: DiaryModel.get.rawEntry)
+        DiaryModel.get.rawEntry = []
 //        else {
 //            print("not working")
 //        }

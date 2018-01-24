@@ -38,14 +38,14 @@ class DiaryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-//        let row = indexPath.row
-//        let section = indexPath.section
-//
+        let row = indexPath.row
+        let section = indexPath.section
+
         //labels access the foodEntry array to get the foodName: weight(g) dict entries for each section/row
         let foodName = cell.viewWithTag(1) as! UILabel
-        foodName.text = DiaryModel.get.foodEntry[0][0][0]
+        foodName.text = DiaryModel.get.foodEntry[section][row][0]
         let foodWeight = cell.viewWithTag(2) as! UILabel
-        foodWeight.text = DiaryModel.get.foodEntry[0][0][1]
+        foodWeight.text = DiaryModel.get.foodEntry[section][row][1] + "g"
         return cell
     }
 }

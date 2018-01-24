@@ -20,16 +20,18 @@ class DiaryModel {
     var foodEntry =
     [
         [
-            ["BreakfastFood1", "0"], ["BreakfastFood2", "0"]
+            ["Apple", "50"],
+            ["Oats", "100"]
         ],
         [
-            ["LunchFood1", "0"]
+            ["Chicken Breast", "150"],
+            ["Spinach", "25"]
         ],
         [
-            ["DinnerFood1", "0"]
+            
         ],
         [
-            ["SnackFood1", "0"]
+            ["Salted Cashew", "40"]
         ]
     ]
     func readRawData(rawData: [(String, String, String)]) -> Int {
