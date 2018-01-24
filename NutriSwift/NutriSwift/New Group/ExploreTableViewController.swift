@@ -11,6 +11,8 @@ import UIKit
 
 class ExploreTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var tableView: UITableView!
+    
     var sectionNames = ["Gym Tips", "Healthy Food", "Detox", "Home Exercises"]
     
     override func viewDidLoad() {
