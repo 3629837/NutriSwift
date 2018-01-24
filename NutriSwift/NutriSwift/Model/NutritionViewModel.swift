@@ -50,9 +50,10 @@ class NutritionModel {
                 nutritionRDI[2].current += food.riboflavin * food.foodWeight/100
                 nutritionRDI[3].current += food.niacin * food.foodWeight/100
                 nutritionRDI[4].current += food.vitaminB6 * food.foodWeight/100
+                print("22222")
             }
         }
-        
+        print("function has run")
         return 1
     }
     
