@@ -1300,4 +1300,7 @@
         <image name="introPic3" width="650" height="867"/>
         <image name="introPic4" width="700" height="1050"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fxt-Io-loC"/>
+    </inferredMetricsTieBreakers>
 </document>

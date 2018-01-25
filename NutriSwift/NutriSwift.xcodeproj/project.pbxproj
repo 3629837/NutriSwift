@@ -22,7 +22,7 @@
 		AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */; };
 		AF802C9C200C72470085976F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9B200C72470085976F /* Assets.xcassets */; };
 		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
-		AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftUITests.swift */; };
+		AF802CB5200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */; };
 		AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */; };
 		AFA98C942019D1460011907F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA98C932019D1460011907F /* ProfileViewModel.swift */; };
 		AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB208D72018073000EF9A2A /* NutritionViewModel.swift */; };
@@ -68,7 +68,7 @@
 		AF802CA9200C72470085976F /* NutriSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftTests.swift; sourceTree = "<group>"; };
 		AF802CAB200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF802CB4200C72470085976F /* NutriSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftUITests.swift; sourceTree = "<group>"; };
+		AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftDiaryTableViewandFoodEntryUITests.swift; sourceTree = "<group>"; };
 		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewModel.swift; sourceTree = "<group>"; };
 		AFA98C932019D1460011907F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		AF802CB3200C72470085976F /* NutriSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AF802CB4200C72470085976F /* NutriSwiftUITests.swift */,
+				AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */,
 				AF802CB6200C72470085976F /* Info.plist */,
 			);
 			path = NutriSwiftUITests;
@@ -316,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1940E28C2019D726002D8484 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */,
+				AF802CB5200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
