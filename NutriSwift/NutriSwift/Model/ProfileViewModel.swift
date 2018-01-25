@@ -12,5 +12,5 @@ class ProfileModel {
     static let get: ProfileModel = ProfileModel()
     private init() {
     }
-    var userProfile = Profile(userName: "", age: 0, gender: "")
+    var userProfile = Profile(userName: "Rodney", age: 21, gender: "Male")
 }
