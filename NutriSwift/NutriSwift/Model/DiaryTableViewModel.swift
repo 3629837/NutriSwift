@@ -13,7 +13,7 @@ class DiaryModel {
     private init() {
         
         let apple: Food = Food(foodName: "Apple", vitaminA: 0.000002, thiamin: 0.000019, riboflavin: 0.000028, niacin: 0.000091,  vitaminB6: 0.000037)
-        let banana: Food = Food(foodName: "Banana", vitaminA: 0.000002, thiamin: 0.000019, riboflavin: 0.000028, niacin: 0.000091,  vitaminB6: 0.000037)
+        let banana: Food = Food(foodName: "Banana", vitaminA: 0.000005, thiamin: 0.000015, riboflavin: 0.000025, niacin: 0.000095,  vitaminB6: 0.000035)
         
 //        let entry1: Food = Food(foodName: "Apple", vitaminA: 0.000002, thiamin: 0.000019, riboflavin: 0.000028, niacin: 0.000091,  vitaminB6: 0.000037,
 //                                foodWeight: 50, mealType: "Breakfast")

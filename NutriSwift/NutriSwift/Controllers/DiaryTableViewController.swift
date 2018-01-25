@@ -33,7 +33,7 @@ class DiaryTableViewController: UITableViewController {
     }
     
     @IBAction func AddMeal(_ sender: UIButton) {
-        print("Going to FoodEntry")
+//        print("Going to FoodEntry")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
