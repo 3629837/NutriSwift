@@ -9,7 +9,6 @@
 import Foundation
 
 class Profile {
-    //per 100g (nutrition information)
     var userName: String
     var age: Int
     var gender: String

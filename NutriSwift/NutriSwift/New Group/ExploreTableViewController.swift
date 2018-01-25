@@ -2,42 +2,51 @@
 //  ExploreTableViewController.swift
 //  NutriSwift
 //
-//  Created by Asli Yoruk on 1/24/18.
+//  Created by Hayden Farrier on 25/01
 //  Copyright © 2018 Hayden Farrier. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class ExploreTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class exploreItemCell: UITableViewCell {
+    @IBOutlet weak var exploreItemImg: UIImageView!
+    @IBOutlet weak var exploreItemName: UILabel!
+}
 
-    @IBOutlet var tableView: UITableView!
+
+class ExploreTableViewController: UITableViewController {
     
-    var sectionNames = ["Gym Tips", "Healthy Food", "Detox", "Home Exercises"]
-    var sectionInfo = ["a", "b", "c", "d"]
-    var myIndex = 0
-    
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionNames.count
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "id.cell.explore")
-        cell!.textLabel?.text = sectionNames[indexPath.row];
-        cell!.textLabel?.textAlignment = .center
-        return cell!
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ExploreModel.get.exploreItems.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        performSegue(withIdentifier: "segue", sender: self)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "exploreItemRow", for: indexPath) as! exploreItemCell
+        let row = indexPath.row
+        cell.imageView?.image = UIImage(named: ExploreModel.get.exploreItems[row].imgName)
+        let exploreItemName = cell.viewWithTag(302) as! UILabel
+        exploreItemName.text = ExploreModel.get.exploreItems[row].itemName
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        ExploreModel.get.selectItemIndex = row
+//        navigationController?.pushViewController(ExploreInfoController, animated: true)
     }
     
 
