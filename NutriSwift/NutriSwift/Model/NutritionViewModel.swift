@@ -11,16 +11,33 @@ import Foundation
 class NutritionModel {
     static let get: NutritionModel = NutritionModel()
     private init() {
-        var vitaminA: Nutrient = Nutrient(nutrientName: "Vitamin-A", RDI: 0.0009, UL: 0.003, current: 0.0)
-        var thiamin: Nutrient = Nutrient(nutrientName: "Thiamin", RDI: 0.0012, UL: -1.0, current: 0.0)
-        var riboflavin: Nutrient = Nutrient(nutrientName: "Riboflavin", RDI: 0.0013, UL: -1.0, current: 0.0)
-        var niacin: Nutrient = Nutrient(nutrientName: "Niacin", RDI: 0.016, UL: 0.035, current: 0.0)
-        var vitaminB6: Nutrient = Nutrient(nutrientName: "Vitamin-B6", RDI: 0.0013, UL: 0.05, current: 0.0)
-        nutritionRDI.append(vitaminA)
-        nutritionRDI.append(thiamin)
-        nutritionRDI.append(riboflavin)
-        nutritionRDI.append(niacin)
-        nutritionRDI.append(vitaminB6)
+        //male 19-30
+        let m19vitaminA: Nutrient = Nutrient(nutrientName: "Vitamin-A", RDI: 0.0009, UL: 0.003, current: 0.0)
+        let m19thiamin: Nutrient = Nutrient(nutrientName: "Thiamin", RDI: 0.0012, UL: -1.0, current: 0.0)
+        let m19riboflavin: Nutrient = Nutrient(nutrientName: "Riboflavin", RDI: 0.0013, UL: -1.0, current: 0.0)
+        let m19niacin: Nutrient = Nutrient(nutrientName: "Niacin", RDI: 0.016, UL: 0.035, current: 0.0)
+        let m19vitaminB6: Nutrient = Nutrient(nutrientName: "Vitamin-B6", RDI: 0.0013, UL: 0.05, current: 0.0)
+        
+        //female 19-30
+        let f19vitaminA: Nutrient = Nutrient(nutrientName: "Vitamin-A", RDI: 0.0007, UL: 0.003, current: 0.0)
+        let f19thiamin: Nutrient = Nutrient(nutrientName: "Thiamin", RDI: 0.0011, UL: -1.0, current: 0.0)
+        let f19riboflavin: Nutrient = Nutrient(nutrientName: "Riboflavin", RDI: 0.0011, UL: -1.0, current: 0.0)
+        let f19niacin: Nutrient = Nutrient(nutrientName: "Niacin", RDI: 0.014, UL: 0.035, current: 0.0)
+        let f19vitaminB6: Nutrient = Nutrient(nutrientName: "Vitamin-B6", RDI: 0.0013, UL: 0.05, current: 0.0)
+        
+        m19nutritionRDI.append(m19vitaminA)
+        m19nutritionRDI.append(m19thiamin)
+        m19nutritionRDI.append(m19riboflavin)
+        m19nutritionRDI.append(m19niacin)
+        m19nutritionRDI.append(m19vitaminB6)
+        
+        f19nutritionRDI.append(f19vitaminA)
+        f19nutritionRDI.append(f19thiamin)
+        f19nutritionRDI.append(f19riboflavin)
+        f19nutritionRDI.append(f19niacin)
+        f19nutritionRDI.append(f19vitaminB6)
+        //default for nutritionRDI is m19RDI (male 19 to 30 RDI values)
+        nutritionRDI = m19nutritionRDI
    }
     
     //fats macronutrients too complex, focus on microNutrients e.g minerals and vitamins
@@ -29,14 +46,45 @@ class NutritionModel {
     
     //[nutrientName, RDI/AI(recommendedIntake), UL(upper level/limit), currentIntake]
     
+    
+    var m19nutritionRDI: [Nutrient] = [Nutrient]()
+    var f19nutritionRDI: [Nutrient] = [Nutrient]()
     var nutritionRDI: [Nutrient] = [Nutrient]()
     
-    func updateNutrition(meals: [[Food]], nutritionRDI: [Nutrient]) -> Int {
-//        var vitaminA = nutritionRDI[0].current
-//        var thiamin = nutritionRDI[1].current
-//        var riboflavin = nutritionRDI[2].current
-//        var niacin = nutritionRDI[3].current
-//        var vitaminB6 = nutritionRDI[4].current
+   
+    
+    func getRDIGroup (profile: Profile, m19RDI: [Nutrient], f19RDI: [Nutrient]) -> [Nutrient] {
+        
+        //default for nutritionRDI is m19RDI (male 19 to 30 RDI values)
+        var nutritionRDI: [Nutrient] = m19RDI
+        let gender = profile.gender
+        let age = profile.age
+        
+        switch gender {
+        
+            case "Male":
+                if age >= 19 && age <= 30 {
+                    nutritionRDI = m19RDI
+                }
+                else {
+                    print("failure")
+                }
+            case "Female":
+                if age >= 19 && age <= 30 {
+                    nutritionRDI = f19RDI
+                }
+                else {
+                    print("failure")
+                }
+            default:
+                print("failure")
+        }
+        
+        
+        return nutritionRDI
+    }
+    
+    func updateNutrition(meals: [[Food]], nutritionRDI: [Nutrient]) {
         nutritionRDI[0].current = 0.0
         nutritionRDI[1].current = 0.0
         nutritionRDI[2].current = 0.0
@@ -50,23 +98,13 @@ class NutritionModel {
                 nutritionRDI[2].current += food.riboflavin * food.foodWeight/100
                 nutritionRDI[3].current += food.niacin * food.foodWeight/100
                 nutritionRDI[4].current += food.vitaminB6 * food.foodWeight/100
-                print("22222")
             }
         }
-        print("function has run")
-        return 1
     }
     
-//    var nutritionRDI =
-//    [
-//        ("Vitamin-A", 0.0009, 0.003, 0.0), // "A UL cannot be established for supplemental beta-carotene use and is not required for food use"
-//        ("Thiamin", 0.0012, -1.0, 0.0), // Not possible to set - may be insufficient evidence or no clear level for adverse effects
-//        ("Riboflavin", 0.0013, -1.0, 0.0), //Not possible to set - may be insufficient evidence or no clear level for adverse effects
-//        ("Niacin", 0.016, 0.035, 0.0), //"The UL for niacin refers to nicotinic acid. For supplemental nicotinamide, the UL is 900 mg/day for men and non-pregnant women, 150 mg/day for 1-3 yr-olds, 250 mg/day for 4-8 yr-olds; 500 mg/day for 9-13 yr-olds and 750 mg/day for 14-18 yr-olds. It is not possible to set a UL for nicotinamide for infancy (intake should be only breast milk, formula or foods) or pregnancy and lactation (source should be food only)"
-//        ("Vitamin-B6", 0.0013, 0.05, 0.0) //f For vitamin B6, the UL is set for pyridoxine
-//    ]
-    
-    
+//    func generateNutrientRequirements(profile: Profile) {
+//
+//    }
     
 }
 

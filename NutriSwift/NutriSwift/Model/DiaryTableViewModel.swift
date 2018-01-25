@@ -13,7 +13,9 @@ class DiaryModel {
     private init() {
         
         let apple: Food = Food(foodName: "Apple", vitaminA: 0.000002, thiamin: 0.000019, riboflavin: 0.000028, niacin: 0.000091,  vitaminB6: 0.000037)
-        let banana: Food = Food(foodName: "Banana", vitaminA: 0.000005, thiamin: 0.000015, riboflavin: 0.000025, niacin: 0.000095,  vitaminB6: 0.000035)
+        let banana: Food = Food(foodName: "Banana", vitaminA: 0.000003, thiamin: 0.000031, riboflavin: 0.000073, niacin: 0.000665,  vitaminB6: 0.000367)
+        let carrot: Food = Food(foodName: "Carrot", vitaminA: 0.000835, thiamin: 0.000066, riboflavin: 0.000058, niacin: 0.000983,  vitaminB6: 0.000138)
+        let brocolli: Food = Food(foodName: "Brocolli", vitaminA: 0.000031, thiamin: 0.000071, riboflavin: 0.000117, niacin: 0.000639,  vitaminB6: 0.000175)
         
 //        let entry1: Food = Food(foodName: "Apple", vitaminA: 0.000002, thiamin: 0.000019, riboflavin: 0.000028, niacin: 0.000091,  vitaminB6: 0.000037,
 //                                foodWeight: 50, mealType: "Breakfast")
@@ -21,17 +23,12 @@ class DiaryModel {
 //                                foodWeight: 100, mealType: "Lunch")
         foods.append(apple)
         foods.append(banana)
-//        meals[0].append(entry1)
-//        meals[1].append(entry2)
-//        meals[2].append(dinner)
-//        meals[3].append(snacks)
+        foods.append(carrot)
+        foods.append(brocolli)
     }
     
     var foods: [Food] = [Food]()
-//    var breakfast: [Food] = [Food]()
-//    var lunch: [Food] = [Food]()
-//    var dinner: [Food] = [Food]()
-//    var snacks: [Food] = [Food]()
+
     var meals: [[Food]] =
     [
         [
@@ -54,29 +51,5 @@ class DiaryModel {
         }
         return falseFood
     }
-    
-    
-    
-    
-//    func readRawData(rawData: [(String, String, String)]) -> Int {
-//        for tuple in rawData {
-//            let meal:String = tuple.0
-//            let name:String = tuple.1
-//            let weight:Double = Double(tuple.2)!
-//            print(meal)
-//            switch meal {
-//            case "Breakfast":
-//                foodEntry[0].append((name, weight))
-//            case "Lunch":
-//                foodEntry[1].append((name, weight))
-//            case "Dinner":
-//                foodEntry[2].append((name, weight))
-//            case "Snacks":
-//                foodEntry[3].append((name, weight))
-//            default:
-//                print("Did not fit into meal sections")
-//            }
-//        }
-//        return 1
-//    }
+
 }

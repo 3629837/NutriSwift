@@ -44,10 +44,9 @@ class NutritionViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nutritionRow", for: indexPath)
         let row = indexPath.row
-        let section = indexPath.section
         let intake = NutritionModel.get.nutritionRDI[row].current
         let rdi = NutritionModel.get.nutritionRDI[row].RDI
-        let intakePercentage = round(100*(intake/rdi))
+        let intakePercentage = round(10*(100*(intake/rdi)))/10
 
         
         //[nutrientName, RDI/AI(recommendedIntake), UL(upper level/limit), currentIntake]
