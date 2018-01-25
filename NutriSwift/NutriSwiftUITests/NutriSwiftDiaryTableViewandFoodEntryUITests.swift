@@ -40,7 +40,8 @@ class NutriSwiftUITests: XCTestCase {
     func testDiaryTableCellCount(){
         let app = XCUIApplication()
         let table = app.tables.element(at: 0)
-        XCTAssertEqual(table.cells.count, 0)
+
+               XCTAssertEqual(table.cells.count, 0)
 
     }
     
@@ -58,33 +59,38 @@ class NutriSwiftUITests: XCTestCase {
         let app = XCUIApplication()
         let table = app.tables.element(at: 0)
         XCTAssertEqual(table.cells.count, 0)
-        XCTAssert(app.navigationBars["Diary"].exists)
+         XCTAssert(app.navigationBars["Diary"].exists)
         app.navigationBars["Diary"].buttons["Add"].tap()
         
-        let nameHereTextField = app.textFields["Name here"]
-        nameHereTextField.tap()
-        nameHereTextField.typeText("Apple")
-
+        let nameTextField = app.textFields["Name"]
+        nameTextField.tap()
+        nameTextField.typeText("Apple")
+        
         let foodNameToType = "Apple"
-        let textFieldText = nameHereTextField.value as! String
+        let textFieldText = nameTextField.value as! String
         XCTAssertEqual(textFieldText, foodNameToType)
         
-        let weightHereTextField = app.textFields["Weight here"]
-        weightHereTextField.tap()
-        weightHereTextField.tap()
-        weightHereTextField.typeText("70")
+        let weightGTextField = app.textFields["Weight (g)"]
+        weightGTextField.tap()
+        weightGTextField.tap()
+        weightGTextField.typeText("50")
         
-        let weightToType = "70"
+        let weightToType = "50"
+        let weightTextArea = weightGTextField.value as! String
+        XCTAssertEqual(weightTextArea, weightToType)
+        
         app/*@START_MENU_TOKEN@*/.pickerWheels["Breakfast"]/*[[".pickers.pickerWheels[\"Breakfast\"]",".pickerWheels[\"Breakfast\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Food Entry"].buttons["Save"].tap()
         app.alerts["Confirm Food Entry"].buttons["Confirm"].tap()
         
-        let nameLabelAfterSavingTheFood = nameHereTextField.value as! String
+        let nameLabelAfterSavingTheFood = nameTextField.value as! String
         XCTAssertEqual(nameLabelAfterSavingTheFood, "Apple")
-        let weightLabelAfterSavingTheFood = weightHereTextField.value as! String
-        XCTAssertEqual(weightLabelAfterSavingTheFood, "70")
+        let weightLabelAfterSavingTheFood = weightGTextField.value as! String
+        XCTAssertEqual(weightLabelAfterSavingTheFood, "50")
+        
         //row was 0 before, since the user added food now it is increased to 1
         XCTAssertEqual(table.cells.count, 1)
+        
     }
     
     
