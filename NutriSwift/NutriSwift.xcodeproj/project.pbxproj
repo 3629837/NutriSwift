@@ -11,7 +11,7 @@
 		0711F678200F27B000232159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0711F676200F27B000232159 /* LaunchScreen.storyboard */; };
 		074F8E232018AE27007044E0 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074F8E222018AE27007044E0 /* ExploreTableViewController.swift */; };
 		19754C0C20193D3A00A2121E /* ExploreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754C0B20193D3A00A2121E /* ExploreInfoViewController.swift */; };
-		19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39E912015A13200A3A55E /* ProfilePageController.swift */; };
+		19E39E922015A13200A3A55E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39E912015A13200A3A55E /* ProfileViewController.swift */; };
 		AF44ED2C2018195F00F66927 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44ED2B2018195F00F66927 /* Food.swift */; };
 		AF663F432011D00400F47B13 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663F422011D00400F47B13 /* DiaryTableViewController.swift */; };
 		AF74FC1420197B73003B07E9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74FC1320197B73003B07E9 /* Profile.swift */; };
@@ -52,7 +52,7 @@
 		0711F676200F27B000232159 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		074F8E222018AE27007044E0 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		19754C0B20193D3A00A2121E /* ExploreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreInfoViewController.swift; sourceTree = "<group>"; };
-		19E39E912015A13200A3A55E /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
+		19E39E912015A13200A3A55E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AF44ED2B2018195F00F66927 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		AF663F422011D00400F47B13 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryTableViewController.swift; path = NutriSwift/Controllers/DiaryTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		AF74FC1320197B73003B07E9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -116,10 +116,10 @@
 			children = (
 				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				AF7504D32016DC0C002D38C7 /* FoodEntryViewController.swift */,
+				19E39E912015A13200A3A55E /* ProfileViewController.swift */,
 				AFF4EFE320184F0B0062411E /* NutritionViewController.swift */,
 				074F8E222018AE27007044E0 /* ExploreTableViewController.swift */,
 				19754C0B20193D3A00A2121E /* ExploreInfoViewController.swift */,
-				19E39E912015A13200A3A55E /* ProfilePageController.swift */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -339,7 +339,7 @@
 				AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */,
 				AFF4EFE8201897D10062411E /* Nutrient.swift in Sources */,
 				AF802C92200C72470085976F /* AppDelegate.swift in Sources */,
-				19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */,
+				19E39E922015A13200A3A55E /* ProfileViewController.swift in Sources */,
 				AFA98C942019D1460011907F /* ProfileViewModel.swift in Sources */,
 				AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */,
 			);
