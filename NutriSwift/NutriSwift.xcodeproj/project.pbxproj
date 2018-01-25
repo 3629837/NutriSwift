@@ -24,6 +24,7 @@
 		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
 		AF802CB5200C72470085976F /* NutriSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftUITests.swift */; };
 		AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */; };
+		AFA98C942019D1460011907F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA98C932019D1460011907F /* ProfileViewModel.swift */; };
 		AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB208D72018073000EF9A2A /* NutritionViewModel.swift */; };
 		AFF4EFE420184F0B0062411E /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4EFE320184F0B0062411E /* NutritionViewController.swift */; };
 		AFF4EFE8201897D10062411E /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4EFE7201897D10062411E /* Nutrient.swift */; };
@@ -70,6 +71,7 @@
 		AF802CB4200C72470085976F /* NutriSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftUITests.swift; sourceTree = "<group>"; };
 		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewModel.swift; sourceTree = "<group>"; };
+		AFA98C932019D1460011907F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AFB208D72018073000EF9A2A /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
 		AFF4EFE320184F0B0062411E /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NutritionViewController.swift; path = NutriSwift/Controllers/NutritionViewController.swift; sourceTree = SOURCE_ROOT; };
 		AFF4EFE7201897D10062411E /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
@@ -112,9 +114,9 @@
 		AF663F412011CEEB00F47B13 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				AF7504D32016DC0C002D38C7 /* FoodEntryViewController.swift */,
 				AFF4EFE320184F0B0062411E /* NutritionViewController.swift */,
-				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				074F8E222018AE27007044E0 /* ExploreTableViewController.swift */,
 				19754C0B20193D3A00A2121E /* ExploreInfoViewController.swift */,
 				19E39E912015A13200A3A55E /* ProfilePageController.swift */,
@@ -179,12 +181,13 @@
 			isa = PBXGroup;
 			children = (
 				AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */,
-				AFB208D72018073000EF9A2A /* NutritionViewModel.swift */,
 				AF44ED2B2018195F00F66927 /* Food.swift */,
 				AFF4EFE7201897D10062411E /* Nutrient.swift */,
-				AF74FC1320197B73003B07E9 /* Profile.swift */,
+				AFB208D72018073000EF9A2A /* NutritionViewModel.swift */,
 				AF74FC15201983FE003B07E9 /* ExploreItem.swift */,
 				AF74FC17201991DB003B07E9 /* ExploreTableViewModel.swift */,
+				AF74FC1320197B73003B07E9 /* Profile.swift */,
+				AFA98C932019D1460011907F /* ProfileViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				AFF4EFE8201897D10062411E /* Nutrient.swift in Sources */,
 				AF802C92200C72470085976F /* AppDelegate.swift in Sources */,
 				19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */,
+				AFA98C942019D1460011907F /* ProfileViewModel.swift in Sources */,
 				AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
