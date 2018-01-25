@@ -7,8 +7,8 @@
 //
 
 import XCTest
-
-class NutriSwiftUITests: XCTestCase {
+@testable import NutriSwift
+class NutriSwiftDiaryTableViewandFoodEntryUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
