@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--Profile-->
         <scene sceneID="Tgm-Vv-xq8">
             <objects>
-                <viewController id="ft8-cT-QbT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="ft8-cT-QbT" userLabel="Profile" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ieN-5V-c7E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="t7x-GH-KUN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="TabBarSettings" id="4gy-lr-XaE"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="TabBarProfile" selectedImage="TabBarProfile" id="4gy-lr-XaE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzj-Fg-qZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1236,7 +1236,7 @@
         <image name="TabBarDiary" width="33" height="33"/>
         <image name="TabBarExplore" width="33" height="33"/>
         <image name="TabBarNutrition" width="33" height="33"/>
-        <image name="TabBarSettings" width="33" height="33"/>
+        <image name="TabBarProfile" width="33" height="33"/>
         <image name="blankProfilePic" width="300" height="300"/>
         <image name="introPic1" width="282" height="421"/>
         <image name="introPic2" width="282" height="423"/>
