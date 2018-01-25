@@ -74,6 +74,11 @@ class FoodEntryViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
         }
         NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
+        
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
+        
     }
 }
 
