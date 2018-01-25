@@ -1128,7 +1128,6 @@
         <!--Diary-->
         <scene sceneID="9PV-fB-zV4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sws-Do-JHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k82-84-mrY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Diary" image="TabBarDiary" id="SSN-Nq-zfW"/>
                     <toolbarItems/>
@@ -1141,6 +1140,7 @@
                         <segue destination="aSN-0J-MNX" kind="relationship" relationship="rootViewController" id="EMc-E9-mjQ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sws-Do-JHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3671" y="682"/>
         </scene>
@@ -1157,6 +1157,6 @@
         <image name="introPic4" width="700" height="1050"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xEC-ea-UQp"/>
+        <segue reference="fxt-Io-loC"/>
     </inferredMetricsTieBreakers>
 </document>
