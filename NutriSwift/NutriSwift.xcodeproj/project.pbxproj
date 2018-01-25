@@ -14,6 +14,7 @@
 		19E39E922015A13200A3A55E /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39E912015A13200A3A55E /* ProfilePageController.swift */; };
 		AF44ED2C2018195F00F66927 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44ED2B2018195F00F66927 /* Food.swift */; };
 		AF663F432011D00400F47B13 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663F422011D00400F47B13 /* DiaryTableViewController.swift */; };
+		AF74FC1420197B73003B07E9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74FC1320197B73003B07E9 /* Profile.swift */; };
 		AF7504D42016DC0C002D38C7 /* FoodEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7504D32016DC0C002D38C7 /* FoodEntryViewController.swift */; };
 		AF802C92200C72470085976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C91200C72470085976F /* AppDelegate.swift */; };
 		AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */; };
@@ -51,6 +52,7 @@
 		19E39E912015A13200A3A55E /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
 		AF44ED2B2018195F00F66927 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		AF663F422011D00400F47B13 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryTableViewController.swift; path = NutriSwift/Controllers/DiaryTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		AF74FC1320197B73003B07E9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		AF7504D32016DC0C002D38C7 /* FoodEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodEntryViewController.swift; path = NutriSwift/Controllers/FoodEntryViewController.swift; sourceTree = SOURCE_ROOT; };
 		AF802C8E200C72470085976F /* NutriSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF802C91200C72470085976F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				AFB208D72018073000EF9A2A /* NutritionViewModel.swift */,
 				AF44ED2B2018195F00F66927 /* Food.swift */,
 				AFF4EFE7201897D10062411E /* Nutrient.swift */,
+				AF74FC1320197B73003B07E9 /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */,
 				19754C0C20193D3A00A2121E /* ExploreInfoController.swift in Sources */,
 				AFF4EFE420184F0B0062411E /* NutritionViewController.swift in Sources */,
+				AF74FC1420197B73003B07E9 /* Profile.swift in Sources */,
 				AF7504D42016DC0C002D38C7 /* FoodEntryViewController.swift in Sources */,
 				AF44ED2C2018195F00F66927 /* Food.swift in Sources */,
 				074F8E232018AE27007044E0 /* ExploreTableViewController.swift in Sources */,

@@ -49,7 +49,8 @@ class DiaryTableViewController: UITableViewController {
         let foodName = cell.viewWithTag(101) as! UILabel
         foodName.text = DiaryModel.get.meals[sectionIndex][row].foodName
         let foodWeight = cell.viewWithTag(102) as! UILabel
-        foodWeight.text = String(describing: DiaryModel.get.meals[sectionIndex][row].foodWeight) + "g"
+        let weight = round(10*DiaryModel.get.meals[sectionIndex][row].foodWeight)/10
+        foodWeight.text = String(describing: weight) + "g"
         return cell
     }
 }

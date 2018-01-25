@@ -56,7 +56,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let name = entryName.text!
         let weight = Double(entryWeight.text!)
         let inputtedFood = DiaryModel.get.isValidFood(foods: DiaryModel.get.foods, input: name)
-        var ourNewFood = Food(foodName: inputtedFood.foodName, vitaminA: inputtedFood.vitaminA, thiamin: inputtedFood.thiamin, riboflavin: inputtedFood.riboflavin, niacin: inputtedFood.niacin, vitaminB6: inputtedFood.vitaminB6)
+        let ourNewFood = Food(foodName: inputtedFood.foodName, vitaminA: inputtedFood.vitaminA, thiamin: inputtedFood.thiamin, riboflavin: inputtedFood.riboflavin, niacin: inputtedFood.niacin, vitaminB6: inputtedFood.vitaminB6)
         NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
 //
 //
