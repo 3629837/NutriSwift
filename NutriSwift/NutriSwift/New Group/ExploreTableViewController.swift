@@ -14,6 +14,8 @@ class ExploreTableViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet var tableView: UITableView!
     
     var sectionNames = ["Gym Tips", "Healthy Food", "Detox", "Home Exercises"]
+    var sectionInfo = ["a", "b", "c", "d"]
+    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,11 @@ class ExploreTableViewController: UIViewController, UITableViewDelegate, UITable
         cell!.textLabel?.text = sectionNames[indexPath.row];
         cell!.textLabel?.textAlignment = .center
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
 

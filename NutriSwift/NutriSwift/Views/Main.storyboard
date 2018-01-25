@@ -47,7 +47,7 @@
         <!--Explore-->
         <scene sceneID="9Vc-Ei-3iM">
             <objects>
-                <viewController id="h3r-WD-3Rr" customClass="ExploreTableViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExploreTableViewController" id="h3r-WD-3Rr" customClass="ExploreTableViewController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aVf-LB-2Yc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,11 +70,64 @@
                     <tabBarItem key="tabBarItem" title="Explore" image="TabBarExplore" id="Kmq-8s-65A"/>
                     <connections>
                         <outlet property="tableView" destination="aVf-LB-2Yc" id="o3v-OP-aJ7"/>
+                        <segue destination="QJo-tG-XHX" kind="show" identifier="segue" id="ATK-Tj-JgG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOU-0V-bfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-272" y="682"/>
+        </scene>
+        <!--Explore Info-->
+        <scene sceneID="f5u-w4-iew">
+            <objects>
+                <viewController storyboardIdentifier="ExploreInfoController" title="Explore Info" id="QJo-tG-XHX" customClass="ExploreInfoController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P4r-oK-Zyj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVN-p3-KZ8">
+                                <rect key="frame" x="186" y="138" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1TR-jf-uX2">
+                                <rect key="frame" x="87" y="195" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-cY-Odc">
+                                <rect key="frame" x="186" y="449" width="1670" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqn-MR-n5u">
+                                <rect key="frame" x="87" y="625" width="180" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="h3r-WD-3Rr" kind="show" id="xEC-ea-UQp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNA-Oe-EHq">
+                                <rect key="frame" x="87" y="195" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RdK-Qv-fIg"/>
+                    </view>
+                    <connections>
+                        <outlet property="descLabel" destination="Ep4-cY-Odc" id="esg-vt-tcf"/>
+                        <outlet property="myImageView" destination="GNA-Oe-EHq" id="mcB-nc-qJq"/>
+                        <outlet property="titleLabel" destination="SVN-p3-KZ8" id="YTc-Bf-Eo6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqn-1Z-7x3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272.46376811594206" y="1514.6739130434785"/>
         </scene>
         <!--Nutrition-->
         <scene sceneID="eWg-EH-594">
@@ -1154,4 +1207,7 @@
         <image name="introPic4" width="700" height="1050"/>
         <image name="snacksicon" width="45" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xEC-ea-UQp"/>
+    </inferredMetricsTieBreakers>
 </document>
