@@ -184,13 +184,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huc-WP-pJs">
-                                <rect key="frame" x="109.33333333333331" y="136.33333333333334" width="59" height="28"/>
+                                <rect key="frame" x="127.33333333333331" y="136.33333333333334" width="59" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj9-IO-aiv">
-                                <rect key="frame" x="103.33333333333331" y="287" width="70.666666666666686" height="27"/>
+                                <rect key="frame" x="115.66666666666666" y="287" width="70.666666666666657" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -204,14 +204,20 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoZ-o9-4K6">
                                 <rect key="frame" x="47" y="436.66666666666674" width="320" height="216"/>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-t3-kWm">
-                                <rect key="frame" x="229.66666666666666" y="135.33333333333334" width="91.333333333333343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-t3-kWm">
+                                <rect key="frame" x="227.66666666666663" y="135.33333333333334" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="mRz-NP-GGi"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight here (g)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-UO-31y">
-                                <rect key="frame" x="214.33333333333334" y="285.33333333333331" width="121.66666666666666" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (g)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-UO-31y">
+                                <rect key="frame" x="227.66666666666666" y="285.33333333333331" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="o2p-cc-LBV"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -221,12 +227,12 @@
                         <constraints>
                             <constraint firstItem="K7Y-t3-kWm" firstAttribute="centerY" secondItem="WEb-8W-sdf" secondAttribute="centerY" multiplier="0.4" id="3p0-yd-bl4"/>
                             <constraint firstItem="2f6-UO-31y" firstAttribute="centerY" secondItem="WEb-8W-sdf" secondAttribute="centerY" multiplier="0.8" id="GGc-FX-3o1"/>
-                            <constraint firstItem="Huc-WP-pJs" firstAttribute="centerX" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="0.67" id="MTb-qG-L5j"/>
+                            <constraint firstItem="Huc-WP-pJs" firstAttribute="trailing" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="0.9" id="MTb-qG-L5j"/>
                             <constraint firstItem="Huc-WP-pJs" firstAttribute="centerY" secondItem="WEb-8W-sdf" secondAttribute="centerY" multiplier="0.4" id="RG8-Aj-Mqs"/>
-                            <constraint firstItem="K7Y-t3-kWm" firstAttribute="centerX" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="1.33" id="UZ4-lg-SnE"/>
+                            <constraint firstItem="K7Y-t3-kWm" firstAttribute="leading" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="1.1" id="UZ4-lg-SnE"/>
                             <constraint firstItem="xoZ-o9-4K6" firstAttribute="centerX" secondItem="WEb-8W-sdf" secondAttribute="centerX" id="YT5-Fr-fzh"/>
-                            <constraint firstItem="2f6-UO-31y" firstAttribute="centerX" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="1.33" id="awa-nA-3jY"/>
-                            <constraint firstItem="Cj9-IO-aiv" firstAttribute="centerX" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="0.67" id="bur-aq-T94"/>
+                            <constraint firstItem="2f6-UO-31y" firstAttribute="leading" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="1.1" id="awa-nA-3jY"/>
+                            <constraint firstItem="Cj9-IO-aiv" firstAttribute="trailing" secondItem="WEb-8W-sdf" secondAttribute="centerX" multiplier="0.9" id="bur-aq-T94"/>
                             <constraint firstItem="xoZ-o9-4K6" firstAttribute="centerY" secondItem="WEb-8W-sdf" secondAttribute="centerY" multiplier="1.45" id="iej-GY-k3p"/>
                             <constraint firstItem="sKx-L0-aGB" firstAttribute="centerY" secondItem="WEb-8W-sdf" secondAttribute="centerY" multiplier="1.15" id="nHR-6J-uJ6"/>
                             <constraint firstItem="sKx-L0-aGB" firstAttribute="centerX" secondItem="WEb-8W-sdf" secondAttribute="centerX" id="tJA-kF-5NJ"/>
