@@ -46,7 +46,7 @@ class ExploreTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         ExploreModel.get.selectItemIndex = row
-//        navigationController?.pushViewController(ExploreInfoController, animated: true)
+        self .performSegue(withIdentifier: "exploreInfo", sender: self)
     }
     
 

@@ -22,6 +22,11 @@ class ExploreInfoViewController: UIViewController {
         exploreDesc.text = ExploreModel.get.exploreItems[ExploreModel.get.selectItemIndex].description
     }
     
+    override func viewWillLayoutSubviews() {
+        exploreDesc.sizeToFit()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
