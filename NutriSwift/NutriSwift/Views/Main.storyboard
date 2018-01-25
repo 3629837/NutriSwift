@@ -200,36 +200,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhd-PF-5s7">
-                                <rect key="frame" x="190.33333333333334" y="130.33333333333334" width="33.333333333333343" height="21"/>
+                                <rect key="frame" x="190.33333333333334" y="83.333333333333329" width="33.333333333333343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ney-h2-ght">
-                                <rect key="frame" x="57" y="221.66666666666663" width="300" height="120"/>
+                                <rect key="frame" x="57" y="165.33333333333334" width="300" height="120.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="6hI-Oj-dBG"/>
                                     <constraint firstAttribute="width" constant="300" id="SXV-DD-x2M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOa-oA-5kY">
-                                <rect key="frame" x="57.666666666666657" y="478" width="300" height="20.333333333333314"/>
+                                <rect key="frame" x="57.666666666666657" y="498" width="300" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="1Vf-qH-Sue"/>
                                     <constraint firstAttribute="width" constant="300" id="jQN-ni-wvA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xOa-oA-5kY" firstAttribute="centerY" secondItem="RdK-Qv-fIg" secondAttribute="centerY" multiplier="1.3" id="7by-d9-eId"/>
+                            <constraint firstItem="xOa-oA-5kY" firstAttribute="centerY" secondItem="RdK-Qv-fIg" secondAttribute="centerY" multiplier="1.35" id="7by-d9-eId"/>
                             <constraint firstItem="ney-h2-ght" firstAttribute="centerX" secondItem="RdK-Qv-fIg" secondAttribute="centerX" id="CIP-Ur-Tze"/>
-                            <constraint firstItem="ney-h2-ght" firstAttribute="centerY" secondItem="RdK-Qv-fIg" secondAttribute="centerY" multiplier="0.75" id="Km0-4b-3Tj"/>
+                            <constraint firstItem="ney-h2-ght" firstAttribute="centerY" secondItem="RdK-Qv-fIg" secondAttribute="centerY" multiplier="0.6" id="Km0-4b-3Tj"/>
                             <constraint firstItem="xOa-oA-5kY" firstAttribute="centerX" secondItem="RdK-Qv-fIg" secondAttribute="centerX" id="fdv-eE-AbK"/>
-                            <constraint firstItem="rhd-PF-5s7" firstAttribute="centerY" secondItem="RdK-Qv-fIg" secondAttribute="centerY" multiplier="0.375" id="nhC-LK-HMm"/>
+                            <constraint firstItem="rhd-PF-5s7" firstAttribute="centerY" secondItem="RdK-Qv-fIg" secondAttribute="centerY" multiplier="0.25" id="nhC-LK-HMm"/>
                             <constraint firstItem="rhd-PF-5s7" firstAttribute="centerX" secondItem="RdK-Qv-fIg" secondAttribute="centerX" id="uSi-Mk-MNI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RdK-Qv-fIg"/>
@@ -1300,7 +1300,4 @@
         <image name="introPic3" width="650" height="867"/>
         <image name="introPic4" width="700" height="1050"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="fxt-Io-loC"/>
-    </inferredMetricsTieBreakers>
 </document>
