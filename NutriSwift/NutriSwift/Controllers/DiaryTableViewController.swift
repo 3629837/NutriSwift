@@ -14,6 +14,8 @@ class DiaryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+//    var deletedObj: NSIndexPath
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -22,6 +24,15 @@ class DiaryTableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let section = indexPath.section
+            let row = indexPath.row
+            DiaryModel.get.meals[section].remove(at: row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
