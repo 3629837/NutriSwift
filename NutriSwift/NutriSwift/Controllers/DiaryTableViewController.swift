@@ -10,7 +10,11 @@ import UIKit
 
 class DiaryTableViewController: UITableViewController {
     
+    var food:FoodModel = FoodModel.sharedInstance
+    
     override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        food.getFoods()
         tableView.reloadData()
     }
     
@@ -27,16 +31,26 @@ class DiaryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        model.deleteMovie(model.moviedb[indexPath.row])
+//        model.moviedb.remove(at: indexPath.row)
+//
+//        self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
         if editingStyle == .delete {
             let section = indexPath.section
             let row = indexPath.row
             DiaryModel.get.meals[section].remove(at: row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
+//
+//           food.deleteFood(food.foodDB[indexPath.row])
+//            food.foodDB.remove(at: indexPath.row)
+//            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            
         }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return DiaryModel.get.sectionNames.count
+        // no need anymore?
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
@@ -49,6 +63,7 @@ class DiaryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
         return DiaryModel.get.meals[sectionIndex].count
+//        return food.foodDB.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,4 +79,5 @@ class DiaryTableViewController: UITableViewController {
         foodWeight.text = String(describing: weight) + "g"
         return cell
     }
+
 }
