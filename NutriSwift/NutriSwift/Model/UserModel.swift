@@ -28,7 +28,7 @@ class UserModel
     // Create a collection of objects to store in the database
     var userDB = [User]()
     
-    func getMovie(_ indexPath: IndexPath) -> User
+    func getUser(_ indexPath: IndexPath) -> User
     {
         return userDB[indexPath.row]
     }
