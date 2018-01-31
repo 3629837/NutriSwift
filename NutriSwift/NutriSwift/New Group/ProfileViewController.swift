@@ -12,16 +12,20 @@ import CoreData
 class ProfileViewController: UIViewController {
     
     var userModel: UserModel = UserModel.sharedInstance
-    var currentUser: User?
+    var this = UserModel.sharedInstance.saveUser("", userAge: -1.0, userGender: "")
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
-        userName.text = ProfileModel.get.userProfile.userName
-        age.text = String(ProfileModel.get.userProfile.age)
-        gender.text = ProfileModel.get.userProfile.gender
+        UserModel.sharedInstance.getUsers()
+        var currentUser = UserModel.sharedInstance.userDB[0]
+        if currentUser.userName != "" {
+            userName.text = currentUser.userName
+            age.text = String(currentUser.userAge)
+            gender.text = currentUser.userGender
+        }
     }
     
     override func viewDidLoad() {
@@ -36,18 +40,22 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func saveData(_ sender: Any) {
-//        let profileName = userName.text!
-//        let profileAge = Int(age.text!)
-//        let profileGender = gender.text!
+        let profileName = userName.text!
+        let profileAge = Double(age.text!)!
+        let profileGender = gender.text!
 //        ProfileModel.get.userProfile.userName = profileName
 //        ProfileModel.get.userProfile.age = profileAge!
 //        ProfileModel.get.userProfile.gender = profileGender
-        UserModel.sharedInstance.saveUser("Hayden", userAge: 22, userGender: "Male", existing: currentUser)
+        UserModel.sharedInstance.deleteUser(UserModel.sharedInstance.userDB[0])
+        UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
         UserModel.sharedInstance.getUsers()
         print(UserModel.sharedInstance.userDB.count)
-        for user in UserModel.sharedInstance.userDB {
-            print(user.userName)
-        }
+        print(UserModel.sharedInstance.userDB[0].userName)
+//        for user in UserModel.sharedInstance.userDB {
+//            print(user.userName)
+//            UserModel.sharedInstance.deleteUser(user)
+//
+//        }
     }
 }
 
