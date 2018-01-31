@@ -12,13 +12,16 @@ import CoreData
 class ProfileViewController: UIViewController {
     
     var userModel: UserModel = UserModel.sharedInstance
-    var this = UserModel.sharedInstance.saveUser("", userAge: -1.0, userGender: "")
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
+        if UserModel.sharedInstance.userDB.count == 0 {
+            var this = UserModel.sharedInstance.saveUser("", userAge: -1.0, userGender: "")
+        }
+        
         UserModel.sharedInstance.getUsers()
         var currentUser = UserModel.sharedInstance.userDB[0]
         if currentUser.userName != "" {
