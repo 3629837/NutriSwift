@@ -28,6 +28,7 @@ class UserModel
     // Create a collection of objects to store in the database
     var userDB = [User]()
     
+    
     func getUser(_ indexPath: IndexPath) -> User
     {
         return userDB[indexPath.row]
@@ -35,7 +36,7 @@ class UserModel
     
     // MARK: - CRUD **************************************************************
     
-    func saveUser(_ userName: String, userAge: Int16, userGender: String, existing: User?)
+    func saveUser(_ userName: String, userAge: Double, userGender: String)
     {
         // Create a new managed object and insert it into the context, so it can be saved
         // into the database
@@ -43,22 +44,22 @@ class UserModel
                                                  in:managedContext)
         
         // Update the existing object with the data passed in from the View Controller
-        if let _ = existing
-        {
-            existing!.userName = userName
-            existing!.userAge = userAge
-            existing!.userGender = userGender
-        }
+//        if let entity = existing
+//        {
+//            existing!.userName = userName
+//            existing!.userAge = userAge
+//            existing!.userGender = userGender
+//        }
             // Create a new movie object and update it with the data passed in from the View Controller
-        else
-        {
+//        else
+//        {
             // Create an object based on the Entity
             let user = User(entity: entity!,
                               insertInto:managedContext)
             user.userName = userName
             user.userAge = userAge
             user.userGender = userGender
-        }
+//        }
         
         updateDatabase()
     }

@@ -137,9 +137,9 @@
 		AF663F412011CEEB00F47B13 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				19E39E912015A13200A3A55E /* ProfileViewController.swift */,
 				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				AF7504D32016DC0C002D38C7 /* FoodEntryViewController.swift */,
-				19E39E912015A13200A3A55E /* ProfileViewController.swift */,
 				AFF4EFE320184F0B0062411E /* NutritionViewController.swift */,
 				074F8E222018AE27007044E0 /* ExploreTableViewController.swift */,
 				19754C0B20193D3A00A2121E /* ExploreInfoViewController.swift */,
