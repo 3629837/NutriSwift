@@ -50,20 +50,23 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return DiaryModel.get.sectionNames.count
-//      return FoodModel.sharedInstance.sectionNames.count
+       // 1return DiaryModel.get.sectionNames.count
+
+        return FoodModel.sharedInstance.sectionNames.count
+
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         self.view.endEditing(true)
-        return DiaryModel.get.sectionNames[row]
-        //return FoodModel.sharedInstance.sectionNames[row]
+        //1return DiaryModel.get.sectionNames[row]
+        return FoodModel.sharedInstance.sectionNames[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.mealText.text = DiaryModel.get.sectionNames[row]
-        meal = DiaryModel.get.sectionNames[row]
-      //self.mealText.text = FoodModel.sharedInstance.sectionNames[row]
+        //1self.mealText.text = DiaryModel.get.sectionNames[row]
+        //1meal = DiaryModel.get.sectionNames[row]
+        self.mealText.text = FoodModel.sharedInstance.sectionNames[row]
+        meal = FoodModel.sharedInstance.sectionNames[row]
         self.pickerView.isHidden = true
     }
    
@@ -100,6 +103,8 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    
+    
     @IBAction func save(_ sender: Any) {
         let name = entryName.text!
         let weight = Double(entryWeight.text!)
@@ -129,7 +134,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
             //      print(UserModel.sharedInstance.userDB[0].userName)
             //UserModel.sharedInstance.getUsers()
-            //FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##Food?#>)
+            //FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##CDFood?#>)
             if let navController = self.navigationController {
                 navController.popViewController(animated: true)
             }
@@ -170,6 +175,8 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         return thisArray
     }
+    
+    //
     
 }
 

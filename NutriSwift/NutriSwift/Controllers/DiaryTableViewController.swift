@@ -45,12 +45,13 @@ class DiaryTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return DiaryModel.get.sectionNames.count
-        // no need anymore?
+        //1return DiaryModel.get.sectionNames.count
+        return FoodModel.sharedInstance.sectionNames.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
-        return DiaryModel.get.sectionNames[sectionIndex]
+        //1return DiaryModel.get.sectionNames[sectionIndex]
+        return FoodModel.sharedInstance.sectionNames[sectionIndex]
         //        return food.foodDB.count
     }
     

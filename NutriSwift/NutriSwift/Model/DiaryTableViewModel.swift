@@ -40,7 +40,7 @@ class DiaryModel {
         [
         ]
     ]
-    var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
+   // var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
     
     func isValidFood(foods: [Food], input: String) -> Food {
         let falseFood: Food = Food(foodName: "False", vitaminA: -1.0, thiamin: -1.0, riboflavin: -1.0, niacin: -1.0, vitaminB6: -1.0)

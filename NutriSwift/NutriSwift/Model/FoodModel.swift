@@ -27,7 +27,7 @@ class FoodModel
     // Create a collection of objects to store in the database
     var foodDB = [CDFood]()
     
-//    var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
+    var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
     
     func getFood(_ indexPath: IndexPath) -> CDFood
     {
@@ -36,7 +36,7 @@ class FoodModel
     
     // MARK: - CRUD **************************************************************
     
-    func saveFood(_ foodName: String, foodWeight: Double, mealType: String, niacin: Double, riboflavin: Double, thiamin: Double, vitaminA: Double, vitaminB6: Double, existing: Food?)
+    func saveFood(_ foodName: String, foodWeight: Double, mealType: String, niacin: Double, riboflavin: Double, thiamin: Double, vitaminA: Double, vitaminB6: Double, existing: CDFood?)
     {
         // Create a new managed object and insert it into the context, so it can be saved
         // into the database
