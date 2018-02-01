@@ -11,7 +11,14 @@ import UIKit
 class NutritionViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
-        NutritionModel.get.nutritionRDI = NutritionModel.get.getRDIGroup (profile: ProfileModel.get.userProfile, m19RDI: NutritionModel.get.m19nutritionRDI, f19RDI: NutritionModel.get.f19nutritionRDI)
+        UserModel.sharedInstance.getUsers()
+        if UserModel.sharedInstance.userDB.count > 0 {
+            NutritionModel.get.nutritionRDI = NutritionModel.get.getRDIGroup (user: UserModel.sharedInstance.userDB[0], m19RDI: NutritionModel.get.m19nutritionRDI, f19RDI: NutritionModel.get.f19nutritionRDI)
+        }
+        else {
+            UserModel.sharedInstance.saveUser("", userAge: 0.0, userGender: "")
+            NutritionModel.get.nutritionRDI = NutritionModel.get.getRDIGroup (user: UserModel.sharedInstance.userDB[0], m19RDI: NutritionModel.get.m19nutritionRDI, f19RDI: NutritionModel.get.f19nutritionRDI)
+        }
         NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
         tableView.reloadData()
     }

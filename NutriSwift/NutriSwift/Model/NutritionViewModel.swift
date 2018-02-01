@@ -53,12 +53,12 @@ class NutritionModel {
     
    
     
-    func getRDIGroup (profile: Profile, m19RDI: [Nutrient], f19RDI: [Nutrient]) -> [Nutrient] {
+    func getRDIGroup (user: User, m19RDI: [Nutrient], f19RDI: [Nutrient]) -> [Nutrient] {
         
         //default for nutritionRDI is m19RDI (male 19 to 30 RDI values)
         var nutritionRDI: [Nutrient] = m19RDI
-        let gender = profile.gender
-        let age = profile.age
+        let gender = user.userGender!
+        let age = user.userAge
         
         switch gender {
         

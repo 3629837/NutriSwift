@@ -58,16 +58,33 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.gender.text = UserModel.sharedInstance.genders[row]
         self.genderPicker.isHidden = true
-        //meal = DiaryModel.get.sectionNames[row]
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.gender {
+            switch gender.text! {
+                case "Male" :
+                    genderPicker.selectRow(0, inComponent: 0, animated: true)
+                case "Female":
+                    genderPicker.selectRow(1, inComponent: 0, animated: true)
+                case "Other":
+                    genderPicker.selectRow(2, inComponent: 0, animated: true)
+                default:
+                    print("")
+            }
             self.genderPicker.isHidden = false
-            //if you dont want the users to se the keyboard type:
             textField.endEditing(true)
         }
     }
+    
+//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+//        if textField == self.gender {
+//            self.genderPicker.isHidden = true
+//        }
+//    }
+    
+    
+    
     
     @IBAction func saveData(_ sender: Any) {
         let profileName = userName.text!

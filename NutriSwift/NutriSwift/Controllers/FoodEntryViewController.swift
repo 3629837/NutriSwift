@@ -19,6 +19,10 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     var meal = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+//        self.pickerView.isHidden = true
+    }
+    
     override func viewDidLoad() {
 //        pickerView.delegate = self
 //        pickerView.dataSource = self
@@ -47,6 +51,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.mealText.text = DiaryModel.get.sectionNames[row]
+        meal = DiaryModel.get.sectionNames[row]
         self.pickerView.isHidden = true
         //meal = DiaryModel.get.sectionNames[row]
     }
@@ -54,10 +59,28 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.mealText {
             self.pickerView.isHidden = false
+            switch mealText.text! {
+                case "Breakfast" :
+                    pickerView.selectRow(0, inComponent: 0, animated: true)
+                case "Lunch":
+                    pickerView.selectRow(1, inComponent: 0, animated: true)
+                case "Dinner":
+                    pickerView.selectRow(2, inComponent: 0, animated: true)
+                case "Snacks":
+                    pickerView.selectRow(3, inComponent: 0, animated: true)
+                default:
+                    print("")
+            }
             //if you dont want the users to se the keyboard type:
             textField.endEditing(true)
         }
     }
+    
+//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+//        if textField == self.mealText {
+//            self.pickerView.isHidden = true
+//        }
+//    }
     
     
     @IBAction func cancel(_ sender: Any) {
