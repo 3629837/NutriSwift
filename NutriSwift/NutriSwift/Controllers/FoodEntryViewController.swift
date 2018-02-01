@@ -10,18 +10,19 @@ import UIKit
 
 class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    var foodModel:FoodModel = FoodModel.sharedInstance
+    var currentFood:CDFood?
+    
     @IBOutlet var entryName: UITextField!
     @IBOutlet var entryWeight: UITextField!
-
     @IBOutlet weak var mealText: UITextField!
-    
     @IBOutlet weak var pickerView: UIPickerView!
     
     var meal = ""
     
-    override func viewWillAppear(_ animated: Bool) {
-//        self.pickerView.isHidden = true
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+////        self.pickerView.isHidden = true
+//    }
     
     override func viewDidLoad() {
 //        pickerView.delegate = self
@@ -30,6 +31,14 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //        meal = "Breakfast"
         self.pickerView.isHidden = true
         super.viewDidLoad()
+        
+        //        what does this actually do?
+        //        if let _ = currentFood
+        //        {
+        //            entryName.text = currentFood!.entryName
+        //            entryWeight.text = currentFood!.entryWeight
+        //
+        //        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -112,7 +121,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             alert.dismiss(animated: true, completion: nil)
             
             DiaryModel.get.meals = self.addFood(ourNewFood: ourNewFood, mealArray: mealArray, weight: weight)
-            
+            //            FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##Food?#>)
             if let navController = self.navigationController {
                 navController.popViewController(animated: true)
             }

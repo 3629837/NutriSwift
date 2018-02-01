@@ -31,10 +31,6 @@ class DiaryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        model.deleteMovie(model.moviedb[indexPath.row])
-//        model.moviedb.remove(at: indexPath.row)
-//
-//        self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
         if editingStyle == .delete {
             let section = indexPath.section
             let row = indexPath.row
@@ -55,6 +51,7 @@ class DiaryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
         return DiaryModel.get.sectionNames[sectionIndex]
+        //        return food.foodDB.count
     }
     
     @IBAction func AddMeal(_ sender: UIButton) {
@@ -74,6 +71,7 @@ class DiaryTableViewController: UITableViewController {
         //labels access the foodEntry array to get the foodName: weight(g) dict entries for each section/row
         let foodName = cell.viewWithTag(101) as! UILabel
         foodName.text = DiaryModel.get.meals[sectionIndex][row].foodName
+        // foodName.text = food.getFoods(indexPath)
         let foodWeight = cell.viewWithTag(102) as! UILabel
         let weight = round(10*DiaryModel.get.meals[sectionIndex][row].foodWeight)/10
         foodWeight.text = String(describing: weight) + "g"
