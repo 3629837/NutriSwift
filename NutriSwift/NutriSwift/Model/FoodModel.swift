@@ -25,11 +25,13 @@ class FoodModel
     let managedContext: NSManagedObjectContext
     
     // Create a collection of objects to store in the database
-    var foodDB = [Food]()
+    var foodDB = [CDFood]()
     
-    func getUser(_ indexPath: IndexPath) -> Food
+//    var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
+    
+    func getFood(_ indexPath: IndexPath) -> CDFood
     {
-        return foodDB[indexPath.row]
+       return foodDB[indexPath.row]
     }
     
     // MARK: - CRUD **************************************************************
@@ -79,7 +81,7 @@ class FoodModel
             
             let results =
                 try managedContext.fetch(fetchRequest)
-            foodDB = results as! [Food]
+            foodDB = results as! [CDFood]
         }
         catch let error as NSError
         {

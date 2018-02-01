@@ -51,18 +51,20 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return DiaryModel.get.sectionNames.count
+//      return FoodModel.sharedInstance.sectionNames.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         self.view.endEditing(true)
         return DiaryModel.get.sectionNames[row]
+        //return FoodModel.sharedInstance.sectionNames[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.mealText.text = DiaryModel.get.sectionNames[row]
         meal = DiaryModel.get.sectionNames[row]
+      //self.mealText.text = FoodModel.sharedInstance.sectionNames[row]
         self.pickerView.isHidden = true
-        //meal = DiaryModel.get.sectionNames[row]
     }
    
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -101,6 +103,9 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func save(_ sender: Any) {
         let name = entryName.text!
         let weight = Double(entryWeight.text!)
+        let mealType = mealText.text!
+        print(mealType)
+        // let mealtype = mealText.text!
         let inputtedFood = DiaryModel.get.isValidFood(foods: DiaryModel.get.foods, input: name)
         let ourNewFood = Food(foodName: inputtedFood.foodName, vitaminA: inputtedFood.vitaminA, thiamin: inputtedFood.thiamin, riboflavin: inputtedFood.riboflavin, niacin: inputtedFood.niacin, vitaminB6: inputtedFood.vitaminB6)
         NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
@@ -121,7 +126,10 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             alert.dismiss(animated: true, completion: nil)
             
             DiaryModel.get.meals = self.addFood(ourNewFood: ourNewFood, mealArray: mealArray, weight: weight)
-            //            FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##Food?#>)
+            //UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
+            //      print(UserModel.sharedInstance.userDB[0].userName)
+            //UserModel.sharedInstance.getUsers()
+            //FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##Food?#>)
             if let navController = self.navigationController {
                 navController.popViewController(animated: true)
             }
@@ -133,14 +141,9 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.present(alert, animated: true, completion: nil)
     }
     
+    //change this
     func addFood (ourNewFood: Food, mealArray: [[Food]], weight: Double?) -> [[Food]] {
         var thisArray = mealArray
-        print("BEFORE")
-        for section in mealArray {
-            for food in section {
-                print(food.foodWeight)
-            }
-        }
         
         if ourNewFood.foodName != "False" {
             switch meal {
@@ -164,13 +167,6 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 print("")
             }
         }
-         print("AFTER")
-        for section in thisArray {
-            for food in section {
-                print(food.foodWeight)
-            }
-        }
-        
         
         return thisArray
     }

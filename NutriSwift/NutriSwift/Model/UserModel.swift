@@ -30,11 +30,6 @@ class UserModel
     
     var genders = ["Male", "Female", "Other"]
     
-    func getUser(_ indexPath: IndexPath) -> User
-    {
-        return userDB[indexPath.row]
-    }
-    
     // MARK: - CRUD **************************************************************
     
     func saveUser(_ userName: String, userAge: Double, userGender: String)

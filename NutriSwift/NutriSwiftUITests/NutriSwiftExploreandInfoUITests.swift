@@ -15,7 +15,7 @@ class NutriSwiftTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         continueAfterFailure = true
-                XCUIApplication().launch()
+        // XCUIApplication().launch()
     }
     
     override func tearDown() {

@@ -97,6 +97,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
         UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
+//      print(UserModel.sharedInstance.userDB[0].userName)
         UserModel.sharedInstance.getUsers()
 
     }
