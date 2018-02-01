@@ -8,21 +8,23 @@
 
 import UIKit
 
-class FoodEntryViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet var entryName: UITextField!
     @IBOutlet var entryWeight: UITextField!
 
+    @IBOutlet weak var mealText: UITextField!
     
     @IBOutlet weak var pickerView: UIPickerView!
     
     var meal = ""
     
     override func viewDidLoad() {
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        pickerView.selectRow(0, inComponent: 0, animated: true)
-        meal = "Breakfast"
+//        pickerView.delegate = self
+//        pickerView.dataSource = self
+//        pickerView.selectRow(0, inComponent: 0, animated: true)
+//        meal = "Breakfast"
+        self.pickerView.isHidden = true
         super.viewDidLoad()
     }
     
@@ -39,13 +41,25 @@ class FoodEntryViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        self.view.endEditing(true)
         return DiaryModel.get.sectionNames[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        meal = DiaryModel.get.sectionNames[row]
+        self.mealText.text = DiaryModel.get.sectionNames[row]
+        self.pickerView.isHidden = true
+        //meal = DiaryModel.get.sectionNames[row]
     }
    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == self.mealText {
+            self.pickerView.isHidden = false
+            //if you dont want the users to se the keyboard type:
+            textField.endEditing(true)
+        }
+    }
+    
+    
     @IBAction func cancel(_ sender: Any) {
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
