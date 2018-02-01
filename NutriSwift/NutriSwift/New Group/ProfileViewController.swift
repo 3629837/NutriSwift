@@ -47,16 +47,16 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return DiaryModel.get.sectionNames.count
+        return UserModel.sharedInstance.genders.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         self.view.endEditing(true)
-        return DiaryModel.get.sectionNames[row]
+        return UserModel.sharedInstance.genders[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.gender.text = DiaryModel.get.sectionNames[row]
+        self.gender.text = UserModel.sharedInstance.genders[row]
         self.genderPicker.isHidden = true
         //meal = DiaryModel.get.sectionNames[row]
     }

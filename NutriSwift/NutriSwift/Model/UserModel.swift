@@ -28,6 +28,7 @@ class UserModel
     // Create a collection of objects to store in the database
     var userDB = [User]()
     
+    var genders = ["Male", "Female", "Other"]
     
     func getUser(_ indexPath: IndexPath) -> User
     {
