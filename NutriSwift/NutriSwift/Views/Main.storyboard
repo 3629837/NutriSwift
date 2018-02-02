@@ -415,7 +415,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="diaryRow" id="1jU-c2-o57">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="diaryRow" id="1jU-c2-o57" customClass="FoodCell" customModule="NutriSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="1jU-c2-o57" id="zSS-4X-jlu">
@@ -442,6 +442,10 @@
                                         <constraint firstItem="yZ6-wf-AAM" firstAttribute="trailing" secondItem="zSS-4X-jlu" secondAttribute="centerX" multiplier="1.9" id="v04-V2-oYK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="foodName" destination="qd3-VD-01x" id="4JM-Bb-g34"/>
+                                    <outlet property="foodWeight" destination="yZ6-wf-AAM" id="70V-Ae-J5w"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

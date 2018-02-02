@@ -18,7 +18,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var mealText: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     
-    var meal = ""
+
     
 //    override func viewWillAppear(_ animated: Bool) {
 ////        self.pickerView.isHidden = true
@@ -67,7 +67,8 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         //1self.mealText.text = DiaryModel.get.sectionNames[row]
         //1meal = DiaryModel.get.sectionNames[row]
         self.mealText.text = FoodModel.sharedInstance.sectionNames[row]
-        meal = FoodModel.sharedInstance.sectionNames[row]
+        //meal = FoodModel.sharedInstance.sectionNames[row]
+        FoodModel.sharedInstance.meal = FoodModel.sharedInstance.sectionNames[row]
         self.pickerView.isHidden = true
     }
    
@@ -112,12 +113,13 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let weight = Double(entryWeight.text!)
         let mealType = mealText.text!
 
-        FoodModel.sharedInstance.saveFood(name, foodWeight: weight!, mealType: "Lunch", niacin: 00.3, riboflavin: 0.4, thiamin: 3.4, vitaminA: 2.3, vitaminB6: 1.6, existing: currentFood)
+        FoodModel.sharedInstance.saveFood(name, foodWeight: weight!, mealType: "Lunch", niacin: 0, riboflavin: 0, thiamin: 0, vitaminA: 0, vitaminB6: 0, existing: currentFood)
         FoodModel.sharedInstance.getFoods()
         
         //no items atm
         print("whats up " + (FoodModel.sharedInstance.foodDB[0].foodName)! + " hello")
         print("whats up " + (String)(FoodModel.sharedInstance.foodDB[0].foodWeight) + " 1st element weight")
+//        print("whats up " + (String)(FoodModel.sharedInstance.foodDB[0].) + " 1st element weight")
 //        print("whats up " + (FoodModel.sharedInstance.foodDB[1].foodName)! + " hello")
 //        print("whats up " + (String)(FoodModel.sharedInstance.foodDB[1].foodWeight) + " 2nd element weight")
 //        print("whats up " + (FoodModel.sharedInstance.foodDB[2].foodName)! + " hello")
@@ -135,7 +137,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         //this deletes the whole food array
         for food in FoodModel.sharedInstance.foodDB {
-            FoodModel.sharedInstance.deleteFood(food)
+//            FoodModel.sharedInstance.deleteFood(food)
         }
         
         
@@ -158,11 +160,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
             
-            DiaryModel.get.meals = self.addFood(ourNewFood: ourNewFood, mealArray: mealArray, weight: weight)
-            //UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
-            //      print(UserModel.sharedInstance.userDB[0].userName)
-            //UserModel.sharedInstance.getUsers()
-            //FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##CDFood?#>)
+          //  DiaryModel.get.meals = self.addFood(ourNewFood: ourNewFood, mealArray: mealArray, weight: weight)
           
             if let navController = self.navigationController {
                 navController.popViewController(animated: true)
@@ -176,34 +174,44 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     //change this
-    func addFood (ourNewFood: Food, mealArray: [[Food]], weight: Double?) -> [[Food]] {
-        var thisArray = mealArray
-        
-        if ourNewFood.foodName != "False" {
-            switch meal {
-            case "Breakfast":
-                ourNewFood.mealType = "Breakfast"
-                ourNewFood.foodWeight = weight!
-                thisArray[0].append(ourNewFood)
-            case "Lunch":
-                ourNewFood.mealType = "Lunch"
-                ourNewFood.foodWeight = weight!
-                thisArray[1].append(ourNewFood)
-            case "Dinner":
-                ourNewFood.mealType = "Dinner"
-                ourNewFood.foodWeight = weight!
-                thisArray[2].append(ourNewFood)
-            case "Snacks":
-                ourNewFood.mealType = "Snacks"
-                ourNewFood.foodWeight = weight!
-                thisArray[3].append(ourNewFood)
-            default:
-                print("")
-            }
-        }
-        
-        return thisArray
-    }
+//    func addFood (ourNewFood: Food, mealArray: [[Food]], weight: Double?) -> [[Food]] {
+//        var thisArray = mealArray
+//
+//        if ourNewFood.foodName != "False" {
+//            switch meal {
+//            case "Breakfast":
+//                ourNewFood.mealType = "Breakfast"
+//                ourNewFood.foodWeight = weight!
+//                thisArray[0].append(ourNewFood)
+//            case "Lunch":
+//                ourNewFood.mealType = "Lunch"
+//                ourNewFood.foodWeight = weight!
+//                thisArray[1].append(ourNewFood)
+//            case "Dinner":
+//                ourNewFood.mealType = "Dinner"
+//                ourNewFood.foodWeight = weight!
+//                thisArray[2].append(ourNewFood)
+//            case "Snacks":
+//                ourNewFood.mealType = "Snacks"
+//                ourNewFood.foodWeight = weight!
+//                thisArray[3].append(ourNewFood)
+//            default:
+//                print("")
+//            }
+//        }
+//
+//        return thisArray
+//    }
+    
+//    func detectSection () {
+//
+//        switch meal {
+//        case "Breakfast":
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//    }
     
     
 }

@@ -18,6 +18,7 @@ class FoodModel
         managedContext = appDelegate.persistentContainer.viewContext
     }
     
+    var meal = ""
     // Get a reference to your App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -89,6 +90,9 @@ class FoodModel
         }
     }
     
+    func printFoods() {
+        print("Foods: \(foodDB)");
+    }
     
     func deleteFood(_ food: CDFood)
     {
