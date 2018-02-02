@@ -19,6 +19,7 @@ class FoodModel
     }
     
     var meal = ""
+    var name = " "
     // Get a reference to your App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -98,6 +99,19 @@ class FoodModel
     {
         managedContext.delete(food)
         updateDatabase()
+    }
+    
+    func count( mealType: String ) -> Int
+    {
+        var count = 0
+        
+        for food in FoodModel.sharedInstance.foodDB {
+            if food.mealType == mealType
+            {
+                count += 1
+            }
+        }
+        return count;
     }
     
     

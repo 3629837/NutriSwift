@@ -64,38 +64,49 @@ class DiaryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
     //    return DiaryModel.get.meals[sectionIndex].count
         
-        //I do not need all the rows but does it matter if there's no data? or is it going to be blank and take space?
+        // breakfast section
+        if sectionIndex == 0
+        {
+            //breakfast section
+            //return food.breakfast.count
+            return food.count(mealType: "Breakfast")
+        }
+
+        //lunch section
+        else if sectionIndex == 1
+        {
+            //return food.lunch.count
+            return food.count(mealType: "Lunch")
+        }
+
+        //dinner section
+        else if sectionIndex == 2
+        {
+            //return food.dinner.count
+            return food.count(mealType: "Dinner")
+        }
+
+        //snacks sections
+        else {
+
+            return food.count(mealType: "Snacks")
+        }
         
-//        if sectionIndex = 0 {
-//            breakfast.count
-//        }
-        
-        return food.foodDB.count
     }
     
+    
+    //change
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FoodCell = tableView.dequeueReusableCell(withIdentifier: "diaryRow", for: indexPath) as! FoodCell
         
-        let label = "dummy"
-        let otherLabel = "dummy2"
-        
-//        let row = indexPath.row
-//        let section = indexPath.section
 //        let foodName = FoodModel.sharedInstance.foodDB[indexPath.row].foodName
 //        let foodMeal = FoodModel.sharedInstance.foodDB[indexPath.row].mealType
-//        let food = FoodModel.sharedInstance.foodDB[section][row]
-//
-//        if section = 0 {
-//            //FoodModel.sharedInstance.Breakfast[indexPath.row].foodName
-//        }
-//
-//        if section = 1 {
-//            //FoodModel.sharedInstance.Lunch[indexPath.row].foodName
-//        }
-//
-//        if section = 2 {
-//            //FoodModel.sharedInstance.Dinner[indexPath.row].foodName
-//        }
+        //  let food = FoodModel.sharedInstance.foodDB[section][row]
+        
+        
+        print("Section: \(indexPath.section) Row: \(indexPath.row) FoodNameFromFoodDB: \(String(describing: FoodModel.sharedInstance.foodDB[indexPath.row].foodName))")
+        let food: CDFood = FoodModel.sharedInstance.foodDB[indexPath.row]
+        
         
 //        for section in
 //        {
@@ -105,8 +116,8 @@ class DiaryTableViewController: UITableViewController {
     //        }
 //    }
         
-//        cell.foodName.text = food.foodName!
-//        cell.foodWeight.text = String(food.foodWeight)
+        cell.foodName.text = food.foodName!
+        cell.foodWeight.text = String(food.foodWeight)
 
         
 //        func getFood(_ indexPath: IndexPath) -> CDFood
