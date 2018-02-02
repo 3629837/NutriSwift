@@ -44,20 +44,20 @@ class FoodModel
                                                  in:managedContext)
         
         // Update the existing object with the data passed in from the View Controller
-        if let _ = existing
-        {
-            existing!.foodName = foodName
-            existing!.foodWeight = foodWeight
-            existing!.mealType = mealType
-            existing!.niacin = niacin
-            existing!.riboflavin = riboflavin
-            existing!.thiamin = thiamin
-            existing!.vitaminA = vitaminA
-            existing!.vitaminB6 = vitaminB6
-        }
-            // Create a new movie object and update it with the data passed in from the View Controller
-        else
-        {
+//        if let _ = existing
+//        {
+//            existing!.foodName = foodName
+//            existing!.foodWeight = foodWeight
+//            existing!.mealType = mealType
+//            existing!.niacin = niacin
+//            existing!.riboflavin = riboflavin
+//            existing!.thiamin = thiamin
+//            existing!.vitaminA = vitaminA
+//            existing!.vitaminB6 = vitaminB6
+//        }
+//            // Create a new movie object and update it with the data passed in from the View Controller
+//        else
+//        {
             // Create an object based on the Entity
             let food = CDFood(entity: entity!, insertInto:managedContext)
             food.foodName = foodName
@@ -67,7 +67,7 @@ class FoodModel
             food.riboflavin = riboflavin
             food.vitaminA = vitaminA
             food.vitaminB6 = vitaminB6
-        }
+//        }
         
         updateDatabase()
     }

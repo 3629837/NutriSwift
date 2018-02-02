@@ -106,11 +106,16 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     
     @IBAction func save(_ sender: Any) {
+
         let name = entryName.text!
         let weight = Double(entryWeight.text!)
         let mealType = mealText.text!
         print(mealType)
-        // let mealtype = mealText.text!
+
+        FoodModel.sharedInstance.saveFood(name, foodWeight: 0.4, mealType: "Lunch", niacin: 00.3, riboflavin: 0.4, thiamin: 3.4, vitaminA: 2.3, vitaminB6: 1.6, existing: currentFood)
+        FoodModel.sharedInstance.getFoods()
+        
+        
         let inputtedFood = DiaryModel.get.isValidFood(foods: DiaryModel.get.foods, input: name)
         let ourNewFood = Food(foodName: inputtedFood.foodName, vitaminA: inputtedFood.vitaminA, thiamin: inputtedFood.thiamin, riboflavin: inputtedFood.riboflavin, niacin: inputtedFood.niacin, vitaminB6: inputtedFood.vitaminB6)
         NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
@@ -135,6 +140,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //      print(UserModel.sharedInstance.userDB[0].userName)
             //UserModel.sharedInstance.getUsers()
             //FoodModel.sharedInstance.saveFood(<#T##foodName: String##String#>, foodWeight: <#T##Double#>, mealType: <#T##String#>, niacin: <#T##Double#>, riboflavin: <#T##Double#>, thiamin: <#T##Double#>, vitaminA: <#T##Double#>, vitaminB6: <#T##Double#>, existing: <#T##CDFood?#>)
+          
             if let navController = self.navigationController {
                 navController.popViewController(animated: true)
             }
