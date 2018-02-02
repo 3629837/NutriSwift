@@ -25,6 +25,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //    }
     
     override func viewDidLoad() {
+        
 //        pickerView.delegate = self
 //        pickerView.dataSource = self
 //        pickerView.selectRow(0, inComponent: 0, animated: true)
@@ -110,10 +111,32 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let name = entryName.text!
         let weight = Double(entryWeight.text!)
         let mealType = mealText.text!
-        print(mealType)
 
-        FoodModel.sharedInstance.saveFood(name, foodWeight: 0.4, mealType: "Lunch", niacin: 00.3, riboflavin: 0.4, thiamin: 3.4, vitaminA: 2.3, vitaminB6: 1.6, existing: currentFood)
+        FoodModel.sharedInstance.saveFood(name, foodWeight: weight!, mealType: "Lunch", niacin: 00.3, riboflavin: 0.4, thiamin: 3.4, vitaminA: 2.3, vitaminB6: 1.6, existing: currentFood)
         FoodModel.sharedInstance.getFoods()
+        
+        //no items atm
+        print("whats up " + (FoodModel.sharedInstance.foodDB[0].foodName)! + " hello")
+        print("whats up " + (String)(FoodModel.sharedInstance.foodDB[0].foodWeight) + " 1st element weight")
+//        print("whats up " + (FoodModel.sharedInstance.foodDB[1].foodName)! + " hello")
+//        print("whats up " + (String)(FoodModel.sharedInstance.foodDB[1].foodWeight) + " 2nd element weight")
+//        print("whats up " + (FoodModel.sharedInstance.foodDB[2].foodName)! + " hello")
+//        print("whats up " + (String)(FoodModel.sharedInstance.foodDB[2].foodWeight) + " 3rd element weight")
+//        print("whats up " + (FoodModel.sharedInstance.foodDB[3].foodName)! + " hello")
+//         print("whats up " + (String)(FoodModel.sharedInstance.foodDB[3].foodWeight) + " 4th element weight")
+//        print("whats up " + (FoodModel.sharedInstance.foodDB[4].foodName)! + " hello")
+//         print("whats up " + (String)(FoodModel.sharedInstance.foodDB[4].foodWeight) + " 5th element weight")
+//        print("whats up " + (FoodModel.sharedInstance.foodDB[5].foodName)! + " 5th element")
+//         print("whats up " + (String)(FoodModel.sharedInstance.foodDB[5].foodWeight) + " 6th element weight")
+//        print("whats up " + (FoodModel.sharedInstance.foodDB[6].foodName)! + " 6th element")
+//         print("whats up " + (String)(FoodModel.sharedInstance.foodDB[6].foodWeight) + " 7th element weight")
+
+//         print("dis is after deletion" + (FoodModel.sharedInstance.foodDB[0].foodName)! + " hello")
+        
+        //this deletes the whole food array
+        for food in FoodModel.sharedInstance.foodDB {
+            FoodModel.sharedInstance.deleteFood(food)
+        }
         
         
         let inputtedFood = DiaryModel.get.isValidFood(foods: DiaryModel.get.foods, input: name)
@@ -182,7 +205,6 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return thisArray
     }
     
-    //
     
 }
 
