@@ -1,3 +1,6 @@
+//NDB No for standard reference (e.g non branded) go from 01001 to 93600
+//Need (Vitamin A, RAE), Thiamin, Riboflavin, Niacin, Vitamin B-6
+
 import UIKit
 
 class ApiTestNew : UIViewController {
@@ -7,12 +10,14 @@ class ApiTestNew : UIViewController {
     var foodName: String = "This is initial value"
     var nutrientName: String = "This is initial value"
     var nutrientValue: Double = -1.0
+    let nutrientsRequired = ["Vitamin A, RAE", "Thiamin", "Riboflavin", "Niacin", "Vitamin B-6"]
+    var nutrientTupleArray: [(String, Double)] = []
     let session = URLSession.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let apiUrl1 = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0"
-        let apiUrl2 = "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
+        let userInput = "potato"
+        let apiUrl1 = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=" + userInput + "&ds=Standard+Reference&sort=r&max=25&offset=0"
         
         let myOperationsQueue = OperationQueue()
         let firstSemaphore = DispatchSemaphore(value: 0)
@@ -21,15 +26,19 @@ class ApiTestNew : UIViewController {
         firstSemaphore.wait(timeout: DispatchTime.distantFuture)
         updateNDBNO(parsedJSON: parsedJSON)
         
-        let secondSemaphore = DispatchSemaphore(value: 0)
-
-        updateParsedJSON(urlString: apiUrl2, myOperationsQueue: myOperationsQueue, semaphore: secondSemaphore)
-        secondSemaphore.wait(timeout: DispatchTime.distantFuture)
-        updateNutrientInfo(parsedJSON: parsedJSON)
+        print("This is foodName: \(self.foodName) | This is foodNDBNO: \(self.foodNDBNO)")
         
-        print("This is foodName: \(self.foodName) | This is foodNDBNO: \(self.foodNDBNO) | This is nutrientName: \(self.nutrientName) | This is nutrientValue: \(self.nutrientValue)")
-//        print("This is foodName: \(self.foodName) | This is foodNDBNO: \(self.foodNDBNO)")
-//        print("This is nutrientName: \(self.nutrientName) | This is nutrientValue: \(self.nutrientValue)")
+        
+        let apiUrl2 = "https://api.nal.usda.gov/ndb/reports/?ndbno=" + self.foodNDBNO + "&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
+
+        for nutrient in nutrientsRequired {
+            let secondSemaphore = DispatchSemaphore(value: 0)
+            updateParsedJSON(urlString: apiUrl2, myOperationsQueue: myOperationsQueue, semaphore: secondSemaphore)
+            secondSemaphore.wait(timeout: DispatchTime.distantFuture)
+            updateNutrientInfo(parsedJSON: parsedJSON, targetNutrient: nutrient)
+        }
+
+        print("Nutrient0: \(self.nutrientTupleArray[0].0), \(self.nutrientTupleArray[0].1) | Nutrient1: \(self.nutrientTupleArray[1].0), \(self.nutrientTupleArray[1].1) | Nutrient2: \(self.nutrientTupleArray[2].0), \(self.nutrientTupleArray[2].1) | Nutrient3: \(self.nutrientTupleArray[3].0), \(self.nutrientTupleArray[3].1) | Nutrient4: \(self.nutrientTupleArray[4].0), \(self.nutrientTupleArray[4].1)")
     }
     
     func updateParsedJSON (urlString: String, myOperationsQueue: OperationQueue, semaphore: DispatchSemaphore) {
@@ -71,14 +80,13 @@ class ApiTestNew : UIViewController {
         }
     }
     
-    func updateNutrientInfo (parsedJSON: Any) {
+    func updateNutrientInfo (parsedJSON: Any, targetNutrient: String) {
         if let reportDict = (parsedJSON as AnyObject).value(forKey: "report") as? NSDictionary {
             let foodDict = reportDict.value(forKey: "food") as! NSDictionary
             let nutrientsArray = foodDict.value(forKey: "nutrients") as! NSArray
             var nutrientCounter = 0
-            var targetNutrient = "Riboflavin"
             while nutrientCounter < nutrientsArray.count {
-                var thisNutrientDict = nutrientsArray[nutrientCounter] as! NSDictionary
+                let thisNutrientDict = nutrientsArray[nutrientCounter] as! NSDictionary
                 if thisNutrientDict.value(forKey: "name") as! String == targetNutrient {
                     break
                 }
@@ -87,24 +95,25 @@ class ApiTestNew : UIViewController {
             
             let firstNutrientDict = nutrientsArray[nutrientCounter] as! NSDictionary
             
-            self.nutrientName = firstNutrientDict.value(forKey: "name") as! String
+            let nutrientName = firstNutrientDict.value(forKey: "name") as! String
             let strValue = firstNutrientDict.value(forKey: "value") as! String
             let unformattedValue = Double(strValue)!
             let unit = firstNutrientDict.value(forKey: "unit") as! String
-            
+            var formattedValue: Double = -1.0
             if unit == "µg" {
-                let formattedValue = unformattedValue/1000000
-                self.nutrientValue = formattedValue
+                formattedValue = unformattedValue/1000000
             }
                 
             else if unit == "mg" {
-                let formattedValue = unformattedValue/1000
-                self.nutrientValue = formattedValue
+                formattedValue = unformattedValue/1000
             }
                 
             else {
-                self.nutrientValue = unformattedValue
+                formattedValue = unformattedValue
             }
+            
+            let nutrientTuple = (nutrientName, formattedValue)
+            self.nutrientTupleArray.append(nutrientTuple)
         }
     }
 }
