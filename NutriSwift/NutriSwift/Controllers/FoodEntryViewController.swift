@@ -117,7 +117,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         //this deletes the whole food array
         for food in FoodModel.sharedInstance.foodDB {
-            //FoodModel.sharedInstance.deleteFood(food)
+    //        FoodModel.sharedInstance.deleteFood(food)
         }
         
         
@@ -144,18 +144,18 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             FoodModel.sharedInstance.saveFood(FoodModel.sharedInstance.name, foodWeight: weight!, mealType: FoodModel.sharedInstance.meal, niacin: 0, riboflavin: 0, thiamin: 0, vitaminA: 0, vitaminB6: 0, existing: self.currentFood)
             FoodModel.sharedInstance.getFoods()
-                    print("whats up " + (FoodModel.sharedInstance.foodDB[0].foodName)! + " hello")
-                    print("whats up " + (String)(FoodModel.sharedInstance.foodDB[0].foodWeight) + " 1st element weight")
-                    print("whats up " + (FoodModel.sharedInstance.foodDB[0].mealType)! + " 1st element weight")
+//                    print("whats up " + (FoodModel.sharedInstance.foodDB[0].foodName)! + " hello")
 //                    print("whats up " + (String)(FoodModel.sharedInstance.foodDB[0].foodWeight) + " 1st element weight")
-//                    print("whats up " + (FoodModel.sharedInstance.foodDB[1].foodName)! + " hello")
-//                    print("whats up " + (String)(FoodModel.sharedInstance.foodDB[1].foodWeight) + " 2nd element weight")
-//                    print("whats up " + (FoodModel.sharedInstance.foodDB[2].foodName)! + " hello")
-//                    print("whats up " + (String)(FoodModel.sharedInstance.foodDB[2].foodWeight) + " 3rd element weight")
-//                    print("whats up " + (FoodModel.sharedInstance.foodDB[3].foodName)! + " hello")
-//                     print("whats up " + (String)(FoodModel.sharedInstance.foodDB[3].foodWeight) + " 4th element weight")
-//                    print("whats up " + (FoodModel.sharedInstance.foodDB[4].foodName)! + " hello")
-            
+//                    print("whats up " + (FoodModel.sharedInstance.foodDB[0].mealType)! + " 1st element weight")
+//            print("whats up " + (FoodModel.sharedInstance.foodDB[1].foodName)! + " hello")
+//            print("whats up " + (String)(FoodModel.sharedInstance.foodDB[1].foodWeight) + " 2nd element weight")
+//            print("whats up " + (FoodModel.sharedInstance.foodDB[1].mealType)! + " 2nd element meal")
+//            print("whats up " + (FoodModel.sharedInstance.foodDB[2].foodName)! + " hello")
+//            print("whats up " + (String)(FoodModel.sharedInstance.foodDB[2].foodWeight) + " 3rd element weight")
+//            print("whats up " + (FoodModel.sharedInstance.foodDB[2].mealType)! + " 3rd element meal")
+//            print("whats up " + (FoodModel.sharedInstance.foodDB[3].foodName)! + " hello")
+//            print("whats up " + (String)(FoodModel.sharedInstance.foodDB[3].foodWeight) + " 4th element weight")
+//            print("whats up " + (FoodModel.sharedInstance.foodDB[3].mealType)! + " 4th element meal")
             
           //  DiaryModel.get.meals = self.addFood(ourNewFood: ourNewFood, mealArray: mealArray, weight: weight)
           
