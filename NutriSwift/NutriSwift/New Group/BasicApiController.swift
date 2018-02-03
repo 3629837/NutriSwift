@@ -1,21 +1,3 @@
-//
-//  MovieDetailController.swift
-//  MyMoviesSolution
-//
-//  Created by Rodney Cocker on 23/01/18.
-//  Copyright © 2018 RMIT. All rights reserved.
-//
-
-// first result is raw carrot (what we want?)
-//    https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0
-// broccoli
-//    https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=broccoli&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0
-// https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=DEMO_KEY
-// this is actual food data accessed by demo key
-
-//NDB No for standard reference (e.g non branded) go from 01001 to 93600
-//Need (Vitamin A, RAE), Thiamin, Riboflavin, Niacin, Vitamin B-6
-
 import UIKit
 
 class BasicApiController : UIViewController {
@@ -24,16 +6,19 @@ class BasicApiController : UIViewController {
     let session = URLSession.shared
     
     override func viewDidLoad() {
+        print("Start Basic Api Controller")
         super.viewDidLoad()
         let apiUrl = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0"
-        print(getParsedJSON(urlString: apiUrl))
+        print("This is myData before getParsedJSON: \(self.myData)")
+        getParsedJSON(urlString: apiUrl)
+        print("This is myData after getParsedJSON: \(self.myData)")
     }
     
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }
     
-    func getParsedJSON (urlString: String) -> Any {
+    func getParsedJSON (urlString: String) {
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
             let session = URLSession.shared
@@ -48,7 +33,22 @@ class BasicApiController : UIViewController {
                     do {
                         parsedResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
                         self.myData = parsedResult
-                        print(self.myData)
+//                        print(self.myData)
+                        
+                        
+                        // Rodney Test Code:
+//                        let parsedResult: [String: Any]?
+//
+//                        if let listDict = (parsedResult as AnyObject).value(forKey: "report") as? NSDictionary {
+//                            let itemArray = listDict.value(forKey: "food") as! NSDictionary
+//                            let firstItemDict: String = itemArray["name"] as! String
+//                            self.firstItemName = itemArray["name"] as! String
+//
+//                            print(firstItemDict)
+//                            print(self.firstItemName)
+                        
+                        
+                        
                     }
                     catch let error as NSError {
                         parsedResult = nil
@@ -60,7 +60,6 @@ class BasicApiController : UIViewController {
             })
             task.resume()
         }
-        return self.myData
     }
 
 }

@@ -26,10 +26,12 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
         if UserModel.sharedInstance.userDB.count > 0 {
-            let currentUser = UserModel.sharedInstance.userDB[0]
-            userName.text = currentUser.userName
-            age.text = String(Int(round(currentUser.userAge)))
-            gender.text = currentUser.userGender
+            if UserModel.sharedInstance.userDB[0].userAge > 0 {
+                let currentUser = UserModel.sharedInstance.userDB[0]
+                userName.text = currentUser.userName
+                age.text = String(Int(round(currentUser.userAge)))
+                gender.text = currentUser.userGender
+            }
         }
     }
     
@@ -77,15 +79,6 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-//        if textField == self.gender {
-//            self.genderPicker.isHidden = true
-//        }
-//    }
-    
-    
-    
-    
     @IBAction func saveData(_ sender: Any) {
         let profileName = userName.text!
         let profileAge = Double(age.text!)!
@@ -97,8 +90,6 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
         UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
- //       UserModel.sharedInstance.saveUser(<#T##userName: String##String#>, userAge: <#T##Double#>, userGender: <#T##String#>)
-//      print(UserModel.sharedInstance.userDB[0].userName)
         UserModel.sharedInstance.getUsers()
 
     }

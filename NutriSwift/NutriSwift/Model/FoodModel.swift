@@ -92,7 +92,7 @@ class FoodModel
     }
     
     func printFoods() {
-        print("Foods: \(foodDB)");
+//        print("Foods: \(foodDB)");
     }
     
     func deleteFood(_ food: CDFood)
