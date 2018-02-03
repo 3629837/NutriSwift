@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+import MobileCoreServices
 import CoreData
 
 class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var userModel: UserModel = UserModel.sharedInstance
+    // CAMERA FUNCTIONALITY
+    var avPlayerViewController: AVPlayerViewController!
+    var image: UIImage?
+    var movieURL: URL?
+    var lastChosenMediaType: String?
+    
+    
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var genderPicker: UIPickerView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         UserModel.sharedInstance.getUsers()
@@ -94,40 +105,57 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
     }
     
+    //****************** CAMERA FUNCTIONALITY ***************************
+    
     @IBAction func addImg(_ sender: Any) {
         pickMediaFromSource(UIImagePickerControllerSourceType.photoLibrary)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateDisplay()
+    }
+    
+    @IBAction func selectExistingPictureOrVideo(_ sender: UIButton) {
+        pickMediaFromSource(UIImagePickerControllerSourceType.photoLibrary)
+    }
+    
+    func updateDisplay() {
+        if let mediaType = lastChosenMediaType {
+            if mediaType == (kUTTypeImage as NSString) as String {
+                imageView.image = image!
+                imageView.isHidden = false
+            }
+        }
+    }
+    
     func pickMediaFromSource(_ sourceType:UIImagePickerControllerSourceType) {
-        
-        // What media types are available on the device
-        let mediaTypes =
-            UIImagePickerController.availableMediaTypes(for: sourceType)!
+        let mediaTypes = UIImagePickerController.availableMediaTypes(for: sourceType)!
         if UIImagePickerController.isSourceTypeAvailable(sourceType)
             && mediaTypes.count > 0 {
             let picker = UIImagePickerController()
-            // Display the media types avaialble on the picker
             picker.mediaTypes = mediaTypes
-            
-            // Set delegate to self for system method calls.
             picker.delegate = self
             picker.allowsEditing = true
             picker.sourceType = sourceType
-            
-            // Present the picker to the user.
             present(picker, animated: true, completion: nil)
         }
-            // Otherwise display an error message
-        else
-        {
-            let alertController = UIAlertController(title:"Error accessing media",
-                                                    message: "Unsupported media source.",
-                                                    preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "OK",
-                                         style: UIAlertActionStyle.cancel, handler: nil)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        lastChosenMediaType = info[UIImagePickerControllerMediaType] as? String
+        if let mediaType = lastChosenMediaType {
+            if mediaType == (kUTTypeImage as NSString) as String {
+                image = info[UIImagePickerControllerEditedImage] as? UIImage
+            } else if mediaType == (kUTTypeMovie as NSString) as String {
+                movieURL = info[UIImagePickerControllerMediaURL] as? URL
+            }
         }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion:nil)
     }
     
     
