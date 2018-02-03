@@ -20,6 +20,8 @@ import UIKit
 
 class apiTestController: UIViewController {
     
+    var myData: Any = ""
+    
     let session = URLSession.shared
     
     override func viewDidLoad() {
@@ -28,15 +30,15 @@ class apiTestController: UIViewController {
     
     @IBAction func onFetch(_ sender: Any) {
         
-        //        let findMovieId = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0"
-//        let findMovieId = "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
-        let findMovieId = "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
+        //        let apiUrl = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0"
+//        let apiUrl = "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
+        let apiUrl = "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
         
-        if let url = URL(string: findMovieId) {
+        if let url = URL(string: apiUrl) {
             let request = URLRequest(url: url)
             //            updateNDBNO(request)
 //            NutrientInfo(request)
-            getParsedJSON(urlString: "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU")
+            print(getParsedJSON(urlString: "https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"))
         }
     }
     
@@ -72,7 +74,7 @@ class apiTestController: UIViewController {
         task.resume()
     }
     
-    func getParsedJSON (urlString: String) {
+    func getParsedJSON (urlString: String) -> Any {
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
             let session = URLSession.shared
@@ -93,13 +95,13 @@ class apiTestController: UIViewController {
                     catch {
                         fatalError()
                     }
-                    print(ApiModel.sharedInstance.parsedData)
-                    ApiModel.sharedInstance.parsedData = "DID I CHANGE?"
+                    self.myData = parsedResult
+//                    print (self.myData)
                 }
             })
             task.resume()
         }
-        print(ApiModel.sharedInstance.parsedData)
+        return self.myData
         
     }
     
