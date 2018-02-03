@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var userModel: UserModel = UserModel.sharedInstance
     
@@ -93,5 +93,44 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         UserModel.sharedInstance.getUsers()
 
     }
+    
+    @IBAction func addImg(_ sender: Any) {
+        pickMediaFromSource(UIImagePickerControllerSourceType.photoLibrary)
+    }
+    
+    func pickMediaFromSource(_ sourceType:UIImagePickerControllerSourceType) {
+        
+        // What media types are available on the device
+        let mediaTypes =
+            UIImagePickerController.availableMediaTypes(for: sourceType)!
+        if UIImagePickerController.isSourceTypeAvailable(sourceType)
+            && mediaTypes.count > 0 {
+            let picker = UIImagePickerController()
+            // Display the media types avaialble on the picker
+            picker.mediaTypes = mediaTypes
+            
+            // Set delegate to self for system method calls.
+            picker.delegate = self
+            picker.allowsEditing = true
+            picker.sourceType = sourceType
+            
+            // Present the picker to the user.
+            present(picker, animated: true, completion: nil)
+        }
+            // Otherwise display an error message
+        else
+        {
+            let alertController = UIAlertController(title:"Error accessing media",
+                                                    message: "Unsupported media source.",
+                                                    preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "OK",
+                                         style: UIAlertActionStyle.cancel, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
 }
 

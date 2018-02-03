@@ -33,6 +33,7 @@
 		AF870DB2202471B70011844D /* apiTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF870DB1202471B70011844D /* apiTestController.swift */; };
 		AF870DB4202487BD0011844D /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF870DB3202487BD0011844D /* ApiModel.swift */; };
 		AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */; };
+		AFA09A1520259911006E6514 /* ApiTestNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA09A1420259911006E6514 /* ApiTestNew.swift */; };
 		AFA98C942019D1460011907F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA98C932019D1460011907F /* ProfileViewModel.swift */; };
 		AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB208D72018073000EF9A2A /* NutritionViewModel.swift */; };
 		AFCC47FC2025526D00FB5698 /* BasicApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC47FB2025526D00FB5698 /* BasicApiController.swift */; };
@@ -92,6 +93,7 @@
 		AF870DB1202471B70011844D /* apiTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiTestController.swift; sourceTree = "<group>"; };
 		AF870DB3202487BD0011844D /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewModel.swift; sourceTree = "<group>"; };
+		AFA09A1420259911006E6514 /* ApiTestNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTestNew.swift; sourceTree = "<group>"; };
 		AFA98C932019D1460011907F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AFB208D72018073000EF9A2A /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
 		AFCC47FB2025526D00FB5698 /* BasicApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicApiController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		AF663F412011CEEB00F47B13 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AFA09A1420259911006E6514 /* ApiTestNew.swift */,
 				AFCC47FB2025526D00FB5698 /* BasicApiController.swift */,
 				AF870DB1202471B70011844D /* apiTestController.swift */,
 				07575D9C20242F9600CB46D8 /* FoodCell.swift */,
@@ -370,6 +373,7 @@
 				AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */,
 				074C3D1C2021909900E8389C /* CDFood+CoreDataProperties.swift in Sources */,
 				19754C0C20193D3A00A2121E /* ExploreInfoViewController.swift in Sources */,
+				AFA09A1520259911006E6514 /* ApiTestNew.swift in Sources */,
 				074C3D1E2021960E00E8389C /* FoodModel.swift in Sources */,
 				AF74FC16201983FE003B07E9 /* ExploreItem.swift in Sources */,
 				AFF4EFE420184F0B0062411E /* NutritionViewController.swift in Sources */,

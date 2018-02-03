@@ -1,6 +1,18 @@
 import UIKit
 
-class BasicApiController : UIViewController {
+
+protocol Refresh{
+    func updateUI(value: Any)
+}
+
+class BasicApiController : UIViewController, Refresh {
+    
+    func updateUI(value: Any) {
+        self.myData = value
+        print(self.myData)
+    }
+    
+    
     
     var myData: Any = "This is initial value"
     let session = URLSession.shared
@@ -8,10 +20,24 @@ class BasicApiController : UIViewController {
     override func viewDidLoad() {
         print("Start Basic Api Controller")
         super.viewDidLoad()
+        
+        
         let apiUrl = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0"
-        print("This is myData before getParsedJSON: \(self.myData)")
+        print("This is myData before group: \(self.myData)")
+        
+        let group = DispatchGroup()
+        group.enter()
         getParsedJSON(urlString: apiUrl)
-        print("This is myData after getParsedJSON: \(self.myData)")
+        group.leave()
+        group.notify(queue: .main) {
+            print("This is myData after group: \(self.myData)")
+        }
+
+        
+//        let apiUrl = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0"
+//        print("This is myData before getParsedJSON: \(self.myData)")
+//        getParsedJSON(urlString: apiUrl)
+//        print("This is myData after getParsedJSON: \(self.myData)")
     }
     
     override func didReceiveMemoryWarning(){
@@ -33,20 +59,23 @@ class BasicApiController : UIViewController {
                     do {
                         parsedResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
                         self.myData = parsedResult
+//                        DispatchQueue.main.async(execute: {
+//                            self.updateUI(value: parsedResult)
+//                        })
+                        
+                        
 //                        print(self.myData)
                         
                         
-                        // Rodney Test Code:
-//                        let parsedResult: [String: Any]?
+//                        if let listDict = (parsedResult as AnyObject).value(forKey: "list") as? NSDictionary {
+//                            let itemArray = listDict.value(forKey: "item") as! NSArray
 //
-//                        if let listDict = (parsedResult as AnyObject).value(forKey: "report") as? NSDictionary {
-//                            let itemArray = listDict.value(forKey: "food") as! NSDictionary
-//                            let firstItemDict: String = itemArray["name"] as! String
-//                            self.firstItemName = itemArray["name"] as! String
+//                            let product = itemArray[0] as! [String: Any]
 //
-//                            print(firstItemDict)
-//                            print(self.firstItemName)
-                        
+//                            let productName = product["name"] as! String
+//                            DispatchQueue.main.async(execute: {
+//                                self.updateUI(value: productName)
+//                            })
                         
                         
                     }
@@ -61,6 +90,5 @@ class BasicApiController : UIViewController {
             task.resume()
         }
     }
-
 }
 

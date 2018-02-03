@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQE-1K-IK0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wkG-wV-t0i">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -116,6 +116,14 @@
                                     <outlet property="delegate" destination="ft8-cT-QbT" id="Nza-VG-kfd"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-Sz-pYV">
+                                <rect key="frame" x="178" y="15" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="addImg"/>
+                                <connections>
+                                    <action selector="addImg:" destination="ft8-cT-QbT" eventType="touchUpInside" id="vFm-ql-Cjf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -486,10 +494,10 @@
             </objects>
             <point key="canvasLocation" x="-1454" y="-152"/>
         </scene>
-        <!--Basic Api Controller-->
+        <!--Api Test New-->
         <scene sceneID="v2c-sb-P8d">
             <objects>
-                <viewController id="wkG-wV-t0i" customClass="BasicApiController" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wkG-wV-t0i" customClass="ApiTestNew" customModule="NutriSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fVW-Oj-szZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
