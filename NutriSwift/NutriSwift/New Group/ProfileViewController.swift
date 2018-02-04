@@ -21,12 +21,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     // ******
     
     var image: UIImage?
-    var movieURL: URL?
     var lastChosenMediaType: String?
-    
-    
-    
-    
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var age: UITextField!
@@ -117,8 +112,29 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         updateDisplay()
     }
     
-    @IBAction func selectExistingPictureOrVideo(_ sender: UIButton) {
+    @IBAction func addImageFromLibrary(_ sender: UIButton) {
         pickMediaFromSource(UIImagePickerControllerSourceType.photoLibrary)
+    }
+    
+    @IBAction func addImageFromCamera(_ sender: UIButton) {
+        if !UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.camera) {
+            
+            let alert = UIAlertController(title: "Error", message: "Unable to detect camera", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                
+                if let navController = self.navigationController {
+                    navController.popViewController(animated: true)
+                }
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            pickMediaFromSource(UIImagePickerControllerSourceType.camera)
+        }
     }
     
     func updateDisplay() {
@@ -147,8 +163,6 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if let mediaType = lastChosenMediaType {
             if mediaType == (kUTTypeImage as NSString) as String {
                 image = info[UIImagePickerControllerEditedImage] as? UIImage
-//                let imageChosen = image.
-                
             }
         }
         picker.dismiss(animated: true, completion: nil)
