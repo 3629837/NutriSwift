@@ -15,10 +15,19 @@ import CoreData
 class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var userModel: UserModel = UserModel.sharedInstance
+    
+    
     // CAMERA FUNCTIONALITY
     var avPlayerViewController: AVPlayerViewController!
     var managedContext : NSManagedObjectContext?
     // ******
+    
+    //*******OBSERVER********
+    // Set the initial value on the model to an empty string
+    // set init method in the Observable struct.
+    var observedText = Observable<(String, Double, String)>(value: ("", -1.0, ""))
+    @IBOutlet weak var outputLabel: UILabel!
+    //*******OBSERVER********
     
     var image: UIImage?
     var lastChosenMediaType: String?
@@ -47,9 +56,38 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     override func viewDidLoad() {
-        self.genderPicker.isHidden = true
         super.viewDidLoad()
+        self.genderPicker.isHidden = true
+        
+        
+        
+        //*******OBSERVER********
+        // function that gets called by the model
+        // remember the observedText variable here has been
+        // added to the model as being an object that wants
+        // to be notified when a change occurs in the model.
+        
+        
+//        observedText.observe { (value: -> () in
+//            self.outputLabel.text = "Hi \(userName)! Your RDI needs will be taken from the group: \(userGender) \(userAge) - 29!"
+//        }
+        
+//
+//        observedText.observe { (userName: String, userAge: Double userGender: String) -> () in
+//            self.outputLabel.text = "Hi \(userName)! Your RDI needs will be taken from the group: \(userGender) \(userAge) - 29!"
+//        }
+        
+        // Whenever the text value changes make a change in the model
+        userName.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        //*******OBSERVER********
     }
+    
+    //*******OBSERVER********
+    @objc func textDidChange() {
+        observedText.value = (userName.text!, Double(age.text!)!, gender.text!)
+    }
+    //*******OBSERVER********
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -171,8 +209,31 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion:nil)
     }
+}
+
+// *******OBERSERVER******
+
+struct Observable<T> {
     
+    // Holds a collection of objects that want to observe changes
+    // in the model
+    var observers: [(T)->()] = []
     
+    // Uses a property observer to perform an action whenever the
+    // value changes.  It calls each of the observers with the result.
+    var value: T {
+        didSet {
+            observers.forEach { $0(value) }
+        }
+    }
     
+    // Allows an object to register itself as an observer.
+    mutating func observe(observer: @escaping (T)->()) {
+        observers.append(observer)
+    }
+    
+    init (value: T) {
+        self.value = value
+    }
 }
 
