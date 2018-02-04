@@ -32,6 +32,12 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     
     override func viewDidLoad() {
+//        for meal in FoodModel.sharedInstance.foodDB1D{
+//            for food in meal {
+//                    FoodModel.sharedInstance.foodDB1D.removeAll()
+//            }
+//
+//        }
         FoodModel.sharedInstance.getFoods()
         self.pickerView.isHidden = true
         super.viewDidLoad()
@@ -106,7 +112,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func addFood(database: [CDFood])
     {
         FoodEntryViewController.foodDB = [[],[],[],[]]
-        
+
         for food in FoodModel.sharedInstance.foodDB1D {
             switch food.mealType! {
             case "Breakfast":
@@ -121,7 +127,8 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 print("failure")
             }
         }
-        
+        print("-------------")
+        print("Adding Food")
         print (String(FoodEntryViewController.foodDB[0].count) + "brekky count")
         print (String(FoodEntryViewController.foodDB[1].count) + "lumch count")
         print (String(FoodEntryViewController.foodDB[2].count) + "dinner count")
