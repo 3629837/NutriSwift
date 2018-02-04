@@ -23,6 +23,13 @@ class DiaryTableViewController: UITableViewController {
     //    var deletedObj: NSIndexPath
     
         override func viewDidLoad() {
+
+//                    if FoodModel.sharedInstance.foodDB1D.count > 0 {
+//                        for food in FoodModel.sharedInstance.foodDB1D {
+//                            FoodModel.sharedInstance.deleteFood(food)
+//                        }
+//                    }
+            
             
         super.viewDidLoad()
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)

@@ -112,7 +112,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func addFood(database: [CDFood])
     {
         FoodEntryViewController.foodDB = [[],[],[],[]]
-        
+
         for food in FoodModel.sharedInstance.foodDB1D {
             switch food.mealType! {
             case "Breakfast":

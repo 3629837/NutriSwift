@@ -67,17 +67,17 @@ class NutritionModel {
                     nutritionRDI = m19RDI
                 }
                 else {
-                    print("failure")
+                    print("failure1")
                 }
             case "Female":
                 if age >= 19 && age <= 30 {
                     nutritionRDI = f19RDI
                 }
                 else {
-                    print("failure")
+                    print("failure2")
                 }
             default:
-                print("failure")
+                print("failure3")
         }
         
         
