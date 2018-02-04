@@ -27,49 +27,34 @@ class FoodModel
     let managedContext: NSManagedObjectContext
     
     // Create a collection of objects to store in the database
-    var foodDB = [CDFood]()
+    var foodDB1D = [CDFood]()
+    
+    
+    
+    
     
     var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
     
     func getFood(_ indexPath: IndexPath) -> CDFood
     {
-       return foodDB[indexPath.row]
+        return  foodDB1D[indexPath.row]
     }
     
     // MARK: - CRUD **************************************************************
     
-    func saveFood(_ foodName: String, foodWeight: Double, mealType: String, niacin: Double, riboflavin: Double, thiamin: Double, vitaminA: Double, vitaminB6: Double, existing: CDFood?)
+    func saveFood(_ foodName: String, foodWeight: Double, mealType: String, niacin: Double, riboflavin: Double, thiamin: Double, vitaminA: Double, vitaminB6: Double)
     {
-        // Create a new managed object and insert it into the context, so it can be saved
-        // into the database
+        print("I have been called")
         let entity =  NSEntityDescription.entity(forEntityName: "CDFood",
                                                  in:managedContext)
-        
-        // Update the existing object with the data passed in from the View Controller
-//        if let _ = existing
-//        {
-//            existing!.foodName = foodName
-//            existing!.foodWeight = foodWeight
-//            existing!.mealType = mealType
-//            existing!.niacin = niacin
-//            existing!.riboflavin = riboflavin
-//            existing!.thiamin = thiamin
-//            existing!.vitaminA = vitaminA
-//            existing!.vitaminB6 = vitaminB6
-//        }
-//            // Create a new movie object and update it with the data passed in from the View Controller
-//        else
-//        {
-            // Create an object based on the Entity
-            let food = CDFood(entity: entity!, insertInto:managedContext)
-            food.foodName = foodName
-            food.foodWeight = foodWeight
-            food.mealType = mealType
-            food.niacin = niacin
-            food.riboflavin = riboflavin
-            food.vitaminA = vitaminA
-            food.vitaminB6 = vitaminB6
-//        }
+        let food = CDFood(entity: entity!, insertInto:managedContext)
+        food.foodName = foodName
+        food.foodWeight = foodWeight
+        food.mealType = mealType
+        food.niacin = niacin
+        food.riboflavin = riboflavin
+        food.vitaminA = vitaminA
+        food.vitaminB6 = vitaminB6
         
         updateDatabase()
     }
@@ -83,7 +68,7 @@ class FoodModel
             
             let results =
                 try managedContext.fetch(fetchRequest)
-            foodDB = results as! [CDFood]
+            foodDB1D = results as! [CDFood]
         }
         catch let error as NSError
         {
@@ -91,9 +76,9 @@ class FoodModel
         }
     }
     
-    func printFoods() {
-//        print("Foods: \(foodDB)");
-    }
+//    func printFoods() {
+//        print("Foods: \(foodDB1D)");
+//    }
     
     func deleteFood(_ food: CDFood)
     {
@@ -101,18 +86,18 @@ class FoodModel
         updateDatabase()
     }
     
-    func count( mealType: String ) -> Int
-    {
-        var count = 0
-        
-        for food in FoodModel.sharedInstance.foodDB {
-            if food.mealType == mealType
-            {
-                count += 1
-            }
-        }
-        return count;
-    }
+    //    func count( mealType: String ) -> Int
+    //    {
+    //        var count = 0
+    //
+    //        for food in FoodModel.sharedInstance.foodDB {
+    //            if f == mealType
+    //            {
+    //                count += 1
+    //            }
+    //        }
+    //        return count;
+    //    }
     
     
     // Save the current state of the objects in the managed context into the

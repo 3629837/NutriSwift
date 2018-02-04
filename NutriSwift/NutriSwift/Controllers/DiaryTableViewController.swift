@@ -12,13 +12,14 @@ class DiaryTableViewController: UITableViewController {
     
     var food:FoodModel = FoodModel.sharedInstance
     
+    
     override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        food.getFoods()
+        //        super.viewWillAppear(animated)
+        //        food.getFoods()
         tableView.reloadData()
     }
     
-//    var deletedObj: NSIndexPath
+    //    var deletedObj: NSIndexPath
     
     override func viewDidLoad()
     {
@@ -31,85 +32,87 @@ class DiaryTableViewController: UITableViewController {
     }
     
     
+    
     //change this
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            FoodModel.sharedInstance.deleteFood(FoodModel.sharedInstance.foodDB[indexPath.row])
-//        let cell: FoodCell = tableView.dequeueReusableCell(withIdentifier: "diaryRow", for: indexPath) as! FoodCell
-//       self.tableView.deleteRows(at: [indexPath], with: .automatic)
-//            
-////            let section = indexPath.section
-////            let row = indexPath.row
-////            self.catNames.remove(at: indexPath.row)
-////            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-//
-//          //  DiaryModel.get.meals[section].remove(at: row)
-//         //   self.tableView.deleteRows(at: [indexPath], with: .automatic)
-////            var count = 0
-////            for food in FoodModel.sharedInstance.foodDB {
-////                if food.mealType == FoodModel.sharedInstance.sectionNames[indexPath.section] && count < indexPath.row + 1
-////                {
-//////                    cell.foodName.text = food.foodName!
-//////                    cell.foodWeight.text = String(food.foodWeight)
-////                    FoodModel.sharedInstance.sectionNames[row].remove(at: row)
-////                    FoodModel.sharedInstance.deleteFood(<#T##food: CDFood##CDFood#>)
-////                    count += 1
-////                }
-////            }
-//
-//
-////
-////           food.deleteFood(food.foodDB[indexPath.row])
-////            food.foodDB.remove(at: indexPath.row)
-////            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-//        }
-//    }
+    //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete {
+    //            FoodModel.sharedInstance.deleteFood(FoodModel.sharedInstance.foodDB[indexPath.row])
+    //        let cell: FoodCell = tableView.dequeueReusableCell(withIdentifier: "diaryRow", for: indexPath) as! FoodCell
+    //       self.tableView.deleteRows(at: [indexPath], with: .automatic)
+    //
+    ////            let section = indexPath.section
+    ////            let row = indexPath.row
+    ////            self.catNames.remove(at: indexPath.row)
+    ////            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+    //
+    //          //  DiaryModel.get.meals[section].remove(at: row)
+    //         //   self.tableView.deleteRows(at: [indexPath], with: .automatic)
+    ////            var count = 0
+    ////            for food in FoodModel.sharedInstance.foodDB {
+    ////                if food.mealType == FoodModel.sharedInstance.sectionNames[indexPath.section] && count < indexPath.row + 1
+    ////                {
+    //////                    cell.foodName.text = food.foodName!
+    //////                    cell.foodWeight.text = String(food.foodWeight)
+    ////                    FoodModel.sharedInstance.sectionNames[row].remove(at: row)
+    ////                    FoodModel.sharedInstance.deleteFood(<#T##food: CDFood##CDFood#>)
+    ////                    count += 1
+    ////                }
+    ////            }
+    //
+    //
+    ////
+    ////           food.deleteFood(food.foodDB[indexPath.row])
+    ////            food.foodDB.remove(at: indexPath.row)
+    ////            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+    //        }
+    //    }
     
     
-//    override func tableView(_ tableView: UITableView,canEditRowAt indexPath: IndexPath) -> Bool
-//    {
-//        return true
-//    }
+    //    override func tableView(_ tableView: UITableView,canEditRowAt indexPath: IndexPath) -> Bool
+    //    {
+    //        return true
+    //    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        //1return DiaryModel.get.sectionNames.count
+        
         return FoodModel.sharedInstance.sectionNames.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
-        //1return DiaryModel.get.sectionNames[sectionIndex]
+        
         return FoodModel.sharedInstance.sectionNames[sectionIndex]
-        //return food.foodDB.count
+        
     }
     
     @IBAction func AddMeal(_ sender: UIButton) {
-//        print("Going to FoodEntry")
+        
+        //        print("Going to FoodEntry")
     }
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-    //    return DiaryModel.get.meals[sectionIndex].count
         
-        // breakfast section
+        //  breakfast section
         if sectionIndex == 0
         {
-            return food.count(mealType: "Breakfast")
+            return FoodEntryViewController.foodDB[0].count
         }
-
-        //lunch section
+            
+            //lunch section
         else if sectionIndex == 1
         {
-            return food.count(mealType: "Lunch")
+            return FoodEntryViewController.foodDB[1].count
         }
-
-        //dinner section
+            
+            //dinner section
         else if sectionIndex == 2
         {
-            return food.count(mealType: "Dinner")
+            return FoodEntryViewController.foodDB[2].count
         }
-
-        //snacks sections
+            
+            //snacks sections
         else {
-            return food.count(mealType: "Snacks")
+            return FoodEntryViewController.foodDB[3].count
         }
         
     }
@@ -118,53 +121,14 @@ class DiaryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FoodCell = tableView.dequeueReusableCell(withIdentifier: "diaryRow", for: indexPath) as! FoodCell
         
-//        let foodName = FoodModel.sharedInstance.foodDB[indexPath.row].foodName
-//        let foodMeal = FoodModel.sharedInstance.foodDB[indexPath.row].mealType
-        //  let food = FoodModel.sharedInstance.foodDB[section][row]
+        let mealType = indexPath.section
+        let food = indexPath.row
         
+        cell.foodName.text = FoodEntryViewController.foodDB[mealType][food].foodName
+        cell.foodWeight.text = String(FoodEntryViewController.foodDB[mealType][food].foodWeight)
         
-        print("Section: \(indexPath.section) Row: \(indexPath.row) FoodNameFromFoodDB: \(String(describing: FoodModel.sharedInstance.foodDB[indexPath.row].foodName))")
-
-        let food: CDFood = FoodModel.sharedInstance.foodDB[indexPath.row]
-        
-        
-//        for section in
-//        {
-    //         if FoodModel.sharedInstance.meal == FoodModel.sharedInstance.sectionNames[sectionIndex]
-    //        {
-    //              cell.foodName.text = food.foodName!
-    //        }
-//    }
-        
-//        cell.foodName.text = food.foodName!
-//        cell.foodWeight.text = String(food.foodWeight)
-
-        var count = 0
-        for food in FoodModel.sharedInstance.foodDB {
-            if food.mealType == FoodModel.sharedInstance.sectionNames[indexPath.section] && count < indexPath.row + 1
-            {
-                cell.foodName.text = food.foodName!
-                cell.foodWeight.text = String(food.foodWeight)
-                count += 1
-            }
-         }
-        
-        
-//        func getFood(_ indexPath: IndexPath) -> CDFood
-//        {
-//            return foodDB[indexPath.row]
-//        }
-        
-        //labels access the foodEntry array to get the foodName: weight(g) dict entries for each section/row
-        //let foodName = cell.viewWithTag(101) as! UILabel
-     //   foodName.text = DiaryModel.get.meals[sectionIndex][row].foodName
-       // foodName.text = (String)(describing: food.getFood(row))
-        //cell. .text = FoodModel.sharedInstance.foodDB[indexPath.row]
-      //  foodName.text = 
-        //let foodWeight = cell.viewWithTag(102) as! UILabel
-        //let weight = round(10*DiaryModel.get.meals[sectionIndex][row].foodWeight)/10
-        //foodWeight.text = String(describing: weight) + "g"
         return cell
     }
-
+    
 }
+
