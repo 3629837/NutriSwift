@@ -30,9 +30,6 @@ class FoodModel
     var foodDB1D = [CDFood]()
     
     
-    
-    
-    
     var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
     
     func getFood(_ indexPath: IndexPath) -> CDFood
@@ -76,9 +73,6 @@ class FoodModel
         }
     }
     
-//    func printFoods() {
-//        print("Foods: \(foodDB1D)");
-//    }
     
     func deleteFood(_ food: CDFood)
     {
@@ -86,19 +80,7 @@ class FoodModel
         updateDatabase()
     }
     
-    //    func count( mealType: String ) -> Int
-    //    {
-    //        var count = 0
-    //
-    //        for food in FoodModel.sharedInstance.foodDB {
-    //            if f == mealType
-    //            {
-    //                count += 1
-    //            }
-    //        }
-    //        return count;
-    //    }
-    
+
     
     // Save the current state of the objects in the managed context into the
     // database.
