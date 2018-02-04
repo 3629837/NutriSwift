@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blankProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="KR4-vL-CNK">
-                                <rect key="frame" x="137" y="53.666666666666657" width="140" height="140"/>
+                                <rect key="frame" x="137" y="29" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="JWD-fF-Z3R"/>
                                     <constraint firstAttribute="height" constant="140" id="PGG-zd-jYA"/>
@@ -117,12 +117,17 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-Sz-pYV">
-                                <rect key="frame" x="178" y="15" width="59" height="30"/>
+                                <rect key="frame" x="125" y="231" width="164" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="addImg"/>
+                                <state key="normal" title="Add Image From Library"/>
                                 <connections>
                                     <action selector="addImg:" destination="ft8-cT-QbT" eventType="touchUpInside" id="vFm-ql-Cjf"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJk-xv-3z9">
+                                <rect key="frame" x="122" y="193" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Image From Camera"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +135,7 @@
                             <constraint firstItem="A8B-EZ-C9l" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="4lc-fJ-3OC"/>
                             <constraint firstItem="A8B-EZ-C9l" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="1.75" id="664-XS-zXn"/>
                             <constraint firstItem="djF-LA-LQM" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="LGB-Fz-Y6e"/>
-                            <constraint firstItem="KR4-vL-CNK" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="0.35" id="Lzd-2j-ghL"/>
+                            <constraint firstItem="KR4-vL-CNK" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="0.28" id="Lzd-2j-ghL"/>
                             <constraint firstItem="djF-LA-LQM" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="0.85" id="NQj-cZ-mUn"/>
                             <constraint firstItem="dSE-z8-DcP" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="bhz-Es-77O"/>
                             <constraint firstItem="KR4-vL-CNK" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="fVo-mz-ciU"/>

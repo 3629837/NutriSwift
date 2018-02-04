@@ -131,8 +131,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func pickMediaFromSource(_ sourceType:UIImagePickerControllerSourceType) {
         let mediaTypes = UIImagePickerController.availableMediaTypes(for: sourceType)!
-        if UIImagePickerController.isSourceTypeAvailable(sourceType)
-            && mediaTypes.count > 0 {
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) && mediaTypes.count > 0 {
             let picker = UIImagePickerController()
             picker.mediaTypes = mediaTypes
             picker.delegate = self
@@ -147,8 +146,8 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if let mediaType = lastChosenMediaType {
             if mediaType == (kUTTypeImage as NSString) as String {
                 image = info[UIImagePickerControllerEditedImage] as? UIImage
-            } else if mediaType == (kUTTypeMovie as NSString) as String {
-                movieURL = info[UIImagePickerControllerMediaURL] as? URL
+//                let imageChosen = image.
+                
             }
         }
         picker.dismiss(animated: true, completion: nil)
