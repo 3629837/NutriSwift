@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blankProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="KR4-vL-CNK">
-                                <rect key="frame" x="137" y="29" width="140" height="140"/>
+                                <rect key="frame" x="137" y="17.666666666666671" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="JWD-fF-Z3R"/>
                                     <constraint firstAttribute="height" constant="140" id="PGG-zd-jYA"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="djF-LA-LQM">
-                                <rect key="frame" x="82" y="283" width="250" height="35"/>
+                                <rect key="frame" x="82" y="259" width="250" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H8-Sb-sqh">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="35"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cGQ-xw-5Ow">
-                                <rect key="frame" x="82" y="389" width="250" height="35"/>
+                                <rect key="frame" x="82" y="371.33333333333331" width="250" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8g-Af-PLc">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="35"/>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dSE-z8-DcP">
-                                <rect key="frame" x="82" y="438.66666666666669" width="250" height="35"/>
+                                <rect key="frame" x="82" y="424.33333333333331" width="250" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWm-Vh-d2g">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="35"/>
@@ -116,31 +116,33 @@
                                     <outlet property="delegate" destination="ft8-cT-QbT" id="Nza-VG-kfd"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-Sz-pYV">
-                                <rect key="frame" x="125" y="231" width="164" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-Sz-pYV">
+                                <rect key="frame" x="125" y="205.33333333333334" width="164" height="30"/>
                                 <state key="normal" title="Add Image From Library"/>
                                 <connections>
-                                    <action selector="addImg:" destination="ft8-cT-QbT" eventType="touchUpInside" id="vFm-ql-Cjf"/>
+                                    <action selector="selectExistingPictureOrVideo:" destination="ft8-cT-QbT" eventType="touchUpInside" id="rJa-iP-AeX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJk-xv-3z9">
-                                <rect key="frame" x="122" y="193" width="170" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJk-xv-3z9">
+                                <rect key="frame" x="122" y="165.66666666666666" width="170" height="30"/>
                                 <state key="normal" title="Add Image From Camera"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2rd-Sz-pYV" firstAttribute="top" secondItem="OJk-xv-3z9" secondAttribute="bottom" multiplier="1.05" id="1ng-ya-t3Y"/>
                             <constraint firstItem="A8B-EZ-C9l" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="4lc-fJ-3OC"/>
                             <constraint firstItem="A8B-EZ-C9l" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="1.75" id="664-XS-zXn"/>
                             <constraint firstItem="djF-LA-LQM" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="LGB-Fz-Y6e"/>
-                            <constraint firstItem="KR4-vL-CNK" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="0.28" id="Lzd-2j-ghL"/>
-                            <constraint firstItem="djF-LA-LQM" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="0.85" id="NQj-cZ-mUn"/>
+                            <constraint firstItem="KR4-vL-CNK" firstAttribute="top" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="0.05" id="Lzd-2j-ghL"/>
+                            <constraint firstItem="djF-LA-LQM" firstAttribute="top" secondItem="2rd-Sz-pYV" secondAttribute="bottom" multiplier="1.1" id="NQj-cZ-mUn"/>
+                            <constraint firstItem="OJk-xv-3z9" firstAttribute="top" secondItem="KR4-vL-CNK" secondAttribute="bottom" multiplier="1.05" id="UVh-8a-4PS"/>
+                            <constraint firstItem="2rd-Sz-pYV" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="YpO-Ak-ncL"/>
                             <constraint firstItem="dSE-z8-DcP" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="bhz-Es-77O"/>
                             <constraint firstItem="KR4-vL-CNK" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="fVo-mz-ciU"/>
-                            <constraint firstItem="cGQ-xw-5Ow" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="1.15" id="kND-Pm-4me"/>
-                            <constraint firstItem="dSE-z8-DcP" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="1.29" id="m3j-Tr-Zfd"/>
+                            <constraint firstItem="OJk-xv-3z9" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="fm2-gh-qsw"/>
+                            <constraint firstItem="cGQ-xw-5Ow" firstAttribute="top" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="1.05" id="kND-Pm-4me"/>
+                            <constraint firstItem="dSE-z8-DcP" firstAttribute="centerY" secondItem="t7x-GH-KUN" secondAttribute="centerY" multiplier="1.25" id="m3j-Tr-Zfd"/>
                             <constraint firstItem="cGQ-xw-5Ow" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="rF3-25-jmS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t7x-GH-KUN"/>

@@ -17,9 +17,14 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var userModel: UserModel = UserModel.sharedInstance
     // CAMERA FUNCTIONALITY
     var avPlayerViewController: AVPlayerViewController!
+    var managedContext : NSManagedObjectContext?
+    // ******
+    
     var image: UIImage?
     var movieURL: URL?
     var lastChosenMediaType: String?
+    
+    
     
     
     
@@ -106,10 +111,6 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     //****************** CAMERA FUNCTIONALITY ***************************
-    
-    @IBAction func addImg(_ sender: Any) {
-        pickMediaFromSource(UIImagePickerControllerSourceType.photoLibrary)
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

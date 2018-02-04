@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  NutriSwift
 //
-//  Created by Hayden Farrier on 1/30/18.
+//  Created by Hayden Farrier on 2/4/18.
 //  Copyright © 2018 Hayden Farrier. All rights reserved.
 //
 //

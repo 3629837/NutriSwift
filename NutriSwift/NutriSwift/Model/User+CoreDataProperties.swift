@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  NutriSwift
 //
-//  Created by Hayden Farrier on 1/30/18.
+//  Created by Hayden Farrier on 2/4/18.
 //  Copyright © 2018 Hayden Farrier. All rights reserved.
 //
 //
@@ -17,8 +17,9 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var userName: String?
     @NSManaged public var userAge: Double
     @NSManaged public var userGender: String?
+    @NSManaged public var userName: String?
+    @NSManaged public var userImage: NSData?
 
 }
