@@ -27,14 +27,25 @@ class FoodModel
     let managedContext: NSManagedObjectContext
     
     // Create a collection of objects to store in the database
-    var foodDB1D = [CDFood]()
+    var foodDBUnsorted = [CDFood]()
     
+    var foodDBSorted : [[CDFood]] =
+        [
+            [
+            ],
+            [
+            ],
+            [
+            ],
+            [
+            ]
+    ]
     
     var sectionNames = ["Breakfast", "Lunch", "Dinner", "Snacks"]
     
     func getFood(_ indexPath: IndexPath) -> CDFood
     {
-        return  foodDB1D[indexPath.row]
+        return  foodDBUnsorted[indexPath.row]
     }
     
     // MARK: - CRUD **************************************************************
@@ -65,7 +76,7 @@ class FoodModel
             
             let results =
                 try managedContext.fetch(fetchRequest)
-            foodDB1D = results as! [CDFood]
+            foodDBUnsorted = results as! [CDFood]
         }
         catch let error as NSError
         {
@@ -95,6 +106,30 @@ class FoodModel
             print("Could not save \(error), \(error.userInfo)")
         }
     }
+    
+    func populateFoodDB()
+    {
+        self.foodDBSorted = [[],[],[],[]]
+        
+        for food in FoodModel.sharedInstance.foodDBUnsorted {
+            switch food.mealType! {
+            case "Breakfast":
+                self.foodDBSorted[0].append(food)
+            case "Lunch":
+                self.foodDBSorted[1].append(food)
+            case "Dinner":
+                self.foodDBSorted[2].append(food)
+            case "Snacks":
+                self.foodDBSorted[3].append(food)
+            default:
+                print("failure populateFoodDB")
+            }
+        }
+        
+    }
+    
+    
+    
     
 }
 

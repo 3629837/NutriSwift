@@ -23,27 +23,20 @@ class DiaryTableViewController: UITableViewController {
             
         }
     
-    //    var deletedObj: NSIndexPath
-    
         override func viewDidLoad() {
-
-//                    if FoodModel.sharedInstance.foodDB1D.count > 0 {
-//                        for food in FoodModel.sharedInstance.foodDB1D {
-//                            FoodModel.sharedInstance.deleteFood(food)
-//                        }
-//                    }
+            FoodModel.sharedInstance.getFoods()
+            tableView.reloadData()
+            super.viewDidLoad()
             
-//                                if FoodModel.sharedInstance.foodDB1D.count > 0 {
-//                                    for food in FoodModel.sharedInstance.foodDB1D {
-//                                        print(FoodModel.sharedInstance.foodDB1D)
-//                                    }
-//                                }
-              FoodModel.sharedInstance.getFoods()
-                    tableView.reloadData()
-        super.viewDidLoad()
-
-        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
-                        tableView.reloadData()
+//            for food in FoodModel.sharedInstance.foodDBUnsorted {
+//                FoodModel.sharedInstance.deleteFood(food)
+//            }
+//            FoodModel.sharedInstance.getFoods()
+            
+            FoodModel.sharedInstance.populateFoodDB()
+            
+            self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+            tableView.reloadData()
             
         }
     
@@ -60,75 +53,51 @@ class DiaryTableViewController: UITableViewController {
                 let section = indexPath.section
                 let row = indexPath.row
                 
-                let selectedFood = FoodEntryViewController.foodDB[section][row]
-                //this is right
+                let selectedFood = FoodModel.sharedInstance.foodDBSorted[section][row]
+
                 print(String(describing: selectedFood))
                
                 
-                for foodCD in FoodModel.sharedInstance.foodDB1D {
+                for foodCD in FoodModel.sharedInstance.foodDBUnsorted {
                     if selectedFood == foodCD {
                         print(String(describing: selectedFood) + "selected Food")
                         print(String(describing: foodCD) + "foodCD")
-//                         tableView.beginUpdates()
-//                                                print(String(describing: FoodModel.sharedInstance.foodDB1D[row].foodName) + " this will be deleted from  foodDB1D")
-//                        for meal in FoodEntryViewController.foodDB{
-//
-//                        }
-                     //   FoodModel.sharedInstance.deleteFood(FoodModel.sharedInstance.foodDB1D[section])
-                        FoodModel.sharedInstance.deleteFood(selectedFood)
-                        for meal in FoodEntryViewController.foodDB{
-                            for food in meal {
-                                print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
-                            }
-                        }
-//                        print(String(describing: FoodModel.sharedInstance.foodDB1D[row].foodName) + " this is deleted from  foodDB1D")
-                      //  let this = FoodModel.sharedInstance.foodDB1D.remove(at: indexPath.row)
-                     //   print(this)
-                        
-                        print("after foodDB1D removal")
-                        for meal in FoodEntryViewController.foodDB{
-                            for food in meal {
-                                print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
-                            }
-                        }
-                        
-//                        FoodModel.sharedInstance.deleteFood(foodCD)
-//                        print("before deleting foodDB")
-//                                print (String(FoodEntryViewController.foodDB[0].count) + "brekky count")
-//                                print (String(FoodEntryViewController.foodDB[1].count) + "lumch count")
-//                                print (String(FoodEntryViewController.foodDB[2].count) + "dinner count")
-//                                print (String(FoodEntryViewController.foodDB[3].count) + "snacks count")
 
-//                         tableView.endUpdates()
+                        FoodModel.sharedInstance.deleteFood(selectedFood)
+                        for meal in FoodModel.sharedInstance.foodDBSorted {
+                            for food in meal {
+                                print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
+                            }
+                        }
+
+                        
+                        print("after foodDBUnsorted removal")
+                        for meal in FoodModel.sharedInstance.foodDBSorted {
+                            for food in meal {
+                                print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
+                            }
+                        }
+                        
                     }
                 }
-//                tableView.beginUpdates()
-                FoodEntryViewController.foodDB[section].remove(at: row)
+
+                FoodModel.sharedInstance.foodDBSorted[section].remove(at: row)
                 print("after foodDB removal")
-                for meal in FoodEntryViewController.foodDB{
+                for meal in FoodModel.sharedInstance.foodDBSorted {
                     for food in meal {
                         print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
                     }
                 }
-                print("------------------------")
-                print("after deleting foodDB")
-                print (String(FoodEntryViewController.foodDB[0].count) + " brekky count")
-                print (String(FoodEntryViewController.foodDB[1].count) + " lunch count")
-                print (String(FoodEntryViewController.foodDB[2].count) + " dinner count")
-                print (String(FoodEntryViewController.foodDB[3].count) + " snacks count")
-                for meal in FoodEntryViewController.foodDB{
+
+                for meal in FoodModel.sharedInstance.foodDBSorted {
                     for food in meal {
                         print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
                     }
                 }
-//                FoodModel.sharedInstance.deleteFood(FoodEntryViewController.foodDB[section].remove(at: row))
-//                tableView.reloadData()
-//                tableView.endUpdates()
-                
-//                tableView.beginUpdates()
+
+
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.reloadData()
-//                tableView.endUpdates()
                 
             }
         }
@@ -157,27 +126,23 @@ class DiaryTableViewController: UITableViewController {
     
         override func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
         
-            //  breakfast section
             if sectionIndex == 0
             {
-                return FoodEntryViewController.foodDB[0].count
+                return FoodModel.sharedInstance.foodDBSorted[0].count
             }
                 
-                //lunch section
             else if sectionIndex == 1
             {
-                return FoodEntryViewController.foodDB[1].count
+                return FoodModel.sharedInstance.foodDBSorted[1].count
             }
                 
-                //dinner section
             else if sectionIndex == 2
             {
-                return FoodEntryViewController.foodDB[2].count
+                return FoodModel.sharedInstance.foodDBSorted[2].count
             }
-                
-                //snacks sections
+      
             else {
-                return FoodEntryViewController.foodDB[3].count
+                return FoodModel.sharedInstance.foodDBSorted[3].count
             }
             
         }
@@ -189,8 +154,8 @@ class DiaryTableViewController: UITableViewController {
             let mealType = indexPath.section
             let food = indexPath.row
             
-            cell.foodName.text = FoodEntryViewController.foodDB[mealType][food].foodName
-            cell.foodWeight.text = String(FoodEntryViewController.foodDB[mealType][food].foodWeight)
+            cell.foodName.text = FoodModel.sharedInstance.foodDBSorted[mealType][food].foodName
+            cell.foodWeight.text = String(FoodModel.sharedInstance.foodDBSorted[mealType][food].foodWeight)
             
             return cell
     }

@@ -21,7 +21,7 @@ class NutritionViewController: UITableViewController {
             NutritionModel.get.nutritionRDI = NutritionModel.get.getRDIGroup (user: UserModel.sharedInstance.userDB[0], m19RDI: NutritionModel.get.m19nutritionRDI, f19RDI: NutritionModel.get.f19nutritionRDI)
         }
 //        NutritionModel.get.updateNutrition(meals: DiaryModel.get.meals, nutritionRDI: NutritionModel.get.nutritionRDI)
-        NutritionModel.get.updateNutrition(meals: FoodEntryViewController.foodDB, nutritionRDI: NutritionModel.get.nutritionRDI)
+        NutritionModel.get.updateNutrition(meals: FoodModel.sharedInstance.foodDBSorted, nutritionRDI: NutritionModel.get.nutritionRDI)
         
         tableView.reloadData()
     }
