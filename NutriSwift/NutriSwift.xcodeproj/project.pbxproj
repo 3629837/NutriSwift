@@ -29,6 +29,8 @@
 		AF802CB5200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */; };
 		AFA27B842026C00500B01113 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA27B822026C00500B01113 /* User+CoreDataClass.swift */; };
 		AFA27B852026C00500B01113 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA27B832026C00500B01113 /* User+CoreDataProperties.swift */; };
+		AFAE3D862028653D0042EBA1 /* NutriSwiftTests5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAE3D852028653D0042EBA1 /* NutriSwiftTests5.swift */; };
+		AFAE3D8E202865690042EBA1 /* ProfileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAE3D8D202865690042EBA1 /* ProfileTest.swift */; };
 		AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB208D72018073000EF9A2A /* NutritionViewModel.swift */; };
 		AFEB652020202244005589A5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB651F20202244005589A5 /* UserModel.swift */; };
 		AFF4EFE420184F0B0062411E /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4EFE320184F0B0062411E /* NutritionViewController.swift */; };
@@ -45,6 +47,20 @@
 			remoteInfo = NutriSwift;
 		};
 		AF802CB1200C72470085976F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF802C86200C72470085976F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF802C8D200C72470085976F;
+			remoteInfo = NutriSwift;
+		};
+		AFAE3D7A202864B60042EBA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF802C86200C72470085976F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF802C8D200C72470085976F;
+			remoteInfo = NutriSwift;
+		};
+		AFAE3D882028653D0042EBA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF802C86200C72470085976F /* Project object */;
 			proxyType = 1;
@@ -81,6 +97,12 @@
 		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA27B822026C00500B01113 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFA27B832026C00500B01113 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFAE3D75202864B60042EBA1 /* NutriSwift Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriSwift Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAE3D79202864B60042EBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAE3D832028653D0042EBA1 /* NutriSwiftTests5.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftTests5.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAE3D852028653D0042EBA1 /* NutriSwiftTests5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftTests5.swift; sourceTree = "<group>"; };
+		AFAE3D872028653D0042EBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAE3D8D202865690042EBA1 /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
 		AFB208D72018073000EF9A2A /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
 		AFEB651F20202244005589A5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AFF4EFE320184F0B0062411E /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NutritionViewController.swift; path = NutriSwift/Controllers/NutritionViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -104,6 +126,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AF802CAD200C72470085976F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAE3D72202864B60042EBA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAE3D802028653D0042EBA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,6 +179,8 @@
 				AF802C90200C72470085976F /* NutriSwift */,
 				AF802CA8200C72470085976F /* NutriSwiftTests */,
 				AF802CB3200C72470085976F /* NutriSwiftUITests */,
+				AFAE3D76202864B60042EBA1 /* NutriSwift Unit Tests */,
+				AFAE3D842028653D0042EBA1 /* NutriSwiftTests5 */,
 				AF802C8F200C72470085976F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +191,8 @@
 				AF802C8E200C72470085976F /* NutriSwift.app */,
 				AF802CA5200C72470085976F /* NutriSwiftTests.xctest */,
 				AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */,
+				AFAE3D75202864B60042EBA1 /* NutriSwift Unit Tests.xctest */,
+				AFAE3D832028653D0042EBA1 /* NutriSwiftTests5.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +246,24 @@
 				AFEB651F20202244005589A5 /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFAE3D76202864B60042EBA1 /* NutriSwift Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFAE3D8D202865690042EBA1 /* ProfileTest.swift */,
+				AFAE3D79202864B60042EBA1 /* Info.plist */,
+			);
+			path = "NutriSwift Unit Tests";
+			sourceTree = "<group>";
+		};
+		AFAE3D842028653D0042EBA1 /* NutriSwiftTests5 */ = {
+			isa = PBXGroup;
+			children = (
+				AFAE3D852028653D0042EBA1 /* NutriSwiftTests5.swift */,
+				AFAE3D872028653D0042EBA1 /* Info.plist */,
+			);
+			path = NutriSwiftTests5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +322,42 @@
 			productReference = AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AFAE3D74202864B60042EBA1 /* NutriSwift Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFAE3D7E202864B60042EBA1 /* Build configuration list for PBXNativeTarget "NutriSwift Unit Tests" */;
+			buildPhases = (
+				AFAE3D71202864B60042EBA1 /* Sources */,
+				AFAE3D72202864B60042EBA1 /* Frameworks */,
+				AFAE3D73202864B60042EBA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFAE3D7B202864B60042EBA1 /* PBXTargetDependency */,
+			);
+			name = "NutriSwift Unit Tests";
+			productName = "NutriSwift Unit Tests";
+			productReference = AFAE3D75202864B60042EBA1 /* NutriSwift Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFAE3D822028653D0042EBA1 /* NutriSwiftTests5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFAE3D8A2028653D0042EBA1 /* Build configuration list for PBXNativeTarget "NutriSwiftTests5" */;
+			buildPhases = (
+				AFAE3D7F2028653D0042EBA1 /* Sources */,
+				AFAE3D802028653D0042EBA1 /* Frameworks */,
+				AFAE3D812028653D0042EBA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFAE3D892028653D0042EBA1 /* PBXTargetDependency */,
+			);
+			name = NutriSwiftTests5;
+			productName = NutriSwiftTests5;
+			productReference = AFAE3D832028653D0042EBA1 /* NutriSwiftTests5.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,6 +382,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = AF802C8D200C72470085976F;
 					};
+					AFAE3D74202864B60042EBA1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF802C8D200C72470085976F;
+					};
+					AFAE3D822028653D0042EBA1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF802C8D200C72470085976F;
+					};
 				};
 			};
 			buildConfigurationList = AF802C89200C72470085976F /* Build configuration list for PBXProject "NutriSwift" */;
@@ -306,6 +410,8 @@
 				AF802C8D200C72470085976F /* NutriSwift */,
 				AF802CA4200C72470085976F /* NutriSwiftTests */,
 				AF802CAF200C72470085976F /* NutriSwiftUITests */,
+				AFAE3D74202864B60042EBA1 /* NutriSwift Unit Tests */,
+				AFAE3D822028653D0042EBA1 /* NutriSwiftTests5 */,
 			);
 		};
 /* End PBXProject section */
@@ -333,6 +439,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1940E28C2019D726002D8484 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAE3D73202864B60042EBA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAE3D812028653D0042EBA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +503,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFAE3D71202864B60042EBA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAE3D8E202865690042EBA1 /* ProfileTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAE3D7F2028653D0042EBA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAE3D862028653D0042EBA1 /* NutriSwiftTests5.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -395,6 +531,16 @@
 			isa = PBXTargetDependency;
 			target = AF802C8D200C72470085976F /* NutriSwift */;
 			targetProxy = AF802CB1200C72470085976F /* PBXContainerItemProxy */;
+		};
+		AFAE3D7B202864B60042EBA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF802C8D200C72470085976F /* NutriSwift */;
+			targetProxy = AFAE3D7A202864B60042EBA1 /* PBXContainerItemProxy */;
+		};
+		AFAE3D892028653D0042EBA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF802C8D200C72470085976F /* NutriSwift */;
+			targetProxy = AFAE3D882028653D0042EBA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -596,6 +742,66 @@
 			};
 			name = Release;
 		};
+		AFAE3D7C202864B60042EBA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NutriSwift Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "afesfr.NutriSwift-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriSwift.app/NutriSwift";
+			};
+			name = Debug;
+		};
+		AFAE3D7D202864B60042EBA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NutriSwift Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "afesfr.NutriSwift-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriSwift.app/NutriSwift";
+			};
+			name = Release;
+		};
+		AFAE3D8B2028653D0042EBA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwiftTests5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = afesfr.NutriSwiftTests5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriSwift.app/NutriSwift";
+			};
+			name = Debug;
+		};
+		AFAE3D8C2028653D0042EBA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NutriSwiftTests5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = afesfr.NutriSwiftTests5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriSwift.app/NutriSwift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -631,6 +837,24 @@
 			buildConfigurations = (
 				AF802CC0200C72470085976F /* Debug */,
 				AF802CC1200C72470085976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAE3D7E202864B60042EBA1 /* Build configuration list for PBXNativeTarget "NutriSwift Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAE3D7C202864B60042EBA1 /* Debug */,
+				AFAE3D7D202864B60042EBA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAE3D8A2028653D0042EBA1 /* Build configuration list for PBXNativeTarget "NutriSwiftTests5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAE3D8B2028653D0042EBA1 /* Debug */,
+				AFAE3D8C2028653D0042EBA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
