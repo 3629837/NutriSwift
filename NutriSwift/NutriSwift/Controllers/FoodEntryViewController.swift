@@ -30,6 +30,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             ]
     ]
     
+
     
     override func viewDidLoad() {
 //        for meal in FoodModel.sharedInstance.foodDB1D{
@@ -129,10 +130,15 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         print("-------------")
         print("Adding Food")
-        print (String(FoodEntryViewController.foodDB[0].count) + "brekky count")
-        print (String(FoodEntryViewController.foodDB[1].count) + "lumch count")
-        print (String(FoodEntryViewController.foodDB[2].count) + "dinner count")
-        print (String(FoodEntryViewController.foodDB[3].count) + "snacks count")
+        print (String(FoodEntryViewController.foodDB[0].count) + " brekky count")
+        print (String(FoodEntryViewController.foodDB[1].count) + " lumch count")
+        print (String(FoodEntryViewController.foodDB[2].count) + " dinner count")
+        print (String(FoodEntryViewController.foodDB[3].count) + " snacks count")
+        for meal in FoodEntryViewController.foodDB{
+            for food in meal {
+                print("Name : \(String(describing: food.foodName)) Weight: \(food.foodWeight) Meal: \(String(describing: food.mealType))")
+            }
+        }
         
     }
     
