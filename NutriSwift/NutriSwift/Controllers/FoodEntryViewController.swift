@@ -36,9 +36,8 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var entryWeight: UITextField!
     @IBOutlet weak var mealText: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
-    
-    override func viewDidLoad() {
         
+    override func viewDidLoad() {
         FoodModel.sharedInstance.getFoods()
         self.pickerView.isHidden = true
         super.viewDidLoad()
@@ -82,7 +81,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             case "Snacks":
                 pickerView.selectRow(3, inComponent: 0, animated: true)
             default:
-                print("")
+                print("Failure in selected meal")
             }
             textField.endEditing(true)
         }
@@ -100,90 +99,59 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBAction func save(_ sender: Any) {
         
+        
         FoodModel.sharedInstance.name = entryName.text!
-        
         let weight = Double(entryWeight.text!)
-        
         FoodModel.sharedInstance.getFoods()
-        
-        
-        
-        
-        //      *************API***************
         let userInput = FoodModel.sharedInstance.name
-        let apiUrl1 = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=" + userInput + "&ds=Standard+Reference&sort=r&max=25&offset=0"
+        let escapedInput = userInput.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let apiUrl1 = "https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=" + escapedInput! + "&ds=Standard+Reference&sort=r&max=25&offset=0"
         
-        let myOperationsQueue = OperationQueue()
-        let firstSemaphore = DispatchSemaphore(value: 0)
-        
-        //["Vitamin A, RAE", "Thiamin", "Riboflavin", "Niacin", "Vitamin B-6"]
-        
-        updateParsedJSON(urlString: apiUrl1, myOperationsQueue: myOperationsQueue, semaphore: firstSemaphore)
-        firstSemaphore.wait(timeout: DispatchTime.distantFuture)
-        updateNDBNO(parsedJSON: parsedJSON)
-        
-        print("This is foodName: \(self.foodName) | This is foodNDBNO: \(self.foodNDBNO)")
-        
-        
-        let apiUrl2 = "https://api.nal.usda.gov/ndb/reports/?ndbno=" + self.foodNDBNO + "&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
-        
-        for nutrient in nutrientsRequired {
-            let secondSemaphore = DispatchSemaphore(value: 0)
-            updateParsedJSON(urlString: apiUrl2, myOperationsQueue: myOperationsQueue, semaphore: secondSemaphore)
-            secondSemaphore.wait(timeout: DispatchTime.distantFuture)
-            updateNutrientInfo(parsedJSON: parsedJSON, targetNutrient: nutrient)
-        }
-        
-        print("Nutrient0: \(self.nutrientTupleArray[0].0), \(self.nutrientTupleArray[0].1) | Nutrient1: \(self.nutrientTupleArray[1].0), \(self.nutrientTupleArray[1].1) | Nutrient2: \(self.nutrientTupleArray[2].0), \(self.nutrientTupleArray[2].1) | Nutrient3: \(self.nutrientTupleArray[3].0), \(self.nutrientTupleArray[3].1) | Nutrient4: \(self.nutrientTupleArray[4].0), \(self.nutrientTupleArray[4].1)")
-        //      *************API***************
-        
-        
-        
-        FoodModel.sharedInstance.saveFood(self.foodName, foodWeight: weight!, mealType: FoodModel.sharedInstance.meal, niacin: self.nutrientTupleArray[3].1, riboflavin: self.nutrientTupleArray[2].1, thiamin: self.nutrientTupleArray[1].1, vitaminA: self.nutrientTupleArray[0].1, vitaminB6: self.nutrientTupleArray[4].1)
-        
-        FoodModel.sharedInstance.getFoods()
-        
-        FoodModel.sharedInstance.populateFoodDB()
-        
-        FoodModel.sharedInstance.getFoods()
-        
-        if let navController = self.navigationController {
-            navController.popViewController(animated: true)
-        }
-        
-        
+        updateParsedJSON(urlString: apiUrl1, completionHandler: { () in
+            self.updateNDBNO(parsedJSON: self.parsedJSON)
+            let apiUrl2 = "https://api.nal.usda.gov/ndb/reports/?ndbno=" + self.foodNDBNO + "&type=b&format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU"
+            self.updateParsedJSON(urlString: apiUrl2, completionHandler: { () in
+                for nutrient in self.nutrientsRequired {
+                    self.updateNutrientInfo(parsedJSON: self.parsedJSON, targetNutrient: nutrient)
+                }
+                
+                FoodModel.sharedInstance.saveFood(self.foodName, foodWeight: weight!, mealType: FoodModel.sharedInstance.meal, niacin: self.nutrientTupleArray[3].1, riboflavin: self.nutrientTupleArray[2].1, thiamin: self.nutrientTupleArray[1].1, vitaminA: self.nutrientTupleArray[0].1, vitaminB6: self.nutrientTupleArray[4].1)
+                FoodModel.sharedInstance.getFoods()
+                FoodModel.sharedInstance.populateFoodDB()
+            })
+        })
+
+        self.navigationController!.popViewController(animated: true)
     }
     
     // ******************** API *********************** BELOW
     
-    func updateParsedJSON (urlString: String, myOperationsQueue: OperationQueue, semaphore: DispatchSemaphore) {
-        myOperationsQueue.addOperation({
-            //            let session = URLSession.shared
-            let request = URLRequest(url: URL(string: urlString)!)
-            
-            let task = self.session.dataTask(with: request, completionHandler: {data, response, downloadError in
-                if let error = downloadError {
-                    print("\(data) \n data")
-                    print("\(response) \n response")
-                    print("\(error)\n error")
+    func updateParsedJSON (urlString: String, completionHandler: @escaping ()->(Void)) {
+        //            let session = URLSession.shared
+        let request = URLRequest(url: URL(string: urlString)!)
+        
+        let task = self.session.dataTask(with: request, completionHandler: {data, response, downloadError in
+            if let error = downloadError {
+                print("\(String(describing: data)) \n data")
+                print("\(String(describing: response)) \n response")
+                print("\(error)\n error")
+            }
+            else {
+                let parsedResult: Any!
+                do {
+                    parsedResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+                    self.parsedJSON = parsedResult
+                    completionHandler();
                 }
-                else {
-                    let parsedResult: Any!
-                    do {
-                        parsedResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                        self.parsedJSON = parsedResult
-                    }
-                    catch let error as NSError {
-                        parsedResult = nil
-                    }
-                    catch {
-                        fatalError()
-                    }
+                catch let error as NSError {
+                    parsedResult = nil
                 }
-                semaphore.signal();
-            })
-            task.resume()
+                catch {
+                    fatalError()
+                }
+            }
         })
+        task.resume()
     }
     
     func updateNDBNO (parsedJSON: Any) {

@@ -52,7 +52,6 @@ class FoodModel
     
     func saveFood(_ foodName: String, foodWeight: Double, mealType: String, niacin: Double, riboflavin: Double, thiamin: Double, vitaminA: Double, vitaminB6: Double)
     {
-        print("I have been called")
         let entity =  NSEntityDescription.entity(forEntityName: "CDFood",
                                                  in:managedContext)
         let food = CDFood(entity: entity!, insertInto:managedContext)
@@ -63,6 +62,7 @@ class FoodModel
         food.riboflavin = riboflavin
         food.vitaminA = vitaminA
         food.vitaminB6 = vitaminB6
+        food.thiamin = thiamin
         
         updateDatabase()
     }

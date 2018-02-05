@@ -67,17 +67,17 @@ class NutritionModel {
                     nutritionRDI = m19RDI
                 }
                 else {
-                    print("failure1")
+                    print("Gender fine, but not within support ages")
                 }
             case "Female":
                 if age >= 19 && age <= 30 {
                     nutritionRDI = f19RDI
                 }
                 else {
-                    print("failure2")
+                    print("Gender fine, but not within support ages")
                 }
             default:
-                print("failure3")
+                print("Non male/female gender input")
         }
         
         
@@ -101,10 +101,6 @@ class NutritionModel {
             }
         }
     }
-    
-//    func generateNutrientRequirements(profile: Profile) {
-//
-//    }
     
 }
 

@@ -31,7 +31,6 @@
 		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
 		AF802CB5200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */; };
 		AF8CAC862015B6AB00B5C9B7 /* DiaryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */; };
-		AFA09A1520259911006E6514 /* ApiTestNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA09A1420259911006E6514 /* ApiTestNew.swift */; };
 		AFA27B842026C00500B01113 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA27B822026C00500B01113 /* User+CoreDataClass.swift */; };
 		AFA27B852026C00500B01113 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA27B832026C00500B01113 /* User+CoreDataProperties.swift */; };
 		AFA98C942019D1460011907F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA98C932019D1460011907F /* ProfileViewModel.swift */; };
@@ -88,7 +87,6 @@
 		AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftDiaryTableViewandFoodEntryUITests.swift; sourceTree = "<group>"; };
 		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8CAC852015B6AB00B5C9B7 /* DiaryTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewModel.swift; sourceTree = "<group>"; };
-		AFA09A1420259911006E6514 /* ApiTestNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTestNew.swift; sourceTree = "<group>"; };
 		AFA27B822026C00500B01113 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFA27B832026C00500B01113 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AFA98C932019D1460011907F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 				19E39E912015A13200A3A55E /* ProfileViewController.swift */,
 				AF663F422011D00400F47B13 /* DiaryTableViewController.swift */,
 				AF7504D32016DC0C002D38C7 /* FoodEntryViewController.swift */,
-				AFA09A1420259911006E6514 /* ApiTestNew.swift */,
 				07575D9C20242F9600CB46D8 /* FoodCell.swift */,
 				AFF4EFE320184F0B0062411E /* NutritionViewController.swift */,
 				074F8E222018AE27007044E0 /* ExploreTableViewController.swift */,
@@ -363,7 +360,6 @@
 				AFA27B852026C00500B01113 /* User+CoreDataProperties.swift in Sources */,
 				074C3D1C2021909900E8389C /* CDFood+CoreDataProperties.swift in Sources */,
 				19754C0C20193D3A00A2121E /* ExploreInfoViewController.swift in Sources */,
-				AFA09A1520259911006E6514 /* ApiTestNew.swift in Sources */,
 				074C3D1E2021960E00E8389C /* FoodModel.swift in Sources */,
 				AFA27B842026C00500B01113 /* User+CoreDataClass.swift in Sources */,
 				AF74FC16201983FE003B07E9 /* ExploreItem.swift in Sources */,

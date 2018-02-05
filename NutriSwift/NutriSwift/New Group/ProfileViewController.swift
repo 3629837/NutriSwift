@@ -120,7 +120,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 case "Other":
                     genderPicker.selectRow(2, inComponent: 0, animated: true)
                 default:
-                    print("")
+                    print("Gender picker failure")
             }
             self.genderPicker.isHidden = false
             textField.endEditing(true)
