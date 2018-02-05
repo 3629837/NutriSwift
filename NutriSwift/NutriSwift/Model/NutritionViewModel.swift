@@ -84,13 +84,13 @@ class NutritionModel {
         return nutritionRDI
     }
     
-    func updateNutrition(meals: [[Food]], nutritionRDI: [Nutrient]) {
+    func updateNutrition(meals: [[CDFood]], nutritionRDI: [Nutrient]) {
         nutritionRDI[0].current = 0.0
         nutritionRDI[1].current = 0.0
         nutritionRDI[2].current = 0.0
         nutritionRDI[3].current = 0.0
         nutritionRDI[4].current = 0.0
-        
+    
         for mealType in meals {
             for food in mealType {
                 nutritionRDI[0].current += food.vitaminA * food.foodWeight/100
