@@ -30,29 +30,14 @@ class UserModel
     
     func saveUser(_ userName: String, userAge: Double, userGender: String)
     {
-        // Create a new managed object and insert it into the context, so it can be saved
-        // into the database
+ 
         let entity =  NSEntityDescription.entity(forEntityName: "User",
                                                  in:managedContext)
-        
-        // Update the existing object with the data passed in from the View Controller
-//        if let entity = existing
-//        {
-//            existing!.userName = userName
-//            existing!.userAge = userAge
-//            existing!.userGender = userGender
-//        }
-            // Create a new movie object and update it with the data passed in from the View Controller
-//        else
-//        {
-            // Create an object based on the Entity
-            let user = User(entity: entity!,
-                              insertInto:managedContext)
-            user.userName = userName
-            user.userAge = userAge
-            user.userGender = userGender
-//        }
-        
+        let user = User(entity: entity!,
+                          insertInto:managedContext)
+        user.userName = userName
+        user.userAge = userAge
+        user.userGender = userGender
         updateDatabase()
     }
         // MARK: - CRUD *****************************************************************************************

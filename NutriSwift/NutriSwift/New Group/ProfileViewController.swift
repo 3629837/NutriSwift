@@ -42,12 +42,16 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
         if UserModel.sharedInstance.userDB.count > 0 {
+            //if not default value
             if UserModel.sharedInstance.userDB[0].userAge > 0 {
                 let currentUser = UserModel.sharedInstance.userDB[0]
                 userName.text = currentUser.userName
                 age.text = String(Int(round(currentUser.userAge)))
                 gender.text = currentUser.userGender
             }
+        }
+        else {
+            UserModel.sharedInstance.saveUser("", userAge: 0.0, userGender: "")
         }
     }
     
