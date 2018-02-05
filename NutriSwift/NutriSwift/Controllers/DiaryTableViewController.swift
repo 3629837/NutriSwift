@@ -12,19 +12,17 @@ class DiaryTableViewController: UITableViewController {
     
     var food:FoodModel = FoodModel.sharedInstance
     
+
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
         FoodModel.sharedInstance.getFoods()
+        tableView.reloadData()
     }
 
     override func viewDidLoad() {
-        FoodModel.sharedInstance.getFoods()
-        tableView.reloadData()
         super.viewDidLoad()
-        
+        FoodModel.sharedInstance.getFoods()
         FoodModel.sharedInstance.populateFoodDB()
-        
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         tableView.reloadData()
     }
@@ -123,15 +121,30 @@ class DiaryTableViewController: UITableViewController {
     }
     
     @IBAction func clearAll(_ sender: Any) {
-        FoodModel.sharedInstance.getFoods()
-        for food in FoodModel.sharedInstance.foodDBUnsorted {
-            FoodModel.sharedInstance.deleteFood(food)
-        }
+        let alert = UIAlertController(title: "Clear All", message: "Do you really want to clear all food data?", preferredStyle: UIAlertControllerStyle.alert)
         
+        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            FoodModel.sharedInstance.getFoods()
+            for food in FoodModel.sharedInstance.foodDBUnsorted {
+                FoodModel.sharedInstance.deleteFood(food)
+            }
+            FoodModel.sharedInstance.getFoods()
+            FoodModel.sharedInstance.populateFoodDB()
+            self.tableView.reloadData()
+            FoodModel.sharedInstance.getFoods()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func refreshData(_ sender: Any) {
         FoodModel.sharedInstance.getFoods()
         FoodModel.sharedInstance.populateFoodDB()
         tableView.reloadData()
-        FoodModel.sharedInstance.getFoods()
     }
     
 }

@@ -81,7 +81,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             case "Snacks":
                 pickerView.selectRow(3, inComponent: 0, animated: true)
             default:
-                print("Failure in selected meal")
+                print("")
             }
             textField.endEditing(true)
         }

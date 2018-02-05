@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -852,11 +853,18 @@
                                 <action selector="clearAll:" destination="aSN-0J-MNX" id="tlc-n9-ncZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KDx-n4-zbz">
-                            <connections>
-                                <segue destination="Tqp-DL-4GL" kind="show" id="LQO-re-g0M"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="KDx-n4-zbz">
+                                <connections>
+                                    <segue destination="Tqp-DL-4GL" kind="show" id="LQO-re-g0M"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="HPE-79-OIy">
+                                <connections>
+                                    <action selector="refreshData:" destination="aSN-0J-MNX" id="YD3-wd-a3G"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
