@@ -2,9 +2,8 @@
 //  FoodViewModel.swift
 //  NutriSwift
 //
-//  Created by Asli Yoruk on 1/31/18.
 //  Copyright © 2018 Hayden Farrier. All rights reserved.
-//
+//  Code adapted from RMIT coursework
 
 import Foundation
 import UIKit

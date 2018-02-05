@@ -124,8 +124,6 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.navigationController!.popViewController(animated: true)
     }
     
-    // ******************** API *********************** BELOW
-    
     func updateParsedJSON (urlString: String, completionHandler: @escaping ()->(Void)) {
         //            let session = URLSession.shared
         let request = URLRequest(url: URL(string: urlString)!)
@@ -144,6 +142,7 @@ class FoodEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                     completionHandler();
                 }
                 catch let error as NSError {
+                    print("\(error)\n error")
                     parsedResult = nil
                 }
                 catch {

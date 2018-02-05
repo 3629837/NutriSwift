@@ -1,10 +1,6 @@
-//
-//  User.swift
-//  NutriSwift
-//
 //  Created by Hayden Farrier on 1/30/18.
 //  Copyright © 2018 Hayden Farrier. All rights reserved.
-//
+//  Code adapted from RMIT coursework (tutorial)
 
 import Foundation
 import UIKit
@@ -18,13 +14,6 @@ class UserModel
     {
         managedContext = appDelegate.persistentContainer.viewContext
     }
-    // first result is raw carrot (what we want?)
-//    https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=carrot&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0
-    // broccoli
- //    https://api.nal.usda.gov/ndb/search/?format=json&api_key=LzwajHcUxYY47kiXlUl5Oh7GOkGg9VN51OtR5fhU&q=broccoli&ds=Standard+Reference&fg=Vegetables+and+Vegetable+Products&sort=r&max=25&offset=0
-// https://api.nal.usda.gov/ndb/reports/?ndbno=11124&type=b&format=json&api_key=DEMO_KEY
-// this is actual food data accessed by demo key
-    
     
     // Get a reference to your App Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate

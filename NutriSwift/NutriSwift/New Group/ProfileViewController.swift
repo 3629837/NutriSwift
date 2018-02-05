@@ -4,7 +4,7 @@
 //
 //  Created by Hayden Farrier 25/01
 //  Copyright © 2018 Hayden Farrier. All rights reserved.
-//
+//  Features code adapted from RMIT coursework
 
 import UIKit
 import AVKit
@@ -20,14 +20,10 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     // CAMERA FUNCTIONALITY
     var avPlayerViewController: AVPlayerViewController!
     var managedContext : NSManagedObjectContext?
-    // ******
     
-    //*******OBSERVER********
-    // Set the initial value on the model to an empty string
-    // set init method in the Observable struct.
+    // Observer
     var observedText = Observable<String>(value: (""))
     @IBOutlet weak var outputLabel: UILabel!
-    //*******OBSERVER********
     
     var image: UIImage?
     var lastChosenMediaType: String?
@@ -210,23 +206,17 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
 }
 
-// *******OBERSERVER******
 
 struct Observable<T> {
     
-    // Holds a collection of objects that want to observe changes
-    // in the model
     var observers: [(T)->()] = []
     
-    // Uses a property observer to perform an action whenever the
-    // value changes.  It calls each of the observers with the result.
     var value: T {
         didSet {
             observers.forEach { $0(value) }
         }
     }
     
-    // Allows an object to register itself as an observer.
     mutating func observe(observer: @escaping (T)->()) {
         observers.append(observer)
     }
