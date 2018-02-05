@@ -25,11 +25,9 @@
 		AF802C92200C72470085976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802C91200C72470085976F /* AppDelegate.swift */; };
 		AF802C9A200C72470085976F /* NutriSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF802C98200C72470085976F /* NutriSwift.xcdatamodeld */; };
 		AF802C9C200C72470085976F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF802C9B200C72470085976F /* Assets.xcassets */; };
-		AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CA9200C72470085976F /* NutriSwiftTests.swift */; };
 		AF802CB5200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */; };
 		AFA27B842026C00500B01113 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA27B822026C00500B01113 /* User+CoreDataClass.swift */; };
 		AFA27B852026C00500B01113 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA27B832026C00500B01113 /* User+CoreDataProperties.swift */; };
-		AFAE3D862028653D0042EBA1 /* NutriSwiftTests5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAE3D852028653D0042EBA1 /* NutriSwiftTests5.swift */; };
 		AFAE3D8E202865690042EBA1 /* RDIUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAE3D8D202865690042EBA1 /* RDIUserTest.swift */; };
 		AFB208D82018073000EF9A2A /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB208D72018073000EF9A2A /* NutritionViewModel.swift */; };
 		AFEB652020202244005589A5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB651F20202244005589A5 /* UserModel.swift */; };
@@ -90,8 +88,6 @@
 		AF802C9B200C72470085976F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF802CA0200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF802CA5200C72470085976F /* NutriSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF802CA9200C72470085976F /* NutriSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftTests.swift; sourceTree = "<group>"; };
-		AF802CAB200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF802CB0200C72470085976F /* NutriSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF802CB4200C72470085976F /* NutriSwiftDiaryTableViewandFoodEntryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftDiaryTableViewandFoodEntryUITests.swift; sourceTree = "<group>"; };
 		AF802CB6200C72470085976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,8 +96,6 @@
 		AFAE3D75202864B60042EBA1 /* NutriSwift Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriSwift Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAE3D79202864B60042EBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFAE3D832028653D0042EBA1 /* NutriSwiftTests5.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriSwiftTests5.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFAE3D852028653D0042EBA1 /* NutriSwiftTests5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriSwiftTests5.swift; sourceTree = "<group>"; };
-		AFAE3D872028653D0042EBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFAE3D8D202865690042EBA1 /* RDIUserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDIUserTest.swift; sourceTree = "<group>"; };
 		AFB208D72018073000EF9A2A /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
 		AFEB651F20202244005589A5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -177,10 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				AF802C90200C72470085976F /* NutriSwift */,
-				AF802CA8200C72470085976F /* NutriSwiftTests */,
 				AF802CB3200C72470085976F /* NutriSwiftUITests */,
 				AFAE3D76202864B60042EBA1 /* NutriSwift Unit Tests */,
-				AFAE3D842028653D0042EBA1 /* NutriSwiftTests5 */,
 				AF802C8F200C72470085976F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,15 +200,6 @@
 				AF802CA0200C72470085976F /* Info.plist */,
 			);
 			path = NutriSwift;
-			sourceTree = "<group>";
-		};
-		AF802CA8200C72470085976F /* NutriSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF802CA9200C72470085976F /* NutriSwiftTests.swift */,
-				AF802CAB200C72470085976F /* Info.plist */,
-			);
-			path = NutriSwiftTests;
 			sourceTree = "<group>";
 		};
 		AF802CB3200C72470085976F /* NutriSwiftUITests */ = {
@@ -255,15 +238,6 @@
 				AFAE3D79202864B60042EBA1 /* Info.plist */,
 			);
 			path = "NutriSwift Unit Tests";
-			sourceTree = "<group>";
-		};
-		AFAE3D842028653D0042EBA1 /* NutriSwiftTests5 */ = {
-			isa = PBXGroup;
-			children = (
-				AFAE3D852028653D0042EBA1 /* NutriSwiftTests5.swift */,
-				AFAE3D872028653D0042EBA1 /* Info.plist */,
-			);
-			path = NutriSwiftTests5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,7 +463,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF802CAA200C72470085976F /* NutriSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +488,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFAE3D862028653D0042EBA1 /* NutriSwiftTests5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

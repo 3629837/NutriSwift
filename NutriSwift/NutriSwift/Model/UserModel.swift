@@ -80,5 +80,13 @@ class UserModel
         }
     }
     
+    func resetUserDB() {
+        self.getUsers()
+        for user in self.userDB {
+            self.deleteUser(user)
+        }
+        self.getUsers()
+    }
+    
 }
 

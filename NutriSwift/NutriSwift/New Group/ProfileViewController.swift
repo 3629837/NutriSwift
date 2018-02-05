@@ -37,9 +37,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func viewWillAppear(_ animated: Bool) {
         UserModel.sharedInstance.getUsers()
         if UserModel.sharedInstance.userDB.count > 1 {
-            for user in UserModel.sharedInstance.userDB {
-                UserModel.sharedInstance.deleteUser(user)
-            }
+            UserModel.sharedInstance.resetUserDB()
         }
         if UserModel.sharedInstance.userDB.count > 0 {
             //if not default value
@@ -133,9 +131,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let profileGender = gender.text!
 
         if UserModel.sharedInstance.userDB.count > 0 {
-            for user in UserModel.sharedInstance.userDB {
-                UserModel.sharedInstance.deleteUser(user)
-            }
+            UserModel.sharedInstance.resetUserDB()
         }
         UserModel.sharedInstance.saveUser(profileName, userAge: profileAge, userGender: profileGender)
         UserModel.sharedInstance.getUsers()

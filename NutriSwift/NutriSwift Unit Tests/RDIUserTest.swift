@@ -13,12 +13,10 @@ class RDIUserTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-//        continueAfterFailure = false
-//        XCUIApplication().launch()
+        UserModel.sharedInstance.resetUserDB()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -42,7 +40,7 @@ class RDIUserTest: XCTestCase {
     func testNoProfile() {
         // Assuming user has not made a profile, and has instead clicked into Nutrition tab
         // A 'temporary' user is created with userName = "", userAge = 0.0, userGender = ""
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
         UserModel.sharedInstance.saveUser("", userAge: 0.0, userGender: "")
         UserModel.sharedInstance.getUsers()
         let user = UserModel.sharedInstance.userDB[0]
@@ -55,14 +53,13 @@ class RDIUserTest: XCTestCase {
         // we also want to first make sure the RDI is indeed the male RDI
         XCTAssertEqual(userRDI[0].RDI, 0.0009)
         XCTAssertEqual(userRDI[0].RDI, m19RDI[0].RDI)
-        UserModel.sharedInstance.deleteUser(user)
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
     }
     
     func testNotFalseFemaleRDI() {
         // User profile with female not chosen or with age not 19-29 should not give female 19-29 RDI
         // Female not chosen (e.g User("Hayden", 22, "Male"))
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
         UserModel.sharedInstance.saveUser("Hayden", userAge: 22.0, userGender: "Male")
         UserModel.sharedInstance.getUsers()
         let user = UserModel.sharedInstance.userDB[0]
@@ -76,10 +73,9 @@ class RDIUserTest: XCTestCase {
         XCTAssertEqual(userRDI[0].RDI, m19RDI[0].RDI)
         XCTAssertNotEqual(userRDI[0].RDI, f19RDI[0].RDI)
         
-        UserModel.sharedInstance.deleteUser(user)
         
         // Incorrect age (e.g User("Asli", 33, "Female"))
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
         UserModel.sharedInstance.saveUser("Asli", userAge: 33.0, userGender: "Female")
         UserModel.sharedInstance.getUsers()
         
@@ -91,14 +87,13 @@ class RDIUserTest: XCTestCase {
         // we also want to first make sure the RDI is indeed the male RDI (expected as is default and age >29 is not supported)
         XCTAssertEqual(userRDI2[0].RDI, 0.0009)
         XCTAssertNotEqual(userRDI2[0].RDI, f19RDI[0].RDI)
-        UserModel.sharedInstance.deleteUser(user2)
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
     }
     
     func testOtherGenderRDI() {
         //   RDI set should default to male (of the selected age group) if 'other' is chosen (this is because male RDIs are on average higher so it is overall a safer guide: if 'other' gender chosen RDI should be equal to male of same age
         // example user: ("Hayden", 22.0, "Other")
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
         UserModel.sharedInstance.saveUser("Hayden", userAge: 22.0, userGender: "Other")
         UserModel.sharedInstance.getUsers()
         let user = UserModel.sharedInstance.userDB[0]
@@ -111,14 +106,13 @@ class RDIUserTest: XCTestCase {
         // we also want to first make sure the RDI is indeed the male RDI
         XCTAssertEqual(userRDI[0].RDI, 0.0009)
         XCTAssertEqual(userRDI[0].RDI, m19RDI[0].RDI)
-        UserModel.sharedInstance.deleteUser(user)
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
     }
     
     func testMaleToFemaleUpdate() {
         //   testMaleToFemaleUpdate: Once female is chosen data set in nutrition should update to demonstrate change. This is relevant because default is male so it is accepted that the app will start off by using male 19-29 RDI.
         // example user: ("Hayden", 22.0, "Male")
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
         UserModel.sharedInstance.saveUser("Hayden", userAge: 22.0, userGender: "Male")
         UserModel.sharedInstance.getUsers()
         let user = UserModel.sharedInstance.userDB[0]
@@ -131,10 +125,9 @@ class RDIUserTest: XCTestCase {
         // we also want to first make sure the RDI is indeed the male RDI
         XCTAssertEqual(userRDI[0].RDI, 0.0009)
         XCTAssertEqual(userRDI[0].RDI, m19RDI[0].RDI)
-        UserModel.sharedInstance.deleteUser(user)
-        
-        
+     
         // now changing from male to female: ("Hayden", 22.0, "Female")
+        UserModel.sharedInstance.resetUserDB()
         UserModel.sharedInstance.getUsers()
         UserModel.sharedInstance.saveUser("Hayden", userAge: 22.0, userGender: "Female")
         UserModel.sharedInstance.getUsers()
@@ -149,9 +142,7 @@ class RDIUserTest: XCTestCase {
         //Ensure userRDI == female 19-29 RDI
         XCTAssertEqual(userRDIUpdated[0].RDI, 0.0007)
         XCTAssertEqual(userRDIUpdated[0].RDI, f19RDI[0].RDI)
-        
-        UserModel.sharedInstance.deleteUser(user)
-        UserModel.sharedInstance.getUsers()
+        UserModel.sharedInstance.resetUserDB()
     }
     
 }
