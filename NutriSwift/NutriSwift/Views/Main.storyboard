@@ -98,7 +98,7 @@
                                 </constraints>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euE-8T-f7v">
-                                <rect key="frame" x="82" y="530" width="250" height="120"/>
+                                <rect key="frame" x="82" y="525" width="250" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Qk4-kh-fIy">
                                         <variation key="heightClass=compact" constant="120"/>
@@ -140,9 +140,8 @@
                                     <action selector="addImageFromCamera:" destination="ft8-cT-QbT" eventType="touchUpInside" id="rFc-3P-Xzg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi ThisIsALongUserName! Your RDI needs will be taken from the group: LongGender 19 - 29" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f9-ub-9ie">
-                                <rect key="frame" x="29" y="6" width="374" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f9-ub-9ie">
+                                <rect key="frame" x="207.66666666666666" y="480" width="0.0" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,6 +163,7 @@
                             <constraint firstItem="OJk-xv-3z9" firstAttribute="top" secondItem="KR4-vL-CNK" secondAttribute="bottom" constant="17" id="Gh0-sO-jrD">
                                 <variation key="heightClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="dSE-z8-DcP" firstAttribute="top" secondItem="7f9-ub-9ie" secondAttribute="bottom" constant="10" id="Gvv-fr-LhX"/>
                             <constraint firstItem="euE-8T-f7v" firstAttribute="width" secondItem="dSE-z8-DcP" secondAttribute="width" id="HTX-JK-Tj6"/>
                             <constraint firstItem="cGQ-xw-5Ow" firstAttribute="centerX" secondItem="djF-LA-LQM" secondAttribute="centerX" id="Jdx-TD-21T"/>
                             <constraint firstItem="djF-LA-LQM" firstAttribute="top" secondItem="t7x-GH-KUN" secondAttribute="top" constant="355" id="L6p-Qz-qdv">
@@ -181,7 +181,8 @@
                             </constraint>
                             <constraint firstItem="euE-8T-f7v" firstAttribute="centerX" secondItem="dSE-z8-DcP" secondAttribute="centerX" id="Udl-F4-Yf8"/>
                             <constraint firstItem="2rd-Sz-pYV" firstAttribute="top" secondItem="OJk-xv-3z9" secondAttribute="bottom" constant="20" id="Uyv-H6-Dl8"/>
-                            <constraint firstItem="euE-8T-f7v" firstAttribute="top" secondItem="dSE-z8-DcP" secondAttribute="top" constant="15" id="YrP-s7-Umy"/>
+                            <constraint firstItem="7f9-ub-9ie" firstAttribute="centerX" secondItem="cGQ-xw-5Ow" secondAttribute="centerX" id="YbW-sa-IFn"/>
+                            <constraint firstItem="euE-8T-f7v" firstAttribute="top" secondItem="dSE-z8-DcP" secondAttribute="top" constant="10" id="YrP-s7-Umy"/>
                             <constraint firstItem="KR4-vL-CNK" firstAttribute="top" secondItem="t7x-GH-KUN" secondAttribute="top" constant="45" id="bsq-E8-i8Q"/>
                             <constraint firstItem="cGQ-xw-5Ow" firstAttribute="top" secondItem="djF-LA-LQM" secondAttribute="bottom" constant="350" id="cHJ-3L-f9v">
                                 <variation key="heightClass=compact" constant="50"/>
@@ -189,6 +190,7 @@
                             <constraint firstItem="2rd-Sz-pYV" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="drA-fo-2Ou"/>
                             <constraint firstItem="cGQ-xw-5Ow" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="e3E-We-B3B"/>
                             <constraint firstItem="euE-8T-f7v" firstAttribute="centerX" secondItem="dSE-z8-DcP" secondAttribute="centerX" id="fFZ-zk-ERd"/>
+                            <constraint firstItem="7f9-ub-9ie" firstAttribute="top" secondItem="cGQ-xw-5Ow" secondAttribute="bottom" constant="10" id="flC-X1-nW1"/>
                             <constraint firstItem="djF-LA-LQM" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" id="gjw-cl-VGv"/>
                             <constraint firstItem="OJk-xv-3z9" firstAttribute="centerX" secondItem="KR4-vL-CNK" secondAttribute="centerX" id="glX-lF-oe1"/>
                             <constraint firstItem="KR4-vL-CNK" firstAttribute="centerX" secondItem="t7x-GH-KUN" secondAttribute="centerX" multiplier="0.5" id="gle-dE-Y9x"/>
