@@ -73,7 +73,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             }
             else {
-                self.outputLabel.text = "Error, please input integer"
+                self.outputLabel.text = "Error, please input an integer"
             }
         }
         
