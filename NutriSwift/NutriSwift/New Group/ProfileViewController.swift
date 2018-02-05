@@ -68,7 +68,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 }
                 
                 else {
-                    self.outputLabel.text = "RDI not available for your age groups"
+                    self.outputLabel.text = "RDI not available for your age group"
                 }
             
             }
