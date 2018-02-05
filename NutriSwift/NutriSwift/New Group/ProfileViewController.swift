@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     //*******OBSERVER********
     // Set the initial value on the model to an empty string
     // set init method in the Observable struct.
-    var observedText = Observable<(String, Double, String)>(value: ("", -1.0, ""))
+    var observedText = Observable<String>(value: (""))
     @IBOutlet weak var outputLabel: UILabel!
     //*******OBSERVER********
     
@@ -59,32 +59,31 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         super.viewDidLoad()
         self.genderPicker.isHidden = true
         
-        
-        
         //*******OBSERVER********
-        // function that gets called by the model
-        // remember the observedText variable here has been
-        // added to the model as being an object that wants
-        // to be notified when a change occurs in the model.
+        observedText.observe { (value: String) -> () in
+            if let inputAge = Int(value) {
+            
+                if inputAge >= 19 && inputAge <= 29 {
+                    self.outputLabel.text = "RDI age group: 19 - 29"
+                }
+                
+                else {
+                    self.outputLabel.text = "RDI not available for your age group"
+                }
+            
+            }
+            else {
+                self.outputLabel.text = "Error, please input integer"
+            }
+        }
         
-        
-//        observedText.observe { (value: -> () in
-//            self.outputLabel.text = "Hi \(userName)! Your RDI needs will be taken from the group: \(userGender) \(userAge) - 29!"
-//        }
-        
-//
-//        observedText.observe { (userName: String, userAge: Double userGender: String) -> () in
-//            self.outputLabel.text = "Hi \(userName)! Your RDI needs will be taken from the group: \(userGender) \(userAge) - 29!"
-//        }
-        
-        // Whenever the text value changes make a change in the model
-        userName.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        age.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         //*******OBSERVER********
     }
     
     //*******OBSERVER********
     @objc func textDidChange() {
-        observedText.value = (userName.text!, Double(age.text!)!, gender.text!)
+        observedText.value = (age.text!)
     }
     //*******OBSERVER********
     
